@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Resources - ElectroPanel Pro | Engineering Guides & CAD Libraries</title>
+    <meta name="description" content="Access comprehensive technical resources including engineering guides, CAD libraries, specification sheets, and compliance documentation for electrical panel design and installation." />
+    <link rel="stylesheet" href="../css/main.css" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Felectropan3871back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="font-body text-text-primary bg-background">
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-card sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="homepage.html" class="flex items-center">
+                        <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                            <rect x="4" y="8" width="32" height="24" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <rect x="8" y="12" width="6" height="4" fill="currentColor"/>
+                            <rect x="16" y="12" width="6" height="4" fill="currentColor"/>
+                            <rect x="24" y="12" width="6" height="4" fill="currentColor"/>
+                            <rect x="8" y="20" width="6" height="4" fill="currentColor"/>
+                            <rect x="16" y="20" width="6" height="4" fill="currentColor"/>
+                            <rect x="24" y="20" width="6" height="4" fill="currentColor"/>
+                            <circle cx="32" cy="16" r="2" fill="currentColor"/>
+                            <path d="M32 20v8" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="ml-3 text-xl font-headline font-bold text-primary">ElectroPanel Pro</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage.html" class="text-secondary-600 hover:text-primary font-inter px-3 py-2 rounded-md text-sm transition-colors">Home</a>
+                        <a href="project_portfolio.html" class="text-secondary-600 hover:text-primary font-inter px-3 py-2 rounded-md text-sm transition-colors">Portfolio</a>
+                        <a href="custom_panel_design.html" class="text-secondary-600 hover:text-primary font-inter px-3 py-2 rounded-md text-sm transition-colors">Custom Design</a>
+                        <a href="about_capabilities.html" class="text-secondary-600 hover:text-primary font-inter px-3 py-2 rounded-md text-sm transition-colors">About</a>
+                        <a href="technical_resources.html" class="text-primary font-inter font-semibold px-3 py-2 rounded-md text-sm">Resources</a>
+                        <a href="contact_quote_request.html" class="btn-accent text-sm">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-secondary-600 hover:text-primary p-2" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-secondary-200">
+                    <a href="homepage.html" class="text-secondary-600 hover:text-primary font-inter block px-3 py-2 rounded-md text-base">Home</a>
+                    <a href="project_portfolio.html" class="text-secondary-600 hover:text-primary font-inter block px-3 py-2 rounded-md text-base">Portfolio</a>
+                    <a href="custom_panel_design.html" class="text-secondary-600 hover:text-primary font-inter block px-3 py-2 rounded-md text-base">Custom Design</a>
+                    <a href="about_capabilities.html" class="text-secondary-600 hover:text-primary font-inter block px-3 py-2 rounded-md text-base">About</a>
+                    <a href="technical_resources.html" class="text-primary font-inter font-semibold block px-3 py-2 rounded-md text-base">Resources</a>
+                    <a href="contact_quote_request.html" class="text-accent font-inter font-semibold block px-3 py-2 rounded-md text-base">Get Quote</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-hero font-headline font-bold mb-6">Technical Resources Center</h1>
+                <p class="text-body-lg opacity-90 max-w-3xl mx-auto mb-8">Comprehensive engineering guides, CAD libraries, and technical documentation to support your electrical panel design and specification process.</p>
+                
+                <!-- Search Bar -->
+                <div class="max-w-2xl mx-auto">
+                    <div class="relative">
+                        <input type="text" id="resource-search" placeholder="Search by product type, industry, or specification..." class="w-full px-6 py-4 pr-12 text-secondary-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" />
+                        <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-secondary-600 hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Tools -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-display font-headline font-bold text-primary mb-4">Quick Access Tools</h2>
+                <p class="text-body-lg text-secondary-600">Essential calculators and worksheets for electrical panel design</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Panel Sizing Calculator -->
+                <div class="card-elevated text-center group hover:shadow-industrial transition-all">
+                    <div class="bg-primary-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-100 transition-colors">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-heading font-headline font-bold text-primary mb-4">Panel Sizing Calculator</h3>
+                    <p class="text-secondary-600 mb-6">Interactive tool for calculating optimal panel size based on load requirements and future expansion needs.</p>
+                    <button onclick="openCalculator('panel-sizing')" class="btn-primary">Launch Calculator</button>
+                </div>
+
+                <!-- Load Calculation Worksheet -->
+                <div class="card-elevated text-center group hover:shadow-industrial transition-all">
+                    <div class="bg-accent-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-accent-100 transition-colors">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-heading font-headline font-bold text-primary mb-4">Load Calculation Worksheet</h3>
+                    <p class="text-secondary-600 mb-6">Comprehensive Excel template for calculating electrical loads according to NEC requirements.</p>
+                    <button onclick="downloadResource('load-calculation-worksheet')" class="btn-accent">Download Excel</button>
+                </div>
+
+                <!-- Code Compliance Checker -->
+                <div class="card-elevated text-center group hover:shadow-industrial transition-all">
+                    <div class="bg-secondary-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-secondary-100 transition-colors">
+                        <svg class="w-8 h-8 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-heading font-headline font-bold text-primary mb-4">Code Compliance Checklist</h3>
+                    <p class="text-secondary-600 mb-6">Interactive checklist covering NEC, NFPA, and local code requirements for electrical panel installations.</p>
+                    <button onclick="openChecklist()" class="btn-secondary">Open Checklist</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Categories -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center mb-12 border-b border-secondary-200">
+                <button onclick="filterResources('all')" class="filter-tab active px-6 py-3 font-inter font-semibold text-primary border-b-2 border-primary transition-colors">All Resources</button>
+                <button onclick="filterResources('guides')" class="filter-tab px-6 py-3 font-inter font-semibold text-secondary-600 hover:text-primary border-b-2 border-transparent hover:border-primary transition-colors">Engineering Guides</button>
+                <button onclick="filterResources('specs')" class="filter-tab px-6 py-3 font-inter font-semibold text-secondary-600 hover:text-primary border-b-2 border-transparent hover:border-primary transition-colors">Specification Sheets</button>
+                <button onclick="filterResources('cad')" class="filter-tab px-6 py-3 font-inter font-semibold text-secondary-600 hover:text-primary border-b-2 border-transparent hover:border-primary transition-colors">CAD Libraries</button>
+                <button onclick="filterResources('compliance')" class="filter-tab px-6 py-3 font-inter font-semibold text-secondary-600 hover:text-primary border-b-2 border-transparent hover:border-primary transition-colors">Compliance Docs</button>
+            </div>
+
+            <!-- Engineering Guides Section -->
+            <div id="guides-section" class="resource-section mb-16">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-display font-headline font-bold text-primary">Engineering Guides</h2>
+                    <span class="text-sm text-secondary-600 bg-secondary-100 px-3 py-1 rounded-full">24 Resources</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Arc Flash Mitigation Guide -->
+                    <div class="card-elevated group hover:shadow-industrial transition-all">
+                        <div class="relative mb-4">
+                            <img src="https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Arc flash safety documentation" class="w-full h-32 object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=400&auto=format&fit=crop'; this.onerror=null;" />
+                            <div class="absolute top-2 right-2 bg-primary text-white px-2 py-1 rounded text-xs font-inter font-semibold">PDF</div>
+                            <div class="absolute top-2 left-2 bg-error text-white px-2 py-1 rounded text-xs font-inter font-semibold">Popular</div>
+                        </div>
+                        <h3 class="text-heading font-headline font-bold text-primary mb-3">Arc Flash Mitigation Strategies</h3>
+                        <p class="text-secondary-600 mb-4 text-sm">Comprehensive guide to arc flash hazard analysis, protective device coordination, and safety protocols for electrical panel design.</p>
+                        <div class="flex items-center justify-between text-xs text-secondary-500 mb-4">
+                            <span>Updated: Sep 2025</span>
+                            <span>2.3 MB</span>
+                            <span>847 downloads</span>
+                        </div>
+                        <button onclick="downloadGatedResource('arc-flash-guide')" class="w-full btn-primary text-sm">Download Guide</button>
+                    </div>
+
+                    <!-- Power Quality Guide -->
+                    <div class="card-elevated group hover:shadow-industrial transition-all">
+                        <div class="relative mb-4">
+                            <img src="https://images.pixabay.com/photo/2017/06/10/07/18/list-2389219_1280.png" alt="Power quality analysis charts" class="w-full h-32 object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format&fit=crop'; this.onerror=null;" />
+                            <div class="absolute top-2 right-2 bg-primary text-white px-2 py-1 rounded text-xs font-inter font-semibold">PDF</div>
+                        </div>
+                        <h3 class="text-heading font-headline font-bold text-primary mb-3">Power Quality Improvement</h3>
+                        <p class="text-secondary-600 mb-4 text-sm">Best practices for minimizing harmonics, voltage fluctuations, and power factor correction in industrial electrical systems.</p>
+                        <div class="flex items-center justify-between text-xs text-secondary-500 mb-4">
+                            <span>Updated: Aug 2025</span>
+                            <span>1.8 MB</span>
+                            <span>623 downloads</span>
+                        </div>
+                        <button onclick="downloadGatedResource('power-quality-guide')" class="w-full btn-primary text-sm">Download Guide</button>
+                    </div>
+
+                    <!-- Emergency Power Design -->
+                    <div class="card-elevated group hover:shadow-industrial transition-all">
+                        <div class="relative mb-4">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop" alt="Emergency power system design" class="w-full h-32 object-cover rounded-lg" onerror="this.src='https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=400'; this.onerror=null;" />
+                            <div class="absolute top-2 right-2 bg-primary text-white px-2 py-1 rounded text-xs font-inter font-semibold">PDF</div>
+                            <div class="absolute top-2 left-2 bg-success text-white px-2 py-1 rounded text-xs font-inter font-semibold">New</div>
+                        </div>
+                        <h3 class="text-heading font-headline font-bold text-primary mb-3">Emergency Power System Design</h3>
+                        <p class="text-secondary-600 mb-4 text-sm">Complete guide to designing reliable emergency power distribution systems for critical facilities and life safety applications.</p>
+                        <div class="flex items-center justify-between text-xs text-secondary-500 mb-4">
+                            <span>Updated: Sep 2025</span>
+                            <span>3.1 MB</span>
+                            <span>412 downloads</span>
+                        </div>
+                        <button onclick="downloadGatedResource('emergency-power-guide')" class="w-full btn-primary text-sm">Download Guide</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAD Libraries Section -->
+            <div id="cad-section" class="resource-section mb-16">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-display font-headline font-bold text-primary">CAD Libraries</h2>
+                    <span class="text-sm text-secondary-600 bg-secondary-100 px-3 py-1 rounded-full">156 Files</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- AutoCAD Library -->
+                    <div class="card-elevated text-center group hover:shadow-industrial transition-all">
+                        <div class="bg-accent-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-subheading font-headline font-bold text-primary mb-2">AutoCAD Files</h3>
+                        <p class="text-secondary-600 text-sm mb-4">Complete library of standard and custom panel configurations in DWG format.</p>
+                        <div class="text-xs text-secondary-500 mb-4">
+                            <span>67 files</span> • <span>Updated weekly</span>
+                        </div>
+                        <button onclick="downloadCADLibrary('autocad')" class="btn-accent text-sm w-full">Download Library</button>
+                    </div>
+
+                    <!-- Revit Library -->
+                    <div class="card-elevated text-center group hover:shadow-industrial transition-all">
+                        <div class="bg-primary-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-subheading font-headline font-bold text-primary mb-2">Revit Families</h3>
+                        <p class="text-secondary-600 text-sm mb-4">BIM-ready families for electrical panels with detailed parameters and specifications.</p>
+                        <div class="text-xs text-secondary-500 mb-4">
+                            <span>43 families</span> • <span>Updated monthly</span>
+                        </div>
+                        <button onclick="downloadCADLibrary('revit')" class="btn-primary text-sm w-full">Download Families</button>
+                    </div>
+
+                    <!-- SketchUp Library -->
+                    <div class="card-elevated text-center group hover:shadow-industrial transition-all">
+                        <div class="bg-secondary-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-subheading font-headline font-bold text-primary mb-2">SketchUp Models</h3>
+                        <p class="text-secondary-600 text-sm mb-4">3D models for visualization and presentation purposes with realistic materials.</p>
+                        <div class="text-xs text-secondary-500 mb-4">
+                            <span>31 models</span> • <span>Updated monthly</span>
+                        </div>
+                        <button onclick="downloadCADLibrary('sketchup')" class="btn-secondary text-sm w-full">Download Models</button>
+                    </div>
+
+                    <!-- Generic CAD -->
+                    <div class="card-elevated text-center group hover:shadow-industrial transition-all">
+                        <div class="bg-success-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-success-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-subheading font-headline font-bold text-primary mb-2">Generic CAD</h3>
+                        <p class="text-secondary-600 text-sm mb-4">Universal formats including STEP, IGES, and PDF technical drawings.</p>
+                        <div class="text-xs text-secondary-500 mb-4">
+                            <span>15 formats</span> • <span>Updated as needed</span>
+                        </div>
+                        <button onclick="downloadCADLibrary('generic')" class="btn-success text-sm w-full">Download All</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specification Sheets Section -->
+            <div id="specs-section" class="resource-section mb-16">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-display font-headline font-bold text-primary">Specification Sheets</h2>
+                    <span class="text-sm text-secondary-600 bg-secondary-100 px-3 py-1 rounded-full">89 Products</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Main Distribution Panels -->
+                    <div class="card-elevated group hover:shadow-industrial transition-all">
+                        <div class="relative mb-4">
+                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=400&auto=format&fit=crop" alt="Main distribution panel specifications" class="w-full h-32 object-cover rounded-lg" onerror="this.src='https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=400'; this.onerror=null;" />
+                            <div class="absolute top-2 right-2 bg-primary text-white px-2 py-1 rounded text-xs font-inter font-semibold">PDF</div>
+                        </div>
+                        <h3 class="text-heading font-headline font-bold text-primary mb-3">Main Distribution Panels</h3>
+                        <p class="text-secondary-600 mb-4 text-sm">Complete specifications for 400A to 4000A main distribution panels including dimensions, ratings, and options.</p>
+                        <div class="flex items-center justify-between text-xs text-secondary-500 mb-4">
+                            <span>23 models</span>
+                            <span>Updated: Aug 2025</span>
+                        </div>
+                        <button onclick="downloadSpecSheet('main-distribution')" class="w-full btn-primary text-sm">Download Specs</button>
+                    </div>
+
+                    <!-- Motor Control Centers -->
+                    <div class="card-elevated group hover:shadow-industrial transition-all">
+                        <div class="relative mb-4">
+                            <img src="https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Motor control center specifications" class="w-full h-32 object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop'; this.onerror=null;" />
+                            <div class="absolute top-2 right-2 bg-primary text-white px-2 py-1 rounded text-xs font-inter font-semibold">PDF</div>
+                        </div>
+                        <h3 class="text-heading font-headline font-bold text-primary mb-3">Motor Control Centers</h3>
+                        <p class="text-secondary-600 mb-4 text-sm">Detailed specifications for industrial motor control centers with various starter configurations and control options.</p>
+                        <div class="flex items-center justify-between text-xs text-secondary-500 mb-4">
+                            <span>18 models</span>
+                            <span>Updated: Sep 2025</span>
+                        </div>
+                        <button onclick="downloadSpecSheet('motor-control')" class="w-full btn-primary text-sm">Download Specs</button>
+                    </div>
+
+                    <!-- Switchgear -->
+                    <div class="card-elevated group hover:shadow-industrial transition-all">
+                        <div class="relative mb-4">
+                            <img src="https://images.pixabay.com/photo/2014/12/22/10/04/factory-577166_1280.jpg" alt="Switchgear specifications" class="w-full h-32 object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=400&auto=format&fit=crop'; this.onerror=null;" />
+                            <div class="absolute top-2 right-2 bg-primary text-white px-2 py-1 rounded text-xs font-inter font-semibold">PDF</div>
+                        </div>
+                        <h3 class="text-heading font-headline font-bold text-primary mb-3">Medium Voltage Switchgear</h3>
+                        <p class="text-secondary-600 mb-4 text-sm">Comprehensive specifications for 5kV to 38kV switchgear including arc-resistant designs and protection schemes.</p>
+                        <div class="flex items-center justify-between text-xs text-secondary-500 mb-4">
+                            <span>12 models</span>
+                            <span>Updated: Jul 2025</span>
+                        </div>
+                        <button onclick="downloadSpecSheet('switchgear')" class="w-full btn-primary text-sm">Download Specs</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Resources Section -->
+            <div class="bg-surface rounded-lg p-8 mb-16">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-display font-headline font-bold text-primary">Video Resources</h2>
+                    <span class="text-sm text-secondary-600 bg-white px-3 py-1 rounded-full">12 Videos</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Installation Best Practices -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-card group hover:shadow-industrial transition-all">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=400&auto=format&fit=crop" alt="Installation best practices video" class="w-full h-40 object-cover" onerror="this.src='https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=400'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button onclick="playVideo('installation-practices')" class="bg-white text-primary rounded-full p-4 hover:bg-secondary-50 transition-colors">
+                                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-xs">12:34</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-heading font-headline font-bold text-primary mb-2">Installation Best Practices</h3>
+                            <p class="text-secondary-600 text-sm mb-4">Step-by-step guide to proper electrical panel installation techniques and safety protocols.</p>
+                            <div class="flex items-center text-xs text-secondary-500">
+                                <span>1,247 views</span>
+                                <span class="mx-2">•</span>
+                                <span>Added Aug 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Facility Tour -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-card group hover:shadow-industrial transition-all">
+                        <div class="relative">
+                            <img src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Manufacturing facility tour video" class="w-full h-40 object-cover" onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button onclick="playVideo('facility-tour')" class="bg-white text-primary rounded-full p-4 hover:bg-secondary-50 transition-colors">
+                                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-xs">8:45</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-heading font-headline font-bold text-primary mb-2">Manufacturing Facility Tour</h3>
+                            <p class="text-secondary-600 text-sm mb-4">Behind-the-scenes look at our state-of-the-art manufacturing processes and quality control.</p>
+                            <div class="flex items-center text-xs text-secondary-500">
+                                <span>892 views</span>
+                                <span class="mx-2">•</span>
+                                <span>Added Sep 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Troubleshooting Guide -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-card group hover:shadow-industrial transition-all">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=400&auto=format&fit=crop" alt="Troubleshooting guide video" class="w-full h-40 object-cover" onerror="this.src='https://images.pixabay.com/photo/2017/06/10/07/18/list-2389219_1280.png'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button onclick="playVideo('troubleshooting')" class="bg-white text-primary rounded-full p-4 hover:bg-secondary-50 transition-colors">
+                                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-xs">15:22</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-heading font-headline font-bold text-primary mb-2">Troubleshooting Common Issues</h3>
+                            <p class="text-secondary-600 text-sm mb-4">Expert guidance on diagnosing and resolving common electrical panel problems and maintenance.</p>
+                            <div class="flex items-center text-xs text-secondary-500">
+                                <span>1,456 views</span>
+                                <span class="mx-2">•</span>
+                                <span>Added Jul 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 bg-primary text-white">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-display font-headline font-bold mb-4">Stay Updated with Latest Resources</h2>
+            <p class="text-body-lg opacity-90 mb-8">Get notified when we publish new engineering guides, specification updates, and technical resources.</p>
+            <div class="max-w-md mx-auto flex gap-4">
+                <input type="email" placeholder="Enter your email address" class="flex-1 px-4 py-3 text-secondary-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" />
+                <button class="btn-accent px-6 py-3 whitespace-nowrap">Subscribe</button>
+            </div>
+            <p class="text-sm opacity-75 mt-4">No spam, unsubscribe anytime. We respect your privacy.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <svg class="h-8 w-8 text-accent" viewBox="0 0 40 40" fill="currentColor">
+                            <rect x="4" y="8" width="32" height="24" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <rect x="8" y="12" width="6" height="4" fill="currentColor"/>
+                            <rect x="16" y="12" width="6" height="4" fill="currentColor"/>
+                            <rect x="24" y="12" width="6" height="4" fill="currentColor"/>
+                            <rect x="8" y="20" width="6" height="4" fill="currentColor"/>
+                            <rect x="16" y="20" width="6" height="4" fill="currentColor"/>
+                            <rect x="24" y="20" width="6" height="4" fill="currentColor"/>
+                            <circle cx="32" cy="16" r="2" fill="currentColor"/>
+                            <path d="M32 20v8" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="ml-3 text-xl font-headline font-bold">ElectroPanel Pro</span>
+                    </div>
+                    <p class="text-secondary-300 mb-6 max-w-md">Powering critical infrastructure with precision-engineered electrical panels and comprehensive engineering services since 1999.</p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-secondary-400 hover:text-accent transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-400 hover:text-accent transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-headline font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="project_portfolio.html" class="text-secondary-300 hover:text-accent transition-colors">Project Portfolio</a></li>
+                        <li><a href="custom_panel_design.html" class="text-secondary-300 hover:text-accent transition-colors">Custom Design</a></li>
+                        <li><a href="about_capabilities.html" class="text-secondary-300 hover:text-accent transition-colors">Our Capabilities</a></li>
+                        <li><a href="technical_resources.html" class="text-secondary-300 hover:text-accent transition-colors">Technical Resources</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-headline font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-secondary-300">
+                        <li>1-800-ELECTRO</li>
+                        <li>info@electropanelpro.com</li>
+                        <li>24/7 Emergency Support</li>
+                        <li class="pt-2">
+                            <a href="contact_quote_request.html" class="text-accent hover:text-accent-400 transition-colors font-inter font-semibold">Request Quote →</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-secondary-700 mt-12 pt-8 text-center text-secondary-400">
+                <p>&copy; 2025 ElectroPanel Pro. All Rights Reserved. | Powering Progress Since 1999</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Download Modal -->
+    <div id="download-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-md w-full p-6">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-heading font-headline font-bold text-primary">Download Resource</h3>
+                <button onclick="closeDownloadModal()" class="text-secondary-600 hover:text-secondary-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <p class="text-secondary-600 mb-6">Please provide your contact information to access this technical resource.</p>
+            <form id="download-form" onsubmit="processDownload(event)">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-inter font-semibold text-secondary-700 mb-2">Name *</label>
+                        <input type="text" required class="input-field" placeholder="Your full name" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-inter font-semibold text-secondary-700 mb-2">Email *</label>
+                        <input type="email" required class="input-field" placeholder="your.email@company.com" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-inter font-semibold text-secondary-700 mb-2">Company</label>
+                        <input type="text" class="input-field" placeholder="Your company name" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-inter font-semibold text-secondary-700 mb-2">Role</label>
+                        <select class="input-field">
+                            <option value>Select your role</option>
+                            <option value="engineer">Electrical Engineer</option>
+                            <option value="manager">Engineering Manager</option>
+                            <option value="procurement">Procurement Specialist</option>
+                            <option value="facility">Facility Manager</option>
+                            <option value="consultant">Consultant</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex gap-4 mt-6">
+                    <button type="button" onclick="closeDownloadModal()" class="flex-1 btn-secondary">Cancel</button>
+                    <button type="submit" class="flex-1 btn-primary">Download</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Filter Resources
+        function filterResources(category) {
+            // Update active tab
+            document.querySelectorAll('.filter-tab').forEach(tab => {
+                tab.classList.remove('active', 'text-primary', 'border-primary');
+                tab.classList.add('text-secondary-600', 'border-transparent');
+            });
+            
+            event.target.classList.add('active', 'text-primary', 'border-primary');
+            event.target.classList.remove('text-secondary-600', 'border-transparent');
+
+            // Show/hide sections based on filter
+            const sections = document.querySelectorAll('.resource-section');
+            sections.forEach(section => {
+                if (category === 'all') {
+                    section.style.display = 'block';
+                } else {
+                    const sectionId = section.id;
+                    if (sectionId.includes(category)) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // Calculator Functions
+        function openCalculator(type) {
+            alert(`Opening ${type} calculator... This would launch an interactive tool in a real implementation.`);
+        }
+
+        function openChecklist() {
+            alert('Opening code compliance checklist... This would show an interactive checklist in a real implementation.');
+        }
+
+        // Download Functions
+        function downloadResource(resource) {
+            alert(`Downloading ${resource}... This would trigger a direct download in a real implementation.`);
+        }
+
+        function downloadGatedResource(resource) {
+            document.getElementById('download-modal').classList.remove('hidden');
+        }
+
+        function downloadCADLibrary(format) {
+            document.getElementById('download-modal').classList.remove('hidden');
+        }
+
+        function downloadSpecSheet(product) {
+            document.getElementById('download-modal').classList.remove('hidden');
+        }
+
+        // Video Functions
+        function playVideo(videoId) {
+            alert(`Playing video: ${videoId}... This would open a video player in a real implementation.`);
+        }
+
+        // Modal Functions
+        function closeDownloadModal() {
+            document.getElementById('download-modal').classList.add('hidden');
+        }
+
+        function processDownload(event) {
+            event.preventDefault();
+            alert('Thank you! Your download will begin shortly and we\'ll send you updates on new resources.');
+            closeDownloadModal();
+        }
+
+        // Search Functionality
+        document.getElementById('resource-search').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            // In a real implementation, this would filter the displayed resources
+            console.log('Searching for:', searchTerm);
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('download-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeDownloadModal();
+            }
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

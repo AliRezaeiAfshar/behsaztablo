@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'iran-sharp';
+  src: url(../IRANSharpRegular.ttf);
+}
+.iran-sharp {
+  font-family: 'iran-sharp', iran-sharp;
+}
+
+:root {
+  /* Primary Colors */
+  --color-primary: #1E3A8A; /* blue-800 */
+  --color-primary-50: #EFF6FF; /* blue-50 */
+  --color-primary-100: #DBEAFE; /* blue-100 */
+  --color-primary-500: #3B82F6; /* blue-500 */
+  --color-primary-600: #2563EB; /* blue-600 */
+  --color-primary-700: #1D4ED8; /* blue-700 */
+  --color-primary-800: #1E40AF; /* blue-800 */
+  --color-primary-900: #1E3A8A; /* blue-900 */
+
+  /* Secondary Colors */
+  --color-secondary: #475569; /* slate-600 */
+  --color-secondary-50: #F8FAFC; /* slate-50 */
+  --color-secondary-100: #F1F5F9; /* slate-100 */
+  --color-secondary-200: #E2E8F0; /* slate-200 */
+  --color-secondary-300: #CBD5E1; /* slate-300 */
+  --color-secondary-400: #94A3B8; /* slate-400 */
+  --color-secondary-500: #64748B; /* slate-500 */
+  --color-secondary-600: #475569; /* slate-600 */
+  --color-secondary-700: #334155; /* slate-700 */
+  --color-secondary-800: #1E293B; /* slate-800 */
+  --color-secondary-900: #0F172A; /* slate-900 */
+
+  /* Accent Colors */
+  --color-accent: #EA580C; /* orange-600 */
+  --color-accent-50: #FFF7ED; /* orange-50 */
+  --color-accent-100: #FFEDD5; /* orange-100 */
+  --color-accent-200: #FED7AA; /* orange-200 */
+  --color-accent-300: #FDBA74; /* orange-300 */
+  --color-accent-400: #FB923C; /* orange-400 */
+  --color-accent-500: #F97316; /* orange-500 */
+  --color-accent-600: #EA580C; /* orange-600 */
+  --color-accent-700: #C2410C; /* orange-700 */
+  --color-accent-800: #9A3412; /* orange-800 */
+  --color-accent-900: #7C2D12; /* orange-900 */
+
+  /* Background Colors */
+  --color-background: #FFFFFF; /* white */
+  --color-surface: #F8FAFC; /* slate-50 */
+
+  /* Text Colors */
+  --color-text-primary: #0F172A; /* slate-900 */
+  --color-text-secondary: #64748B; /* slate-500 */
+
+  /* Status Colors */
+  --color-success: #059669; /* emerald-600 */
+  --color-success-50: #ECFDF5; /* emerald-50 */
+  --color-success-100: #D1FAE5; /* emerald-100 */
+  --color-success-500: #10B981; /* emerald-500 */
+  --color-success-600: #059669; /* emerald-600 */
+  --color-success-700: #047857; /* emerald-700 */
+
+  --color-warning: #D97706; /* amber-600 */
+  --color-warning-50: #FFFBEB; /* amber-50 */
+  --color-warning-100: #FEF3C7; /* amber-100 */
+  --color-warning-500: #F59E0B; /* amber-500 */
+  --color-warning-600: #D97706; /* amber-600 */
+  --color-warning-700: #B45309; /* amber-700 */
+
+  --color-error: #DC2626; /* red-600 */
+  --color-error-50: #FEF2F2; /* red-50 */
+  --color-error-100: #FEE2E2; /* red-100 */
+  --color-error-500: #EF4444; /* red-500 */
+  --color-error-600: #DC2626; /* red-600 */
+  --color-error-700: #B91C1C; /* red-700 */
+
+  /* Shadows */
+  --shadow-subtle: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  /* Transitions */
+  --transition-smooth: 300ms ease-in-out;
+  --transition-quick: 200ms ease-in-out;
+}
+
+@layer base {
+  html {
+    font-family: iran-sharp;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: iran-sharp;
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+  
+  .font-headline {
+    font-family: iran-sharp;
+  }
+  
+  .font-body {
+    font-family: iran-sharp;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-sans font-sans px-6 py-3 rounded-lg transition-all duration-300 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white font-sans font-sans px-6 py-3 rounded-lg transition-all duration-300 hover:bg-secondary-700 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-white font-sans font-sans px-6 py-3 rounded-lg transition-all duration-300 hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2;
+  }
+  
+  .card {
+    @apply bg-surface rounded-lg p-6 transition-all duration-300;
+  }
+  
+  .card-elevated {
+    @apply bg-white rounded-lg p-6 shadow-subtle transition-all duration-300;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-secondary-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-quick {
+    transition: var(--transition-quick);
+  }
+  
+  .shadow-industrial {
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .border-industrial {
+    border: 1px solid var(--color-secondary-200);
+  }
+}
