@@ -79,4 +79,3 @@ The app is built with responsive design using Tailwind CSS breakpoints:
 - Built by Ali Rezaei Afshar
 - Powered by HTML and Tailwind CSS
 
-Built with ❤️ on Rocket.new
