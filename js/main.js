@@ -78,3 +78,68 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 3000);
     }
 });
+
+// js/main.js
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    // --- Toast Notification Function ---
+    function showToast(message, isSuccess = true) {
+        const toast = document.getElementById('toast-notification');
+        const toastMessage = document.getElementById('toast-message');
+
+        if (toast && toastMessage) {
+            toastMessage.textContent = message;
+            
+            // Change color for success or error
+            if (isSuccess) {
+                toast.classList.remove('bg-error');
+                toast.classList.add('bg-success-600');
+            } else {
+                toast.classList.remove('bg-success-600');
+                toast.classList.add('bg-error');
+            }
+
+            toast.classList.add('toast-show');
+
+            setTimeout(() => {
+                toast.classList.remove('toast-show');
+            }, 5000);
+        }
+    }
+
+    // --- Netlify AJAX Form Submission ---
+    const quoteForm = document.getElementById('quote-form');
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default browser submission
+
+            const formData = new FormData(quoteForm);
+            const submitButton = quoteForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Sending...';
+
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            })
+            .then(() => {
+                showToast("درخواست شما با موفقیت ارسال شد!");
+                quoteForm.reset();
+            })
+            .catch((error) => {
+                showToast("خطا در ارسال. لطفاً دوباره تلاش کنید.", false);
+                console.error(error);
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            });
+        });
+    }
+
+    // ... (rest of your main.js code for mobile menu, nav links, etc.) ...
+});

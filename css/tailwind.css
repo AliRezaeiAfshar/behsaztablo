@@ -57,6 +57,10 @@
         position: relative;
         z-index: 2;
     }
+
+    .toast-show {
+        @apply opacity-100 translate-y-0;
+    }
 }
 
 :root {

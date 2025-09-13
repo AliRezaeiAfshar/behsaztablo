@@ -12,6 +12,13 @@
             src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Felectropan3871back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
     </head>
     <body class="font-sans text-text-primary bg-background">
+        <!-- ADD THIS TOAST CONTAINER -->
+        <div id="toast-notification" class="fixed top-5 right-5 bg-success-600 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-x-3 opacity-0 transition-all duration-300 transform translate-y-[-20px]">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span id="toast-message">Your message has been sent!</span>
+        </div>
         <!-- Navigation Header -->
         <header class="bg-white shadow-card sticky top-0 z-50">
             <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -152,7 +159,7 @@
                                     ارسال کنند.</p>
                             </div>
 
-                            <form id="quote-form" class="space-y-6">
+                            <form id="quote-form" name="contact" netlify class="space-y-6">
                                 <!-- Contact Information -->
                                 <div
                                     class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -448,7 +455,7 @@
                                 </div>
 
                                 <!-- File Upload -->
-                                <div class="border-t border-secondary-200 pt-8">
+                                <!-- <div class="border-t border-secondary-200 pt-8">
                                     <div>
                                         <label
                                             class="block text-sm font-sans font-semibold text-secondary-700 mb-2">می‌توانید
@@ -485,6 +492,15 @@
                                                     each</p>
                                             </div>
                                         </div>
+                                    </div>
+                                </div> -->
+
+                                <!-- Free Alternative: Link Input -->
+                                <div class="border-t border-secondary-200 pt-8">
+                                    <div>
+                                        <label for="file-link" class="block text-sm font-sans font-semibold text-secondary-700 mb-2">لینک فایل‌های پیوست</label>
+                                        <input type="url" id="file-link" name="file-link" class="input-field" placeholder="لینک فایل را از گوگل درایو یا دراپ‌باکس جایگذاری کنید" />
+                                        <p class="mt-1 text-xs text-secondary-500">Please upload your files to a service like Google Drive and paste the shareable link here.</p>
                                     </div>
                                 </div>
 
