@@ -13,6 +13,52 @@
   font-family: 'iran-sharp', iran-sharp;
 }
 
+@layer components {
+    .bg-metrics {
+        position: relative; /* This is crucial for positioning the overlay */
+        background-image: url('../assets/images/apply-bg.jpg'); /* <-- CHANGE THIS to your image path */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* This creates the cool parallax effect */
+    }
+
+    .bg-metrics::before {
+        content: '';
+        position: absolute;
+        inset: 0; /* Makes the overlay cover the entire section */
+        background-color: rgba(30, 58, 138, 0.85); /* This is your primary color with 85% opacity */
+        z-index: 1; /* Sits on top of the background image */
+    }
+
+    /* We need to make sure the content sits on top of the overlay */
+    .bg-metrics > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .bg-projects-profile {
+        position: relative; /* This is crucial for positioning the overlay */
+        background-image: url('../assets/images/heading-bg.webp'); /* <-- CHANGE THIS to your image path */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* This creates the cool parallax effect */
+    }
+
+    .bg-projects-profile::before {
+        content: '';
+        position: absolute;
+        inset: 0; /* Makes the overlay cover the entire section */
+        background-color: rgba(30, 58, 138, 0.85); /* This is your primary color with 85% opacity */
+        z-index: 1; /* Sits on top of the background image */
+    }
+
+    /* We need to make sure the content sits on top of the overlay */
+    .bg-projects-profile > * {
+        position: relative;
+        z-index: 2;
+    }
+}
+
 :root {
   /* Primary Colors */
   --color-primary: #1E3A8A; /* blue-800 */

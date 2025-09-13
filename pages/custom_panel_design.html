@@ -30,7 +30,7 @@
                     <div class="hidden md:block flex-grow">
                         <div class="flex justify-end items-baseline gap-x-3">
                             <a href="homepage.html"
-                                class="text-primary font-sans font-semibold px-3 py-2 rounded-md text-sm iran-sharp">خانه</a>
+                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm iran-sharp">خانه</a>
                             <a href="project_portfolio.html"
                                 class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">پروژه
                                 ها</a>
@@ -43,7 +43,7 @@
                             <a href="technical_resources.html"
                                 class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">بلاگ</a>
                             <a href="contact_quote_request.html"
-                                class="btn-accent text-sm">ثبت درخواست</a>
+                                class="btn-accent text-sm text-white">ثبت درخواست</a>
                         </div>
                     </div>
 
@@ -1203,87 +1203,10 @@
                 </div>
             </footer>
 
-            <script>
-        // Mobile Menu Toggle
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        }
+            <script src="../js/main.js"></script>
 
-        // Panel Configurator Form Handler
-        document.getElementById('panel-configurator').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const voltage = formData.get('voltage');
-            const amperage = formData.get('amperage');
-            const environment = formData.get('environment');
-            const application = formData.get('application');
-            const features = formData.getAll('features');
-            const notes = formData.get('notes');
-            
-            // Generate preliminary specifications
-            let specifications = [];
-            
-            if (voltage) {
-                specifications.push(`<strong>Voltage:</strong> ${voltage}`);
-            }
-            
-            if (amperage) {
-                specifications.push(`<strong>Main Breaker:</strong> ${amperage}`);
-            }
-            
-            if (environment) {
-                const envMap = {
-                    'indoor-standard': 'NEMA 1 Indoor Standard',
-                    'indoor-harsh': 'NEMA 12 Dust-Tight',
-                    'outdoor': 'NEMA 3R Weather Resistant',
-                    'hazardous': 'Class I Division 1 Explosion-Proof',
-                    'washdown': 'NEMA 4X Washdown Rated',
-                    'seismic': 'IBC Seismic Compliant'
-                };
-                specifications.push(`<strong>Enclosure:</strong> ${envMap[environment]}`);
-            }
-            
-            if (application) {
-                const appMap = {
-                    'healthcare': 'Healthcare/Life Safety Compliant',
-                    'manufacturing': 'Industrial Manufacturing Grade',
-                    'datacenter': 'Mission-Critical Data Center',
-                    'commercial': 'Commercial Building Standard',
-                    'industrial': 'Heavy Industrial Application',
-                    'utility': 'Utility/Power Generation Grade'
-                };
-                specifications.push(`<strong>Application:</strong> ${appMap[application]}`);
-            }
-            
-            if (features.length > 0) {
-                const featureMap = {
-                    'monitoring': 'Power Quality Monitoring',
-                    'redundancy': 'Redundant Feed Capability',
-                    'arc-flash': 'Arc Flash Protection',
-                    'remote-control': 'Remote Control Interface'
-                };
-                const featureList = features.map(f => featureMap[f]).join(', ');
-                specifications.push(`<strong>Special Features:</strong> ${featureList}`);
-            }
-            
-            // Estimated timeline
-            specifications.push(`<strong>Estimated Timeline:</strong> 8-12 weeks from approval`);
-            specifications.push(`<strong>Compliance:</strong> UL Listed, NEC Compliant`);
-            
-            // Display results
-            const resultsContent = document.getElementById('results-content');
-            resultsContent.innerHTML = specifications.map(spec => `<div>${spec}</div>`).join('');
-            
-            const resultsSection = document.getElementById('configurator-results');
-            resultsSection.classList.remove('hidden');
-            
-            // Scroll to results
-            resultsSection.scrollIntoView({ behavior: 'smooth' });
-        });
-    </script>
-            <script id="dhws-dataInjector"
-                src="../public/dhws-data-injector.js"></script>
-        </body>
-    </html>
+        <!-- This rocket script can stay if it's needed on all pages -->
+        <script id="dhws-dataInjector"
+            src="../public/dhws-data-injector.js"></script>
+    </body>
+</html>

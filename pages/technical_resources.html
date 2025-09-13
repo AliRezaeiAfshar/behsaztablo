@@ -27,7 +27,7 @@
                     <div class="hidden md:block flex-grow">
                         <div class="flex justify-end items-baseline gap-x-3">
                             <a href="homepage.html"
-                                class="text-primary font-sans font-semibold px-3 py-2 rounded-md text-sm iran-sharp">خانه</a>
+                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm iran-sharp">خانه</a>
                             <a href="project_portfolio.html"
                                 class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">پروژه
                                 ها</a>
@@ -40,7 +40,7 @@
                             <a href="technical_resources.html"
                                 class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">بلاگ</a>
                             <a href="contact_quote_request.html"
-                                class="btn-accent text-sm">ثبت درخواست</a>
+                                class="btn-accent text-sm text-white">ثبت درخواست</a>
                         </div>
                     </div>
 
@@ -582,96 +582,10 @@
         </div>
     </div>
 
-    <script>
-        // Mobile Menu Toggle
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        }
+    <script src="../js/main.js"></script>
 
-        // Filter Resources
-        function filterResources(category) {
-            // Update active tab
-            document.querySelectorAll('.filter-tab').forEach(tab => {
-                tab.classList.remove('active', 'text-primary', 'border-primary');
-                tab.classList.add('text-secondary-600', 'border-transparent');
-            });
-            
-            event.target.classList.add('active', 'text-primary', 'border-primary');
-            event.target.classList.remove('text-secondary-600', 'border-transparent');
-
-            // Show/hide sections based on filter
-            const sections = document.querySelectorAll('.resource-section');
-            sections.forEach(section => {
-                if (category === 'all') {
-                    section.style.display = 'block';
-                } else {
-                    const sectionId = section.id;
-                    if (sectionId.includes(category)) {
-                        section.style.display = 'block';
-                    } else {
-                        section.style.display = 'none';
-                    }
-                }
-            });
-        }
-
-        // Calculator Functions
-        function openCalculator(type) {
-            alert(`Opening ${type} calculator... This would launch an interactive tool in a real implementation.`);
-        }
-
-        function openChecklist() {
-            alert('Opening code compliance checklist... This would show an interactive checklist in a real implementation.');
-        }
-
-        // Download Functions
-        function downloadResource(resource) {
-            alert(`Downloading ${resource}... This would trigger a direct download in a real implementation.`);
-        }
-
-        function downloadGatedResource(resource) {
-            document.getElementById('download-modal').classList.remove('hidden');
-        }
-
-        function downloadCADLibrary(format) {
-            document.getElementById('download-modal').classList.remove('hidden');
-        }
-
-        function downloadSpecSheet(product) {
-            document.getElementById('download-modal').classList.remove('hidden');
-        }
-
-        // Video Functions
-        function playVideo(videoId) {
-            alert(`Playing video: ${videoId}... This would open a video player in a real implementation.`);
-        }
-
-        // Modal Functions
-        function closeDownloadModal() {
-            document.getElementById('download-modal').classList.add('hidden');
-        }
-
-        function processDownload(event) {
-            event.preventDefault();
-            alert('Thank you! Your download will begin shortly and we\'ll send you updates on new resources.');
-            closeDownloadModal();
-        }
-
-        // Search Functionality
-        document.getElementById('resource-search').addEventListener('input', function(e) {
-            const searchTerm = e.target.value.toLowerCase();
-            // In a real implementation, this would filter the displayed resources
-            console.log('Searching for:', searchTerm);
-        });
-
-        // Close modal when clicking outside
-        document.getElementById('download-modal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeDownloadModal();
-            }
-        });
-    </script>
-<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
-</body>
+        <!-- This rocket script can stay if it's needed on all pages -->
+        <script id="dhws-dataInjector"
+            src="../public/dhws-data-injector.js"></script>
+    </body>
 </html>

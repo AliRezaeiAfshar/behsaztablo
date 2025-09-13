@@ -27,7 +27,7 @@
                     <div class="hidden md:block flex-grow">
                         <div class="flex justify-end items-baseline gap-x-3">
                             <a href="homepage.html"
-                                class="text-primary font-sans font-semibold px-3 py-2 rounded-md text-sm iran-sharp">خانه</a>
+                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm iran-sharp">خانه</a>
                             <a href="project_portfolio.html"
                                 class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">پروژه
                                 ها</a>
@@ -40,7 +40,7 @@
                             <a href="technical_resources.html"
                                 class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">بلاگ</a>
                             <a href="contact_quote_request.html"
-                                class="btn-accent text-sm">ثبت درخواست</a>
+                                class="btn-accent text-sm text-white">ثبت درخواست</a>
                         </div>
                     </div>
 
@@ -875,32 +875,10 @@
                 </div>
             </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        }
+    <script src="../js/main.js"></script>
 
-        // Virtual Tour Modal (placeholder functionality)
-        function openVirtualTour(section) {
-            alert(`Opening virtual tour for ${section} section. This would launch a 360-degree interactive tour in a production environment.`);
-        }
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
-<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
-</body>
+        <!-- This rocket script can stay if it's needed on all pages -->
+        <script id="dhws-dataInjector"
+            src="../public/dhws-data-injector.js"></script>
+    </body>
 </html>
