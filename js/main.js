@@ -1,4 +1,4 @@
-// js/main.js - Cleaned Up Version
+// js/main.js - Final Version with Hover Effect Logic
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -10,16 +10,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // --- Active Navigation Link ---
     const currentPageFile = window.location.pathname.split('/').pop() || 'homepage.html';
-    const navLinks = document.querySelectorAll('header nav a:not(.btn-accent)');
+    // We now select all links with the .nav-link class
+    const navLinks = document.querySelectorAll('header nav .nav-link');
 
     navLinks.forEach(link => {
         if (link.hasAttribute('href')) {
             const linkFile = link.getAttribute('href').split('/').pop();
+            
             if (linkFile === currentPageFile) {
-                link.classList.add('text-primary', 'font-semibold');
+                // For the active link, add the 'active' class and set the color
+                link.classList.add('active', 'text-primary');
                 link.classList.remove('text-secondary-600');
             } else {
-                link.classList.remove('text-primary', 'font-semibold');
+                // For inactive links, ensure 'active' is removed
+                link.classList.remove('active', 'text-primary');
                 link.classList.add('text-secondary-600');
             }
         }
@@ -50,4 +54,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         setInterval(() => plusSlides(1), 3000);
     }
+    
+    // NOTE: The toast/formspree logic has been removed as per your request.
 });
