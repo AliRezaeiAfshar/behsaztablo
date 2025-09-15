@@ -53,6 +53,28 @@
         z-index: 2;
     }
 
+    .bg-about {
+        position: relative; /* This is crucial for positioning the overlay */
+        background-image: url('../assets/images/about-us.webp'); /* <-- CHANGE THIS to your image path */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* This creates the cool parallax effect */
+    }
+
+    .bg-about::before {
+        content: '';
+        position: absolute;
+        inset: 0; /* Makes the overlay cover the entire section */
+        background-color: rgba(30, 58, 138, 0.85); /* This is your primary color with 85% opacity */
+        z-index: 1; /* Sits on top of the background image */
+    }
+
+    /* We need to make sure the content sits on top of the overlay */
+    .bg-about > * {
+        position: relative;
+        z-index: 2;
+    }
+
     .bg-projects-profile {
         position: relative; /* This is crucial for positioning the overlay */
         background-image: url('../assets/images/heading-bg.webp'); /* <-- CHANGE THIS to your image path */

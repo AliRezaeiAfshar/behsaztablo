@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/main.css" />
 <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Felectropan3871back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
 </head>
-<body class="font-body text-text-primary bg-background">
+<body class="font-sans text-text-primary bg-background">
     <!-- Navigation Header -->
         <header id="main-header" class="bg-white shadow-card sticky top-0 z-50 transition-all duration-300">
             <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,128 +67,179 @@
         </header>
 
     <!-- Hero Section -->
-    <section class="relative py-20 bg-primary text-white overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=2940" alt="ElectroPanel Pro manufacturing facility" class="w-full h-full object-cover opacity-20" onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
-        </div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-hero font-headline font-bold mb-6">Engineering Excellence Since 1999</h1>
-                <p class="text-body-lg mb-8 max-w-3xl mx-auto opacity-90">Your trusted electrical infrastructure partners, delivering precision-engineered solutions that power critical operations across industries.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#facility-tour" class="btn-accent text-lg px-8 py-4">Take Virtual Tour</a>
-                    <a href="contact_quote_request.html" class="bg-white text-primary font-inter font-semibold px-8 py-4 rounded-lg hover:bg-secondary-50 transition-colors">Request Consultation</a>
+<section class="relative py-20 text-white overflow-hidden">
+    <!-- Layer 1: Background Image -->
+    <img src="../assets/images/about-us.webp" alt="Engineer working on an electrical panel" class="absolute inset-0 w-full h-full object-cover">
+
+    <!-- Layer 2: Dark Overlay -->
+    <div class="absolute inset-0 bg-primary bg-opacity-60"></div>
+
+    <!-- Layer 3: Text Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h1 class="text-hero font-sans font-bold mb-6">درباره ما</h1>
+            <p class="text-body-lg mb-8 max-w-3xl mx-auto opacity-90">شریک قابل اعتماد شما در زیرساخت‌های برق، ارائه‌دهنده راه‌حل‌های مهندسی‌شده با دقت که عملیات حیاتی را در صنایع مختلف به‌کار می‌اندازند.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+
+                <!-- Card 1: Phone Number (Clickable) -->
+                <div class="relative bg-white bg-opacity-10 rounded-lg backdrop-blur-sm border border-white/20 text-right w-full sm:w-auto transition-all duration-300 hover:bg-opacity-20 hover:border-white/40">
+                    <a href="tel:+982188543614" class="block p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <p class="font-sans font-semibold text-lg">شماره تماس</p>
+                            <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                        </div>
+                        <p class="opacity-80" dir="ltr">021-88543614 - 09123456789</p>
+                    </a>
                 </div>
+
+                <!-- Card 2: Email (NOW CLICKABLE) -->
+                <div class="relative bg-white bg-opacity-10 rounded-lg backdrop-blur-sm border border-white/20 text-right w-full sm:w-auto transition-all duration-300 hover:bg-opacity-20 hover:border-white/40">
+                    <!-- WRAPPED content in an <a> tag with mailto: -->
+                    <a href="mailto:info@behsaztablo.ir" class="block p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <p class="font-sans font-semibold text-lg">ایمیل</p>
+                            <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                        </div>
+                        <p class="opacity-80">info@behsaztablo.ir</p>
+                    </a>
+                </div>
+
+                <!-- Card 3: Location (Clickable) -->
+                <div class="relative bg-white bg-opacity-10 rounded-lg backdrop-blur-sm border border-white/20 text-right w-full sm:w-auto transition-all duration-300 hover:bg-opacity-20 hover:border-white/40">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Behsaz+Tablo+Asia+Tehran" target="_blank" rel="noopener noreferrer" class="block p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <p class="font-sans font-semibold text-lg">دفتر مرکزی</p>
+                            <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <p class="opacity-80">تهران، خیابان نیلوفر</p>
+                    </a>
+                </div>
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Company Heritage Timeline -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-display font-headline font-bold text-primary mb-4">Our Journey of Innovation</h2>
-                <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto">From a small electrical engineering firm to a leading manufacturer of critical infrastructure solutions.</p>
-            </div>
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-display font-sans font-bold text-primary mb-4">مسیر ما</h2>
+            <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto">از یک شرکت مهندسی کوچک تا تولیدکننده‌ای پیشرو در زیرساخت‌های حیاتی برق.</p>
+        </div>
 
-            <div class="relative">
-                <!-- Timeline Line -->
-                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-secondary-200"></div>
+        <div class="relative">
+            <!-- Timeline Line -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-secondary-200"></div>
+            
+            <!-- Timeline Items -->
+            <div class="space-y-16">
                 
-                <!-- Timeline Items -->
-                <div class="space-y-16">
-                    <!-- 1999 - Founding -->
-                    <div class="relative flex items-center">
-                        <div class="flex-1 text-right pr-8">
-                            <div class="card-elevated">
-                                <h3 class="text-heading font-headline font-bold text-primary mb-2">1999 - Company Founded</h3>
-                                <p class="text-secondary-600">Electrical engineer Robert Chen establishes ElectroPanel Pro with a vision to revolutionize industrial electrical distribution.</p>
-                            </div>
-                        </div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-card"></div>
-                        <div class="flex-1 pl-8"></div>
-                    </div>
-
-                    <!-- 2003 - First Major Hospital Project -->
-                    <div class="relative flex items-center">
-                        <div class="flex-1 pr-8"></div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow-card"></div>
-                        <div class="flex-1 text-left pl-8">
-                            <div class="card-elevated">
-                                <h3 class="text-heading font-headline font-bold text-primary mb-2">2003 - Healthcare Breakthrough</h3>
-                                <p class="text-secondary-600">Completed first major hospital emergency power system, establishing our reputation in critical infrastructure.</p>
-                            </div>
+                <!-- 1379 - Founding -->
+                <div class="relative flex items-center">
+                    <div class="flex-1 text-right pr-8">
+                        <div class="card-elevated">
+                            <h3 class="text-heading font-sans font-bold text-primary mb-2">ثبت شرکت - ۱۳۷۹</h3>
+                            <!-- NEW PERSIAN DESCRIPTION -->
+                            <p class="text-secondary-600">شرکت بهساز تابلو آسیا با هدف ارائه راه‌حل‌های نوین و مهندسی‌شده در صنعت برق کشور تاسیس گردید. چشم‌انداز ما از همان ابتدا، ارتقاء کیفیت و ایمنی در زیرساخت‌های الکتریکی بود.</p>
                         </div>
                     </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-card"></div>
+                    <div class="flex-1 pl-8"></div>
+                </div>
 
-                    <!-- 2008 - Facility Expansion -->
-                    <div class="relative flex items-center">
-                        <div class="flex-1 text-right pr-8">
-                            <div class="card-elevated">
-                                <h3 class="text-heading font-headline font-bold text-primary mb-2">2008 - Manufacturing Expansion</h3>
-                                <p class="text-secondary-600">Opened 50,000 sq ft manufacturing facility with advanced testing laboratory and quality control systems.</p>
-                            </div>
-                        </div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-white shadow-card"></div>
-                        <div class="flex-1 pl-8"></div>
-                    </div>
-
-                    <!-- 2015 - Certifications -->
-                    <div class="relative flex items-center">
-                        <div class="flex-1 pr-8"></div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-success-600 rounded-full border-4 border-white shadow-card"></div>
-                        <div class="flex-1 text-left pl-8">
-                            <div class="card-elevated">
-                                <h3 class="text-heading font-headline font-bold text-primary mb-2">2015 - Industry Recognition</h3>
-                                <p class="text-secondary-600">Achieved UL listing, NEMA membership, and ISO 9001:2015 certification, setting new quality standards.</p>
-                            </div>
+                <!-- 1385 - Factory Upgrade -->
+                <div class="relative flex items-center">
+                    <div class="flex-1 pr-8"></div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow-card"></div>
+                    <div class="flex-1 text-left pl-8">
+                        <div class="card-elevated">
+                            <h3 class="text-heading font-sans font-bold text-primary mb-2">ارتقا محیط و ابزار کارخانه - ۱۳۸۵</h3>
+                            <!-- NEW PERSIAN DESCRIPTION -->
+                            <p class="text-secondary-600">با گسترش کارخانه و مدرن‌سازی تجهیزات تولیدی، توانستیم اولین پروژه بزرگ بیمارستانی خود را با موفقیت به اتمام برسانیم و جایگاه خود را در پروژه‌های حیاتی تثبیت کنیم.</p>
                         </div>
                     </div>
+                </div>
 
-                    <!-- 2020 - Digital Innovation -->
-                    <div class="relative flex items-center">
-                        <div class="flex-1 text-right pr-8">
-                            <div class="card-elevated">
-                                <h3 class="text-heading font-bold text-primary mb-2">2020 - Digital Innovation</h3>
-                                <p class="text-secondary-600">Launched advanced monitoring systems and IoT-enabled panels for predictive maintenance capabilities.</p>
-                            </div>
+                <!-- 1389 - Certifications -->
+                <div class="relative flex items-center">
+                    <div class="flex-1 text-right pr-8">
+                        <div class="card-elevated">
+                            <h3 class="text-heading font-sans font-bold text-primary mb-2">اخذ گواهینامه‌ها - ۱۳۸۹</h3>
+                            <!-- NEW PERSIAN DESCRIPTION -->
+                            <p class="text-secondary-600">در راستای تعهد به کیفیت، موفق به دریافت گواهینامه‌های معتبر ملی و بین‌المللی شدیم. این دستاورد، استانداردهای تولید ما را به سطح جدیدی ارتقا داد.</p>
                         </div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-card"></div>
-                        <div class="flex-1 pl-8"></div>
                     </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-white shadow-card"></div>
+                    <div class="flex-1 pl-8"></div>
+                </div>
 
-                    <!-- 2025 - Present -->
-                    <div class="relative flex items-center">
-                        <div class="flex-1 pr-8"></div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow-card"></div>
-                        <div class="flex-1 text-left pl-8">
-                            <div class="card-elevated">
-                                <h3 class="text-heading font-headline font-bold text-primary mb-2">2025 - Continued Excellence</h3>
-                                <p class="text-secondary-600">500+ projects completed with zero safety incidents, serving critical infrastructure nationwide.</p>
-                            </div>
+                <!-- 1393 - Major Partnerships -->
+                <div class="relative flex items-center">
+                    <div class="flex-1 pr-8"></div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-success-600 rounded-full border-4 border-white shadow-card"></div>
+                    <div class="flex-1 text-left pl-8">
+                        <div class="card-elevated">
+                            <h3 class="text-heading font-sans font-bold text-primary mb-2">همکاری با صنایع بزرگ - ۱۳۹۳</h3>
+                            <!-- NEW PERSIAN DESCRIPTION -->
+                            <p class="text-secondary-600">با کسب اعتماد شرکت‌های پیشرو در صنایع نفت، گاز و پتروشیمی، وارد فصل جدیدی از همکاری‌های استراتژیک شدیم و پروژه‌های بزرگی را در سطح ملی آغاز کردیم.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1395 - Team Expansion -->
+                <div class="relative flex items-center">
+                    <div class="flex-1 text-right pr-8">
+                        <div class="card-elevated">
+                            <h3 class="text-heading font-bold text-primary mb-2">گسترش و افزایش پرسنل - ۱۳۹۵</h3>
+                            <!-- NEW PERSIAN DESCRIPTION -->
+                            <p class="text-secondary-600">با گسترش دامنه فعالیت‌ها و افزایش تقاضا، تیم مهندسی و تولیدی خود را با جذب متخصصان برجسته تقویت کردیم تا پاسخگوی پروژه‌های پیچیده‌تر باشیم.</p>
+                        </div>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-card"></div>
+                    <div class="flex-1 pl-8"></div>
+                </div>
+
+                <!-- 1400 - Industry Leadership -->
+                <div class="relative flex items-center">
+                    <div class="flex-1 pr-8"></div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow-card"></div>
+                    <div class="flex-1 text-left pl-8">
+                        <div class="card-elevated">
+                            <h3 class="text-heading font-sans font-bold text-primary mb-2">رهبری در صنعت - ۱۴۰۰</h3>
+                            <!-- NEW PERSIAN DESCRIPTION -->
+                            <p class="text-secondary-600">با عبور از مرز ۱۰۰۰ پروژه موفق و حفظ رکورد بدون حادثه ایمنی، جایگاه خود را به عنوان یکی از رهبران قابل اعتماد صنعت تابلو برق در کشور تثبیت نمودیم.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Virtual Facility Tour -->
     <section id="facility-tour" class="py-20 bg-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-display font-headline font-bold text-primary mb-4">Virtual Facility Tour</h2>
-                <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto">Explore our state-of-the-art manufacturing facility, testing laboratory, and quality control areas.</p>
+                <h2 class="text-display font-sans font-bold text-primary mb-4">خدمات ما</h2>
+                <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto">از محصولات مدرن تولید، آزمایشگاه تخصصی و بخش‌های کنترل کیفیت ما دیدن کنید.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Manufacturing Floor -->
+                
                 <div class="card-elevated group hover:shadow-industrial transition-all">
                     <div class="relative overflow-hidden rounded-lg mb-6">
-                        <img src="https://images.pixabay.com/photo/2016/11/19/15/32/factory-1840496_1280.jpg" alt="Manufacturing floor with precision equipment" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;" />
-                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-inter font-semibold">360° View</div>
+                        <img src="../assets/images/products.webp" alt="Manufacturing floor with precision equipment" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;" />
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">360° View</div>
                     </div>
-                    <h3 class="text-heading font-headline font-bold text-primary mb-3">Manufacturing Floor</h3>
+                    <h3 class="text-heading font-sans font-bold text-primary mb-3">پست کامپکت</h3>
                     <p class="text-secondary-600 mb-4">50,000 sq ft of precision manufacturing space with automated assembly lines and quality control checkpoints.</p>
                     <ul class="text-sm text-secondary-600 space-y-2 mb-6">
                         <li class="flex items-center">
@@ -210,91 +261,90 @@
                             Real-time quality monitoring
                         </li>
                     </ul>
-                    <button class="text-accent font-inter font-semibold hover:text-accent-700 transition-colors" onclick="openVirtualTour('manufacturing')">Launch Virtual Tour →</button>
+                    <button class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors" onclick="openVirtualTour('manufacturing')">Launch Virtual Tour →</button>
                 </div>
 
-                <!-- Testing Laboratory -->
+                
                 <div class="card-elevated group hover:shadow-industrial transition-all">
                     <div class="relative overflow-hidden rounded-lg mb-6">
-                        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Advanced testing laboratory equipment" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;" />
-                        <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-inter font-semibold">360° View</div>
+                        <img src="../assets/images/products.webp" alt="Advanced testing laboratory equipment" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;" />
+                        <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">360° View</div>
                     </div>
-                    <h3 class="text-heading font-headline font-bold text-primary mb-3">Testing Laboratory</h3>
+                    <h3 class="text-heading font-sans font-bold text-primary mb-3">تابلو فشار ضعیف</h3>
                     <p class="text-secondary-600 mb-4">State-of-the-art testing facility ensuring every panel meets or exceeds industry standards and specifications.</p>
                     <ul class="text-sm text-secondary-600 space-y-2 mb-6">
                         <li class="flex items-center">
                             <svg class="w-4 h-4 text-success-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
-                            High-voltage testing equipment
+                            تابلو فشار ضعیف Sivacon 8PT
                         </li>
                         <li class="flex items-center">
                             <svg class="w-4 h-4 text-success-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
-                            Environmental simulation chambers
+                            تابلو فشار ضعیف کشویی
                         </li>
-                        <li class="flex items-center">
+                        <!-- <li class="flex items-center">
                             <svg class="w-4 h-4 text-success-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
                             UL compliance verification
-                        </li>
+                        </li> -->
                     </ul>
-                    <button class="text-accent font-inter font-semibold hover:text-accent-700 transition-colors" onclick="openVirtualTour('testing')">Launch Virtual Tour →</button>
+                    <button class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors" onclick="openVirtualTour('testing')">Launch Virtual Tour →</button>
                 </div>
 
-                <!-- Quality Control -->
                 <div class="card-elevated group hover:shadow-industrial transition-all">
                     <div class="relative overflow-hidden rounded-lg mb-6">
-                        <img src="https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Quality control inspection area" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1582719471384-894fbb16e074?q=80&w=800&auto=format&fit=crop'; this.onerror=null;" />
-                        <div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-inter font-semibold">360° View</div>
+                        <img src="../assets/images/products.webp" alt="Advanced testing laboratory equipment" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;" />
+                        <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">360° View</div>
                     </div>
-                    <h3 class="text-heading font-headline font-bold text-primary mb-3">Quality Control</h3>
-                    <p class="text-secondary-600 mb-4">Comprehensive inspection protocols and documentation standards ensuring zero-defect delivery.</p>
+                    <h3 class="text-heading font-sans font-bold text-primary mb-3">تابلو فشار متوسط</h3>
+                    <p class="text-secondary-600 mb-4">State-of-the-art testing facility ensuring every panel meets or exceeds industry standards and specifications.</p>
                     <ul class="text-sm text-secondary-600 space-y-2 mb-6">
                         <li class="flex items-center">
                             <svg class="w-4 h-4 text-success-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
-                            Multi-point inspection process
+                            تابلو فشار متوسط Compact
                         </li>
                         <li class="flex items-center">
                             <svg class="w-4 h-4 text-success-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
-                            Digital documentation system
+                            تابلو فشار متوسط کشویی ABB Unisafe
                         </li>
-                        <li class="flex items-center">
+                        <!-- <li class="flex items-center">
                             <svg class="w-4 h-4 text-success-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
-                            Traceability tracking
-                        </li>
+                            UL compliance verification
+                        </li> -->
                     </ul>
-                    <button class="text-accent font-inter font-semibold hover:text-accent-700 transition-colors" onclick="openVirtualTour('quality')">Launch Virtual Tour →</button>
+                    <button class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors" onclick="openVirtualTour('testing')">Launch Virtual Tour →</button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Leadership Team -->
-    <section class="py-20 bg-white">
+    <!-- <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-display font-headline font-bold text-primary mb-4">Leadership Team</h2>
+                <h2 class="text-display font-sans font-bold text-primary mb-4">Leadership Team</h2>
                 <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto">Meet the experienced professionals who drive our commitment to engineering excellence and customer success.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Founder & CEO -->
+                
                 <div class="card-elevated text-center group hover:shadow-industrial transition-all">
                     <div class="relative mb-6">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Robert Chen, Founder & CEO" class="w-32 h-32 rounded-full mx-auto object-cover" onerror="this.src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300'; this.onerror=null;" />
-                        <div class="absolute bottom-0 right-1/2 transform translate-x-16 bg-primary text-white px-2 py-1 rounded-full text-xs font-inter font-semibold">Founder</div>
+                        <div class="absolute bottom-0 right-1/2 transform translate-x-16 bg-primary text-white px-2 py-1 rounded-full text-xs font-sans font-semibold">Founder</div>
                     </div>
-                    <h3 class="text-heading font-headline font-bold text-primary mb-2">Robert Chen, P.E.</h3>
-                    <p class="text-accent font-inter font-semibold mb-3">Founder & CEO</p>
+                    <h3 class="text-heading font-sans font-bold text-primary mb-2">Robert Chen, P.E.</h3>
+                    <p class="text-accent font-sans font-semibold mb-3">Founder & CEO</p>
                     <p class="text-secondary-600 mb-4">Licensed Professional Engineer with 30+ years in electrical infrastructure design. Founded ElectroPanel Pro with a vision to revolutionize industrial electrical distribution.</p>
                     <div class="text-sm text-secondary-600">
                         <p class="mb-1">• M.S. Electrical Engineering, MIT</p>
@@ -303,14 +353,14 @@
                     </div>
                 </div>
 
-                <!-- Chief Engineering Officer -->
+                
                 <div class="card-elevated text-center group hover:shadow-industrial transition-all">
                     <div class="relative mb-6">
                         <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Sarah Rodriguez, Chief Engineering Officer" class="w-32 h-32 rounded-full mx-auto object-cover" onerror="this.src='https://images.unsplash.com/photo-1494790108755-2616b332c1c2?q=80&w=300&auto=format&fit=crop'; this.onerror=null;" />
-                        <div class="absolute bottom-0 right-1/2 transform translate-x-16 bg-accent text-white px-2 py-1 rounded-full text-xs font-inter font-semibold">CTO</div>
+                        <div class="absolute bottom-0 right-1/2 transform translate-x-16 bg-accent text-white px-2 py-1 rounded-full text-xs font-sans font-semibold">CTO</div>
                     </div>
-                    <h3 class="text-heading font-headline font-bold text-primary mb-2">Sarah Rodriguez, P.E.</h3>
-                    <p class="text-accent font-inter font-semibold mb-3">Chief Engineering Officer</p>
+                    <h3 class="text-heading font-sans font-bold text-primary mb-2">Sarah Rodriguez, P.E.</h3>
+                    <p class="text-accent font-sans font-semibold mb-3">Chief Engineering Officer</p>
                     <p class="text-secondary-600 mb-4">Leads our engineering team with expertise in power systems design and critical infrastructure applications. 20+ years in healthcare and data center projects.</p>
                     <div class="text-sm text-secondary-600">
                         <p class="mb-1">• B.S. Electrical Engineering, Stanford</p>
@@ -319,14 +369,14 @@
                     </div>
                 </div>
 
-                <!-- VP of Manufacturing -->
+                
                 <div class="card-elevated text-center group hover:shadow-industrial transition-all">
                     <div class="relative mb-6">
                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=300&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Michael Park, VP of Manufacturing" class="w-32 h-32 rounded-full mx-auto object-cover" onerror="this.src='https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300'; this.onerror=null;" />
-                        <div class="absolute bottom-0 right-1/2 transform translate-x-16 bg-secondary text-white px-2 py-1 rounded-full text-xs font-inter font-semibold">VP</div>
+                        <div class="absolute bottom-0 right-1/2 transform translate-x-16 bg-secondary text-white px-2 py-1 rounded-full text-xs font-sans font-semibold">VP</div>
                     </div>
-                    <h3 class="text-heading font-headline font-bold text-primary mb-2">Michael Park</h3>
-                    <p class="text-accent font-inter font-semibold mb-3">VP of Manufacturing</p>
+                    <h3 class="text-heading font-sans font-bold text-primary mb-2">Michael Park</h3>
+                    <p class="text-accent font-sans font-semibold mb-3">VP of Manufacturing</p>
                     <p class="text-secondary-600 mb-4">Oversees all manufacturing operations with focus on lean production and quality excellence. 18+ years in industrial manufacturing and process optimization.</p>
                     <div class="text-sm text-secondary-600">
                         <p class="mb-1">• M.B.A. Operations, Wharton</p>
@@ -336,13 +386,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Capabilities Matrix -->
     <section class="py-20 bg-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-display font-headline font-bold text-primary mb-4">Comprehensive Capabilities</h2>
+                <h2 class="text-display font-sans font-bold text-primary mb-4">Comprehensive Capabilities</h2>
                 <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto">From initial design through ongoing support, we provide complete electrical infrastructure solutions.</p>
             </div>
 
@@ -355,7 +405,7 @@
                             <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"/>
                         </svg>
                     </div>
-                    <h3 class="text-heading font-headline font-bold text-primary mb-4">Design Engineering</h3>
+                    <h3 class="text-heading font-sans font-bold text-primary mb-4">Design Engineering</h3>
                     <ul class="text-secondary-600 space-y-3">
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-success-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -391,7 +441,7 @@
                             <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
                         </svg>
                     </div>
-                    <h3 class="text-heading font-headline font-bold text-primary mb-4">Manufacturing</h3>
+                    <h3 class="text-heading font-sans font-bold text-primary mb-4">Manufacturing</h3>
                     <ul class="text-secondary-600 space-y-3">
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-success-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -427,7 +477,7 @@
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-heading font-headline font-bold text-primary mb-4">Testing & Commissioning</h3>
+                    <h3 class="text-heading font-sans font-bold text-primary mb-4">Testing & Commissioning</h3>
                     <ul class="text-secondary-600 space-y-3">
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-success-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -463,7 +513,7 @@
                             <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12zm-9 7a1 1 0 012 0v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1-1v-4zm13-1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L15 13.586V12a1 1 0 011-1z" clip-rule="evenodd"/>
                         </svg>
                     </div>
-                    <h3 class="text-heading font-headline font-bold text-primary mb-4">Installation Services</h3>
+                    <h3 class="text-heading font-sans font-bold text-primary mb-4">Installation Services</h3>
                     <ul class="text-secondary-600 space-y-3">
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-success-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -499,7 +549,7 @@
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
                         </svg>
                     </div>
-                    <h3 class="text-heading font-headline font-bold text-primary mb-4">Maintenance Programs</h3>
+                    <h3 class="text-heading font-sans font-bold text-primary mb-4">Maintenance Programs</h3>
                     <ul class="text-secondary-600 space-y-3">
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-success-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -535,7 +585,7 @@
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
                         </svg>
                     </div>
-                    <h3 class="text-heading font-headline font-bold text-primary mb-4">Ongoing Support</h3>
+                    <h3 class="text-heading font-sans font-bold text-primary mb-4">Ongoing Support</h3>
                     <ul class="text-secondary-600 space-y-3">
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-success-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -571,32 +621,32 @@
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-display font-headline font-bold text-primary mb-4">Certifications & Safety Record</h2>
+                <h2 class="text-display font-sans font-bold text-primary mb-4">Certifications & Safety Record</h2>
                 <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto">Industry-leading certifications and an impeccable safety record demonstrate our commitment to excellence.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Certifications -->
                 <div>
-                    <h3 class="text-heading font-headline font-bold text-primary mb-8">Industry Certifications</h3>
+                    <h3 class="text-heading font-sans font-bold text-primary mb-8">Industry Certifications</h3>
                     <div class="grid grid-cols-2 gap-6">
                         <div class="card-elevated text-center">
                             <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=120&auto=format&fit=crop" alt="UL Listed Certification" class="h-16 w-auto mx-auto mb-4" onerror="this.src='https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=120'; this.onerror=null;" />
-                            <h4 class="font-headline font-bold text-primary mb-2">UL Listed</h4>
+                            <h4 class="font-sans font-bold text-primary mb-2">UL Listed</h4>
                             <p class="text-sm text-secondary-600">Certified for safety and performance standards</p>
-                            <a href="javascript:void(0)" class="text-accent text-sm font-inter font-semibold hover:text-accent-700 transition-colors">Verify Certificate →</a>
+                            <a href="javascript:void(0)" class="text-accent text-sm font-sans font-semibold hover:text-accent-700 transition-colors">Verify Certificate →</a>
                         </div>
                         <div class="card-elevated text-center">
                             <img src="https://images.pixabay.com/photo/2017/06/10/07/18/list-2389219_1280.png?auto=compress&cs=tinysrgb&w=120" alt="NEMA Member" class="h-16 w-auto mx-auto mb-4" onerror="this.src='https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=120&auto=format&fit=crop'; this.onerror=null;" />
-                            <h4 class="font-headline font-bold text-primary mb-2">NEMA Member</h4>
+                            <h4 class="font-sans font-bold text-primary mb-2">NEMA Member</h4>
                             <p class="text-sm text-secondary-600">National Electrical Manufacturers Association</p>
-                            <a href="javascript:void(0)" class="text-accent text-sm font-inter font-semibold hover:text-accent-700 transition-colors">View Membership →</a>
+                            <a href="javascript:void(0)" class="text-accent text-sm font-sans font-semibold hover:text-accent-700 transition-colors">View Membership →</a>
                         </div>
                         <div class="card-elevated text-center">
                             <img src="https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=120" alt="IEEE Standards" class="h-16 w-auto mx-auto mb-4" onerror="this.src='https://images.pixabay.com/photo/2017/06/10/07/18/list-2389219_1280.png'; this.onerror=null;" />
-                            <h4 class="font-headline font-bold text-primary mb-2">IEEE Standards</h4>
+                            <h4 class="font-sans font-bold text-primary mb-2">IEEE Standards</h4>
                             <p class="text-sm text-secondary-600">Institute of Electrical and Electronics Engineers</p>
-                            <a href="javascript:void(0)" class="text-accent text-sm font-inter font-semibold hover:text-accent-700 transition-colors">View Standards →</a>
+                            <a href="javascript:void(0)" class="text-accent text-sm font-sans font-semibold hover:text-accent-700 transition-colors">View Standards →</a>
                         </div>
                         <div class="card-elevated text-center">
                             <div class="bg-success-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -604,16 +654,16 @@
                                     <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                 </svg>
                             </div>
-                            <h4 class="font-headline font-bold text-primary mb-2">ISO 9001:2015</h4>
+                            <h4 class="font-sans font-bold text-primary mb-2">ISO 9001:2015</h4>
                             <p class="text-sm text-secondary-600">Quality Management System Certification</p>
-                            <a href="javascript:void(0)" class="text-accent text-sm font-inter font-semibold hover:text-accent-700 transition-colors">Download Certificate →</a>
+                            <a href="javascript:void(0)" class="text-accent text-sm font-sans font-semibold hover:text-accent-700 transition-colors">Download Certificate →</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Safety Record -->
                 <div>
-                    <h3 class="text-heading font-headline font-bold text-primary mb-8">Safety Excellence</h3>
+                    <h3 class="text-heading font-sans font-bold text-primary mb-8">Safety Excellence</h3>
                     <div class="space-y-6">
                         <div class="bg-success-50 rounded-lg p-6">
                             <div class="flex items-center mb-4">
@@ -623,8 +673,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-headline font-bold text-primary">Zero Safety Incidents</h4>
-                                    <p class="text-success-700 font-inter font-semibold">500+ Projects Completed</p>
+                                    <h4 class="font-sans font-bold text-primary">Zero Safety Incidents</h4>
+                                    <p class="text-success-700 font-sans font-semibold">500+ Projects Completed</p>
                                 </div>
                             </div>
                             <p class="text-secondary-600">Maintaining an impeccable safety record across all manufacturing and installation operations since 1999.</p>
@@ -638,8 +688,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-headline font-bold text-primary">OSHA Compliance</h4>
-                                    <p class="text-primary-700 font-inter font-semibold">100% Compliance Rate</p>
+                                    <h4 class="font-sans font-bold text-primary">OSHA Compliance</h4>
+                                    <p class="text-primary-700 font-sans font-semibold">100% Compliance Rate</p>
                                 </div>
                             </div>
                             <p class="text-secondary-600">Full compliance with all Occupational Safety and Health Administration regulations and standards.</p>
@@ -653,8 +703,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-headline font-bold text-primary">Safety Training</h4>
-                                    <p class="text-accent-700 font-inter font-semibold">2,400+ Hours Annually</p>
+                                    <h4 class="font-sans font-bold text-primary">Safety Training</h4>
+                                    <p class="text-accent-700 font-sans font-semibold">2,400+ Hours Annually</p>
                                 </div>
                             </div>
                             <p class="text-secondary-600">Comprehensive safety training programs for all employees, contractors, and installation teams.</p>
@@ -669,7 +719,7 @@
     <section class="py-20 bg-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-display font-headline font-bold text-primary mb-4">Employee Spotlights</h2>
+                <h2 class="text-display font-sans font-bold text-primary mb-4">Employee Spotlights</h2>
                 <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto">Meet the dedicated professionals whose expertise and commitment drive our success.</p>
             </div>
 
@@ -679,8 +729,8 @@
                     <div class="flex items-start space-x-6">
                         <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=200" alt="James Wilson, Senior Electrical Engineer" class="w-24 h-24 rounded-full object-cover flex-shrink-0" onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'; this.onerror=null;" />
                         <div class="flex-1">
-                            <h3 class="text-heading font-headline font-bold text-primary mb-2">James Wilson, P.E.</h3>
-                            <p class="text-accent font-inter font-semibold mb-3">Senior Electrical Engineer</p>
+                            <h3 class="text-heading font-sans font-bold text-primary mb-2">James Wilson, P.E.</h3>
+                            <p class="text-accent font-sans font-semibold mb-3">Senior Electrical Engineer</p>
                             <p class="text-secondary-600 mb-4">15 years with ElectroPanel Pro, specializing in healthcare and critical infrastructure projects. Led the design team for our largest hospital emergency power system.</p>
                             <div class="bg-secondary-50 rounded-lg p-3">
                                 <p class="text-sm text-secondary-700 italic">"Every panel we design could be the difference between life and death in a hospital. That responsibility drives our attention to detail."</p>
@@ -694,8 +744,8 @@
                     <div class="flex items-start space-x-6">
                         <img src="https://images.unsplash.com/photo-1494790108755-2616b332c1c2?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Maria Garcia, Manufacturing Supervisor" class="w-24 h-24 rounded-full object-cover flex-shrink-0" onerror="this.src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200'; this.onerror=null;" />
                         <div class="flex-1">
-                            <h3 class="text-heading font-headline font-bold text-primary mb-2">Maria Garcia</h3>
-                            <p class="text-accent font-inter font-semibold mb-3">Manufacturing Supervisor</p>
+                            <h3 class="text-heading font-sans font-bold text-primary mb-2">Maria Garcia</h3>
+                            <p class="text-accent font-sans font-semibold mb-3">Manufacturing Supervisor</p>
                             <p class="text-secondary-600 mb-4">12 years overseeing quality control and production efficiency. Implemented lean manufacturing processes that reduced production time by 30%.</p>
                             <div class="bg-secondary-50 rounded-lg p-3">
                                 <p class="text-sm text-secondary-700 italic">"Quality isn't just about meeting specifications—it's about exceeding expectations and ensuring reliability for decades."</p>
@@ -711,7 +761,7 @@
     <section class="py-20 bg-primary text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-display font-headline font-bold mb-6">Your Electrical Infrastructure Partners</h2>
+                <h2 class="text-display font-sans font-bold mb-6">Your Electrical Infrastructure Partners</h2>
                 <p class="text-body-lg opacity-90 max-w-3xl mx-auto">We don't just manufacture panels—we build lasting partnerships that power your success for decades.</p>
             </div>
 
@@ -723,8 +773,8 @@
                             <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
                         </svg>
                     </div>
-                    <h3 class="text-heading font-headline font-bold mb-4">Long-term Client Relationships</h3>
-                    <div class="text-4xl font-headline font-bold mb-2">85%</div>
+                    <h3 class="text-heading font-sans font-bold mb-4">Long-term Client Relationships</h3>
+                    <div class="text-4xl font-sans font-bold mb-2">85%</div>
                     <p class="opacity-90">Client retention rate over 10+ years</p>
                 </div>
 
@@ -735,8 +785,8 @@
                             <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
                         </svg>
                     </div>
-                    <h3 class="text-heading font-headline font-bold mb-4">Repeat Business</h3>
-                    <div class="text-4xl font-headline font-bold mb-2">70%</div>
+                    <h3 class="text-heading font-sans font-bold mb-4">Repeat Business</h3>
+                    <div class="text-4xl font-sans font-bold mb-2">70%</div>
                     <p class="opacity-90">Of projects come from existing clients</p>
                 </div>
 
@@ -747,8 +797,8 @@
                             <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
                         </svg>
                     </div>
-                    <h3 class="text-heading font-headline font-bold mb-4">Partnership Approach</h3>
-                    <div class="text-4xl font-headline font-bold mb-2">25+</div>
+                    <h3 class="text-heading font-sans font-bold mb-4">Partnership Approach</h3>
+                    <div class="text-4xl font-sans font-bold mb-2">25+</div>
                     <p class="opacity-90">Years of trusted partnerships</p>
                 </div>
             </div>
@@ -762,7 +812,7 @@
     <!-- Call to Action -->
     <section class="py-20 bg-white">
         <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 class="text-display font-headline font-bold text-primary mb-6">Ready to Experience the ElectroPanel Pro Difference?</h2>
+            <h2 class="text-display font-sans font-bold text-primary mb-6">Ready to Experience the ElectroPanel Pro Difference?</h2>
             <p class="text-body-lg text-secondary-600 mb-8">Discover how our engineering excellence, manufacturing capabilities, and partnership approach can power your next project.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="contact_quote_request.html" class="btn-accent text-lg px-8 py-4">Request Consultation</a>

@@ -625,57 +625,55 @@
             </div>
         </section>
 
-        <!-- Performance Metrics Section -->
-        <section class="py-20 text-white bg-metrics">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-display font-sans font-bold mb-4"
-                        style="color: rgb(134, 199, 255);">کیفیت بی‌نظیر</h2>
-                    <p
-                        class="text-body-lg opacity-90 max-w-3xl mx-auto iran-sharp">بیست
-                        و پنج سال درخشش موفق در تولید تابلوهای فشار ضعیف و
-                        متوسط</p>
-                </div>
+<!-- Performance Metrics Section -->
+<!-- ADDED id="metrics-section" to be observed by the script -->
+<section id="metrics-section" class="relative py-20 text-white">
+    <!-- Layer 1: Background Image -->
+    <img src="../assets/images/apply-bg.jpg" alt="Skilled technician working on a complex electrical panel" class="absolute inset-0 w-full h-full object-cover">
 
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <div class="text-center">
-                        <div class="text-4xl font-sans font-bold mb-2">+25</div>
-                        <p class="text-lg font-sans opacity-90">سال تجربه</p>
-                    </div>
-                    <div class="text-center">
-                        <div
-                            class="text-4xl font-sans font-bold mb-2">+1000</div>
-                        <p class="text-lg font-sans opacity-90">پروژه موفق</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-4xl font-sans font-bold mb-2">+20</div>
-                        <p class="text-lg font-sans opacity-90">جایزه</p>
-                    </div>
-                    <div class="text-center">
-                        <div
-                            class="text-4xl font-sans font-bold mb-2">24/7</div>
-                        <p class="text-lg font-sans opacity-90">پاسخگویی تمام
-                            وقت</p>
-                    </div>
-                </div>
+    <!-- Layer 2: Dark Overlay -->
+    <div class="absolute inset-0 bg-primary bg-opacity-85"></div>
 
-                <div class="mt-16 text-center">
-                    <div
-                        class="inline-flex items-center bg-white bg-opacity-10 rounded-lg px-6 py-4">
+    <!-- Layer 3: Text Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-display font-sans font-bold mb-4">کیفیت بی‌نظیر</h2>
+            <p class="text-body-lg opacity-90 max-w-3xl mx-auto iran-sharp">بیست و پنج سال درخشش موفق در تولید تابلوهای فشار ضعیف و متوسط</p>
+        </div>
 
-                        <span class="text-lg font-sans font-semibold">با رعایت
-                            تمام استانداردها</span>
-                        <svg class="w-6 h-6 text-success-400 mr-3"
-                            fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <!-- MODIFIED: Added class="counter" and data-target="25" -->
+                <div class="text-4xl font-sans font-bold mb-2 counter" data-target="25">+0</div>
+                <p class="text-lg font-sans opacity-90">سال تجربه</p>
             </div>
-        </section>
+            <div class="text-center">
+                <!-- MODIFIED: Added class="counter" and data-target="1000" -->
+                <div class="text-4xl font-sans font-bold mb-2 counter" data-target="1000">+0</div>
+                <p class="text-lg font-sans opacity-90">پروژه موفق</p>
+            </div>
+            <div class="text-center">
+                <!-- MODIFIED: Added class="counter" and data-target="20" -->
+                <div class="text-4xl font-sans font-bold mb-2 counter" data-target="20">+0</div>
+                <p class="text-lg font-sans opacity-90">جایزه</p>
+            </div>
+            <div class="text-center">
+                <!-- NOTE: 24/7 is not a number, so we don't animate it. -->
+                <div class="text-4xl font-sans font-bold mb-2">24/7</div>
+                <p class="text-lg font-sans opacity-90">پاسخگویی تمام وقت</p>
+            </div>
+        </div>
 
+        <div class="mt-16 text-center">
+            <div class="inline-flex items-center bg-white bg-opacity-10 rounded-lg px-6 py-4">
+                <span class="text-lg font-sans font-semibold">با رعایت تمام استانداردها</span>
+                <svg class="w-6 h-6 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
         <!-- Call to Action Section -->
         <section class="py-20 bg-white">
             <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
