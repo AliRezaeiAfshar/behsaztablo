@@ -1,6 +1,35 @@
-// js/main.js - Final Version with Number Counter Animation
+// js/main.js - Final Version
 
 document.addEventListener("DOMContentLoaded", function() {
+
+    // --- Image Modal Functionality ---
+    const modal = document.getElementById('image-modal');
+    const modalImage = document.getElementById('modal-image');
+
+    window.openImageModal = function(imageSrc) {
+        if (modal && modalImage) {
+            modalImage.src = imageSrc;
+            modal.classList.add('modal-open');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+    }
+
+    window.closeImageModal = function(event) {
+        // This condition allows closing by clicking the background but not the image itself
+        if (event && event.target !== modal) {
+            return;
+        }
+        if (modal) {
+            modal.classList.remove('modal-open');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    }
+    
+    // --- Mobile Menu Toggle ---
+    window.toggleMobileMenu = function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    };
 
     // --- Mobile Menu Toggle ---
     window.toggleMobileMenu = function() {
@@ -8,24 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
         mobileMenu.classList.toggle('hidden');
     };
 
-    // --- Active Navigation Link ---
-    const currentPageFile = window.location.pathname.split('/').pop() || 'homepage.html';
-    const navLinks = document.querySelectorAll('header nav a:not(.btn-accent)');
-
-    navLinks.forEach(link => {
-        if (link.hasAttribute('href')) {
-            const linkFile = link.getAttribute('href').split('/').pop();
-            if (linkFile === currentPageFile) {
-                link.classList.add('active', 'text-primary');
-                link.classList.remove('text-secondary-600');
-            } else {
-                link.classList.remove('active', 'text-primary');
-                link.classList.add('text-secondary-600');
-            }
-        }
-    });
-
-    // --- Animated Counter on Scroll ---
     const metricsSection = document.getElementById('metrics-section');
     if (metricsSection) {
         const counters = metricsSection.querySelectorAll('.counter');
@@ -66,7 +77,39 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(metricsSection);
     }
 
-    // --- Carousel Functionality (if it's on the page) ---
+    // --- Active Navigation Link ---
+    const currentPageFile = window.location.pathname.split('/').pop() || 'homepage.html';
+    // This selector now specifically targets the <a> tags with the .nav-link class
+    const navLinks = document.querySelectorAll('header nav a.nav-link');
+
+    navLinks.forEach(link => {
+        if (link.hasAttribute('href')) {
+            const linkFile = link.getAttribute('href').split('/').pop();
+            if (linkFile === currentPageFile) {
+                link.classList.add('active', 'text-primary');
+                link.classList.remove('text-secondary-600');
+            } else {
+                link.classList.remove('active', 'text-primary');
+                link.classList.add('text-secondary-600');
+            }
+        }
+    });
+
+    // --- Glass Navbar on Scroll ---
+    const header = document.getElementById('main-header');
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 20) {
+                header.classList.add('bg-white/75', 'backdrop-blur-lg');
+                header.classList.remove('shadow-card');
+            } else {
+                header.classList.remove('bg-white/75', 'backdrop-blur-lg');
+                header.classList.add('shadow-card');
+            }
+        });
+    }
+    
+    // --- Carousel Functionality (if on homepage) ---
     if (document.getElementById('hero-carousel')) {
         let slideIndex = 1;
         showSlides(slideIndex);
@@ -91,5 +134,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         setInterval(() => plusSlides(1), 3000);
     }
-    
 });

@@ -15,6 +15,30 @@
 
 @layer components {
 
+  #image-modal.modal-open {
+    @apply opacity-100 pointer-events-auto;
+  }
+  #image-modal.modal-open > div {
+    @apply scale-100;
+  }
+  .dropdown-menu {
+  @apply absolute right-0 top-full pt-2 w-56 origin-top-right;
+  @apply bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none;
+  @apply opacity-0 scale-95 pointer-events-none; /* Hidden state */
+  @apply transition-all duration-200 ease-out; /* Smooth transition */
+}
+
+  /* The visible state when the parent group is hovered */
+  .group:hover .dropdown-menu {
+    @apply opacity-100 scale-100 pointer-events-auto;
+  }
+
+  /* The style for each link inside the dropdown */
+  .dropdown-item {
+    @apply block w-full px-4 py-2 text-sm text-right text-secondary-700;
+    @apply hover:bg-surface hover:text-primary rounded-md transition-colors duration-150;
+  }
+
     .map-container {
     position: relative;
     overflow: hidden;
