@@ -29,116 +29,122 @@
             <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo -->
-                    <!-- Logo -->
                     <div class="flex-shrink-0">
-                        <!-- 1. Added gap-x-3 for clean spacing -->
                         <a href="homepage.html"
                             class="flex items-center gap-x-3">
-                            <!-- 3. Added logo with src, alt, and size -->
-                            <img src="../assets/images/logo.webp"
-                                alt="Behsaz Tablo Asia Logo"
-                                class="h-14 w-auto">
-                            <!-- 2. Text now comes first for RTL layout -->
                             <span
                                 class="text-xl font-sans font-bold text-primary">بهساز
                                 تابلو آسیا</span>
-
+                            <img src="../assets/images/logo.webp"
+                                alt="Behsaz Tablo Asia Logo"
+                                class="h-14 w-auto">
                         </a>
                     </div>
 
-<!-- Desktop Navigation (FINAL CORRECTED VERSION) -->
-<div class="hidden md:block flex-grow">
-    <div class="flex justify-end items-center gap-x-16">
-        
-        <a href="homepage.html" class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">خانه</a>
-        
-        <!-- Dropdown 1: Projects -->
-        <div class="relative group">
-            <button 
-                onclick="window.location.href='products.html';"
-                class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
-                <span>پروژه ها</span>
-                
-            </button>
-            <!-- USES dropdown-menu class -->
-            <div class="dropdown-menu">
-                <div class="p-1">
-                    <a href="project_portfolio.html" class="dropdown-item">همه پروژه‌ها</a>
-                    <a href="#" class="dropdown-item">پروژه‌های نفت و گاز</a>
-                    <a href="#" class="dropdown-item">پروژه‌های صنعتی</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Dropdown: Products -->
-        <div class="relative group">
-            <button
-                onclick="window.location.href='products.html';"
-                class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
-                <span>محصولات</span>
-            </button>
-            <!-- USES dropdown-menu class -->
-            <div class="dropdown-menu">
-                <div class="p-1">
-                    
-                    <!-- NESTED DROPDOWN ITEM: Low Voltage -->
-                    <div class="relative group">
-                        <div class="dropdown-item flex items-center justify-between cursor-pointer">
-                            <span>تابلو فشار ضعیف</span>
-                            
-                        </div>
-                        <!-- USES dropdown-menu-nested class -->
-                        <div class="dropdown-menu-nested">
-                            <div class="p-1">
-                                <a href="#" class="dropdown-item">کشویی</a>
-                                <a href="#" class="dropdown-item">Sivacon</a>
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:block flex-grow">
+                        <div class="flex justify-end items-center gap-x-6">
+                            <a href="homepage.html"
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">خانه</a>
+                            <!-- Projects Dropdown -->
+                            <div class="relative group">
+                                <button
+                                    class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                    <span>پروژه ها</span>
+                                    <svg
+                                        class="w-4 h-4 mr-1 transition-transform duration-200 group-hover:rotate-180"
+                                        fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24"><path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <div class="p-1">
+                                        <a href="project_portfolio.html"
+                                            class="dropdown-item">همه
+                                            پروژه‌ها</a>
+                                        <a href="#"
+                                            class="dropdown-item">پروژه‌های نفت
+                                            و گاز</a>
+                                        <a href="#"
+                                            class="dropdown-item">پروژه‌های
+                                            صنعتی</a>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- Products Dropdown -->
+                            <div class="relative group">
+                                <button
+                                    class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                    <span>محصولات</span>
+                                    <svg
+                                        class="w-4 h-4 mr-1 transition-transform duration-200 group-hover:rotate-180"
+                                        fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24"><path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <div class="p-1">
+                                        <a href="products.html"
+                                            class="dropdown-item">همه
+                                            محصولات</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="about_capabilities.html"
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">درباره
+                                ما</a>
+                            <a href="technical_resources.html"
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">بلاگ</a>
+                            <a href="contact_quote_request.html"
+                                class="btn-accent text-sm text-white">ارتباط با
+                                ما</a>
                         </div>
                     </div>
-                    
-                    <!-- NESTED DROPDOWN ITEM: Medium Voltage -->
-                    <div class="relative group">
-                        <div class="dropdown-item flex items-center justify-between cursor-pointer">
-                            <span>تابلو فشار متوسط</span>
-                            
-                        </div>
-                        <!-- USES dropdown-menu-nested class -->
-                        <div class="dropdown-menu-nested">
-                            <div class="p-1">
-                                <a href="#" class="dropdown-item">کشویی</a>
-                                <a href="#" class="dropdown-item">Compact</a>
-                            </div>
-                        </div>
+
+                    <!-- ADD THIS BLOCK BACK IN: Mobile menu button -->
+                    <div class="lg:hidden">
+                        <button type="button"
+                            class="text-secondary-600 hover:text-primary p-2"
+                            onclick="toggleMobileMenu()">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
                     </div>
 
-                    <!-- Regular Dropdown Item -->
-                    <a href="products.html" class="dropdown-item">پست کیوسک</a>
                 </div>
-            </div>
-        </div>
 
-        <a href="about_capabilities.html" class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">درباره ما</a>
-        <a href="technical_resources.html" class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">بلاگ</a>
-        <a href="contact_quote_request.html" class="btn-accent text-sm text-white">ارتباط با ما</a>
-    </div>
-</div>
-
-<!-- Mobile Navigation (UPDATED FOR SIMPLICITY) -->
-<div id="mobile-menu" class="md:hidden hidden">
-    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-secondary-200">
-        <a href="homepage.html" class="nav-link block text-base">خانه</a>
-        <a href="project_portfolio.html" class="nav-link block text-base">پروژه ها</a>
-        <a href="products.html" class="nav-link block text-base">محصولات</a>
-        <a href="custom_panel_design.html" class="nav-link block text-base">گواهینامه ها</a>
-        <a href="about_capabilities.html" class="nav-link block text-base">درباره ما</a>
-        <a href="technical_resources.html" class="nav-link block text-base">بلاگ</a>
-        <a href="contact_quote_request.html" class="nav-link block text-base">ارتباط با ما</a>
-    </div>
-</div>
-
-                <!-- Mobile Navigation (No changes needed here) -->
-                <div id="mobile-menu" class="md:hidden hidden">
-                    ...
+                <!-- This is your existing mobile menu panel, it should be OUTSIDE the flex container above -->
+                <div id="mobile-menu" class="lg:hidden hidden">
+                    <div
+                        class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-secondary-200">
+                        <a href="homepage.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">خانه</a>
+                        <a href="project_portfolio.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">پروژه
+                            ها</a>
+                        <a href="products.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">محصولات</a>
+                        <a href="custom_panel_design.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">گواهینامه
+                            ها</a>
+                        <a href="about_capabilities.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">درباره
+                            ما</a>
+                        <a href="contact_quote_request.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">ارتباط
+                            با ما</a>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -157,7 +163,8 @@
                                 d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
                                 clip-rule="evenodd" />
                         </svg>
-                        <span class="font-sans font-bold text-lg">24/7 پشتیبانی
+                        <span class="font-sans font-bold text-lg">24/7
+                            پشتیبانی
                             تمام وقت</span>
                     </div>
                     <!-- Sub-container: Changed space-y and space-x to gap -->
@@ -174,7 +181,8 @@
                         </div>
                         <div class="text-sm opacity-90">
                             میانگین پاسخگویی: <span
-                                class="font-sans font-semibold">45 دقیقه</span>
+                                class="font-sans font-semibold">45
+                                دقیقه</span>
                         </div>
                     </div>
                 </div>
@@ -206,72 +214,123 @@
                 </div>
             </div>
         </section> -->
+
         <!-- Hero Section -->
-<section class="relative h-[70vh] text-white overflow-hidden">
-    <!-- Layer 1: Carousel Background -->
-    <div id="hero-carousel" class="absolute inset-0 w-full h-full">
-        <!-- Slide 1 -->
-        <div class="carousel-slide active absolute inset-0 w-full h-full">
-            <img src="../assets/images/about-hero1.jpg" alt="Engineer reviewing technical blueprints" class="w-full h-full object-cover">
-        </div>
-        <!-- Slide 2 -->
-        <div class="carousel-slide absolute inset-0 w-full h-full opacity-0">
-            <img src="../assets/images/about-hero2.webp" alt="Team of engineers collaborating on a project" class="w-full h-full object-cover">
-        </div>
-        <!-- Slide 3 -->
-        <div class="carousel-slide absolute inset-0 w-full h-full opacity-0">
-            <img src="../assets/images/about-hero3.webp" alt="Close-up of a high-tech electrical panel" class="w-full h-full object-cover">
-        </div>
-        <div class="carousel-slide absolute inset-0 w-full h-full opacity-0">
-            <img src="../assets/images/about-hero2.webp" alt="Team of engineers collaborating on a project" class="w-full h-full object-cover">
-        </div>
-    </div>
-
-    <!-- Layer 2: Dark Overlay -->
-    <div class="absolute inset-0 bg-primary bg-opacity-60"></div>
-
-    <!-- Layer 3: Text Content -->
-    <div class="relative z-10 h-full flex flex-col items-center justify-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-hero font-sans font-bold mb-6 text-white">ارتباط با ما</h1>
-            <p class="text-body-lg mb-8 max-w-3xl mx-auto opacity-90">شریک قابل اعتماد شما در زیرساخت‌های برق، ارائه‌دهنده راه‌حل‌های مهندسی‌شده با دقت که عملیات حیاتی را در صنایع مختلف به‌کار می‌اندازند.</p>
-
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-                <!-- Card 1: Phone Number (Clickable) -->
-                <div class="relative bg-white bg-opacity-10 rounded-lg backdrop-blur-sm border border-white/20 text-right w-full sm:w-auto transition-all duration-300 hover:bg-opacity-20 hover:border-white/40">
-                    <a href="tel:+982188543614" class="block p-6">
-                        <div class="flex items-center justify-between mb-2">
-                            <p class="font-sans font-semibold text-lg">شماره تماس</p>
-                            <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
-                        </div>
-                        <p class="opacity-80" dir="ltr">021-88543614 - 09123456789</p>
-                    </a>
+        <!-- MODIFIED: Changed height to be a MINIMUM height, not a fixed height -->
+        <section
+            class="relative min-h-[80vh] lg:min-h-[70vh] text-white overflow-hidden">
+            <!-- Layer 1: Carousel Background -->
+            <div id="hero-carousel" class="absolute inset-0 w-full h-full">
+                <!-- Slide 1 -->
+                <div
+                    class="carousel-slide active absolute inset-0 w-full h-full">
+                    <img src="../assets/images/about-hero1.jpg"
+                        alt="Engineer reviewing technical blueprints"
+                        class="w-full h-full object-cover">
                 </div>
-                <!-- Card 2: Email (Clickable) -->
-                <div class="relative bg-white bg-opacity-10 rounded-lg backdrop-blur-sm border border-white/20 text-right w-full sm:w-auto transition-all duration-300 hover:bg-opacity-20 hover:border-white/40">
-                    <a href="mailto:info@behsaztablo.ir" class="block p-6">
-                        <div class="flex items-center justify-between mb-2">
-                            <p class="font-sans font-semibold text-lg">ایمیل</p>
-                            <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
-                        </div>
-                        <p class="opacity-80">info@behsaztablo.ir</p>
-                    </a>
+                <!-- Slide 2 -->
+                <div
+                    class="carousel-slide absolute inset-0 w-full h-full opacity-0">
+                    <img src="../assets/images/about-hero2.webp"
+                        alt="Team of engineers collaborating on a project"
+                        class="w-full h-full object-cover">
                 </div>
-                <!-- Card 3: Location (Clickable) -->
-                <div class="relative bg-white bg-opacity-10 rounded-lg backdrop-blur-sm border border-white/20 text-right w-full sm:w-auto transition-all duration-300 hover:bg-opacity-20 hover:border-white/40">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Behsaz+Tablo+Asia+Tehran" target="_blank" rel="noopener noreferrer" class="block p-6">
-                        <div class="flex items-center justify-between mb-2">
-                            <p class="font-sans font-semibold text-lg">دفتر مرکزی</p>
-                            <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
-                        </div>
-                        <p class="opacity-80">تهران، خیابان نیلوفر</p>
-                    </a>
+                <!-- Slide 3 -->
+                <div
+                    class="carousel-slide absolute inset-0 w-full h-full opacity-0">
+                    <img src="../assets/images/about-hero3.webp"
+                        alt="Close-up of a high-tech electrical panel"
+                        class="w-full h-full object-cover">
                 </div>
             </div>
-        </div>
-    </div>
 
-</section>
+            <!-- Layer 2: Dark Overlay -->
+            <div class="absolute inset-0 bg-primary bg-opacity-60"></div>
+
+            <!-- Layer 3: Text Content -->
+            <!-- MODIFIED: Removed h-full and justify-center. Added padding top and bottom. -->
+            <div class="relative z-10 flex flex-col items-center pt-24 pb-12">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <!-- Responsive font sizes -->
+                    <h1
+                        class="text-5xl md:text-hero font-sans font-bold mb-4 text-white">ارتباط
+                        با ما</h1>
+                    <p
+                        class="text-base md:text-body-lg mb-8 max-w-3xl mx-auto opacity-90">شریک
+                        قابل اعتماد شما در زیرساخت‌های برق، ارائه‌دهنده
+                        راه‌حل‌های مهندسی‌شده با دقت که عملیات حیاتی را در صنایع
+                        مختلف به‌کار می‌اندازند.</p>
+
+                    <!-- Changed sm:flex-row to lg:flex-row -->
+                    <div
+                        class="flex flex-col lg:flex-row gap-4 justify-center mt-8 md:mt-12">
+
+                        <!-- Card 1: Phone Number (Clickable) -->
+                        <div
+                            class="relative bg-white bg-opacity-10 rounded-lg backdrop-blur-sm border border-white/20 text-right w-full sm:w-auto transition-all duration-300 hover:bg-opacity-20 hover:border-white/40">
+                            <a href="tel:+982188543614"
+                                class="block p-4 md:p-6">
+                                <div
+                                    class="flex items-center justify-between mb-2">
+                                    <p
+                                        class="font-sans font-semibold text-lg">شماره
+                                        تماس</p>
+                                    <svg class="w-8 h-8 text-accent"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"><path
+                                            d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+                                </div>
+                                <p class="opacity-80" dir="ltr">021-88543614 -
+                                    09123456789</p>
+                            </a>
+                        </div>
+
+                        <!-- Card 2: Email (Clickable) -->
+                        <div
+                            class="relative bg-white bg-opacity-10 rounded-lg backdrop-blur-sm border border-white/20 text-right w-full sm:w-auto transition-all duration-300 hover:bg-opacity-20 hover:border-white/40">
+                            <a href="mailto:info@behsaztablo.ir"
+                                class="block p-4 md:p-6">
+                                <div
+                                    class="flex items-center justify-between mb-2">
+                                    <p
+                                        class="font-sans font-semibold text-lg">ایمیل</p>
+                                    <svg class="w-8 h-8 text-accent"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"><path
+                                            d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path
+                                            d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
+                                </div>
+                                <p class="opacity-80">info@behsaztablo.ir</p>
+                            </a>
+                        </div>
+
+                        <!-- Card 3: Location (Clickable) -->
+                        <div
+                            class="relative bg-white bg-opacity-10 rounded-lg backdrop-blur-sm border border-white/20 text-right w-full sm:w-auto transition-all duration-300 hover:bg-opacity-20 hover:border-white/40">
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Behsaz+Tablo+Asia+Tehran"
+                                target="_blank" rel="noopener noreferrer"
+                                class="block p-4 md:p-6">
+                                <div
+                                    class="flex items-center justify-between mb-2">
+                                    <p
+                                        class="font-sans font-semibold text-lg">دفتر
+                                        مرکزی</p>
+                                    <svg class="w-8 h-8 text-accent"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"><path
+                                            fill-rule="evenodd"
+                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            clip-rule="evenodd" /></svg>
+                                </div>
+                                <p class="opacity-80">تهران، خیابان نیلوفر</p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Main Content -->
         <section class="py-20 bg-surface">
@@ -285,9 +344,12 @@
                                     class="text-display font-sans font-bold text-primary mb-4">طرح
                                     پرسش / درخواست پیشنهاد قیمت</h2>
                                 <p class="text-secondary-600">نیازمندی‌های
-                                    پروژ‌ه‌تان را با ما در میان بگذارید تا تیم
-                                    فنی مهندسی ما در اسرع وقت مشخصات فنی، جدول
-                                    زمان‌بندی و پیشنهاد قیمت را برای شما تهیه و
+                                    پروژ‌ه‌تان را با ما در میان بگذارید تا
+                                    تیم
+                                    فنی مهندسی ما در اسرع وقت مشخصات فنی،
+                                    جدول
+                                    زمان‌بندی و پیشنهاد قیمت را برای شما
+                                    تهیه و
                                     ارسال کنند.</p>
                             </div>
 
@@ -362,7 +424,8 @@
                                 </div>
 
                                 <!-- Project Information -->
-                                <div class="border-t border-secondary-200 pt-8">
+                                <div
+                                    class="border-t border-secondary-200 pt-8">
                                     <h3
                                         class="text-heading font-sans font-bold text-primary mb-6">جزئیات
                                         پروژه (اختیاری)</h3>
@@ -382,7 +445,8 @@
                                                     value="healthcare">Healthcare</option>
                                                 <option
                                                     value="manufacturing">Manufacturing</option>
-                                                <option value="data-center">Data
+                                                <option
+                                                    value="data-center">Data
                                                     Center</option>
                                                 <option
                                                     value="commercial">Commercial</option>
@@ -406,7 +470,8 @@
                                                 <option
                                                     value="new-installation">New
                                                     Installation</option>
-                                                <option value="upgrade">System
+                                                <option
+                                                    value="upgrade">System
                                                     Upgrade</option>
                                                 <option
                                                     value="replacement">Equipment
@@ -438,7 +503,8 @@
                                                 <option
                                                     value="immediate">Immediate
                                                     (Emergency)</option>
-                                                <option value="1-month">Within 1
+                                                <option
+                                                    value="1-month">Within 1
                                                     Month</option>
                                                 <option value="3-months">1-3
                                                     Months</option>
@@ -453,21 +519,27 @@
                                             <label for="budget"
                                                 class="block text-sm font-sans font-semibold text-secondary-700 mb-2">محدوده
                                                 بودجه</label>
-                                            <select id="budget" name="budget"
+                                            <select id="budget"
+                                                name="budget"
                                                 class="input-field">
                                                 <option value>انتخاب محدوده
                                                     بودجه</option>
-                                                <option value="under-50k">Under
+                                                <option
+                                                    value="under-50k">Under
                                                     $50,000</option>
-                                                <option value="50k-100k">$50,000
+                                                <option
+                                                    value="50k-100k">$50,000
                                                     - $100,000</option>
                                                 <option
-                                                    value="100k-250k">$100,000 -
+                                                    value="100k-250k">$100,000
+                                                    -
                                                     $250,000</option>
                                                 <option
-                                                    value="250k-500k">$250,000 -
+                                                    value="250k-500k">$250,000
+                                                    -
                                                     $500,000</option>
-                                                <option value="over-500k">Over
+                                                <option
+                                                    value="over-500k">Over
                                                     $500,000</option>
                                             </select>
                                         </div>
@@ -496,7 +568,8 @@
                                             <label for="voltage"
                                                 class="block text-sm font-sans font-semibold text-secondary-700 mb-2">Voltage
                                                 Requirements</label>
-                                            <select id="voltage" name="voltage"
+                                            <select id="voltage"
+                                                name="voltage"
                                                 class="input-field">
                                                 <option value>Select
                                                     Voltage</option>
@@ -558,7 +631,8 @@
                                                         name="compliance[]"
                                                         value="nema"
                                                         class="mr-2" />
-                                                    <span class="text-sm">NEMA
+                                                    <span
+                                                        class="text-sm">NEMA
                                                         Compliant</span>
                                                 </label>
                                                 <label
@@ -567,7 +641,8 @@
                                                         name="compliance[]"
                                                         value="ieee"
                                                         class="mr-2" />
-                                                    <span class="text-sm">IEEE
+                                                    <span
+                                                        class="text-sm">IEEE
                                                         Standards</span>
                                                 </label>
                                             </div>
@@ -576,7 +651,8 @@
                                 </div>
 
                                 <!-- Project Description -->
-                                <div class="border-t border-secondary-200 pt-8">
+                                <div
+                                    class="border-t border-secondary-200 pt-8">
                                     <div>
                                         <label for="description"
                                             class="block text-sm font-sans font-semibold text-secondary-700 mb-2">توضیحات
@@ -630,18 +706,22 @@
                                 </div> -->
 
                                 <!-- Free Alternative: Link Input -->
-                                <div class="border-t border-secondary-200 pt-8">
+                                <div
+                                    class="border-t border-secondary-200 pt-8">
                                     <div>
                                         <label for="file-link"
                                             class="block text-sm font-sans font-semibold text-secondary-700 mb-2">لینک
                                             فایل‌های پیوست</label>
                                         <input type="url" id="file-link"
-                                            name="file-link" class="input-field"
+                                            name="file-link"
+                                            class="input-field"
                                             placeholder="لینک فایل را از گوگل درایو یا دراپ‌باکس جایگذاری کنید" />
                                         <p
                                             class="mt-1 text-xs text-secondary-500">Please
-                                            upload your files to a service like
-                                            Google Drive and paste the shareable
+                                            upload your files to a service
+                                            like
+                                            Google Drive and paste the
+                                            shareable
                                             link here.</p>
                                     </div>
                                 </div>
@@ -652,7 +732,8 @@
                                         class="btn-accent w-full text-lg py-4">
                                         ثبت و ارسال
                                         <svg class="w-5 h-5 mr-2 inline"
-                                            fill="none" stroke="currentColor"
+                                            fill="none"
+                                            stroke="currentColor"
                                             viewBox="0 0 24 24">
                                             <path stroke-linecap="round"
                                                 stroke-linejoin="round"
@@ -694,7 +775,8 @@
                                         <div
                                             class="font-sans font-semibold text-primary">دفتر
                                             مرکزی</div>
-                                        <div class="text-secondary-600">بهساز
+                                        <div
+                                            class="text-secondary-600">بهساز
                                             تابلو آسیا - نیلوفر</div>
                                         <div
                                             class="text-sm text-secondary-500">شنبه

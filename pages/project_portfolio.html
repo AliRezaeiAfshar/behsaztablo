@@ -18,64 +18,154 @@
             <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo -->
+                    <!-- Logo -->
                     <div class="flex-shrink-0">
-                        <a href="homepage.html" class="flex items-center">
-                            <img src alt>
+                        <!-- 1. Added gap-x-3 for clean spacing -->
+                        <a href="homepage.html"
+                            class="flex items-center gap-x-3">
+                            <!-- 3. Added logo with src, alt, and size -->
+                            <img src="../assets/images/logo.webp"
+                                alt="Behsaz Tablo Asia Logo"
+                                class="h-14 w-auto">
+                            <!-- 2. Text now comes first for RTL layout -->
                             <span
-                                class="ml-3 text-xl font-sans font-bold text-primary iran-sharp">بهساز
+                                class="text-xl font-sans font-bold text-primary">بهساز
                                 تابلو آسیا</span>
+
                         </a>
                     </div>
 
-                    <!-- Desktop Navigation (MODIFIED) -->
+                    <!-- Desktop Navigation (FINAL CORRECTED VERSION) -->
                     <div class="hidden md:block flex-grow">
-                        <div class="flex justify-end items-baseline gap-x-3">
+                        <div class="flex justify-end items-center gap-x-16">
+
                             <a href="homepage.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm iran-sharp">خانه</a>
-                            <a href="project_portfolio.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">پروژه
-                                ها</a>
-                            <a href="custom_panel_design.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">گواهینامه
-                                ها</a>
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">خانه</a>
+
+                            <!-- Dropdown 1: Projects -->
+                            <div class="relative group">
+                                <button
+                                    onclick="window.location.href='products.html';"
+                                    class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                    <span>پروژه ها</span>
+
+                                </button>
+                                <!-- USES dropdown-menu class -->
+                                <div class="dropdown-menu">
+                                    <div class="p-1">
+                                        <a href="project_portfolio.html"
+                                            class="dropdown-item">همه
+                                            پروژه‌ها</a>
+                                        <a href="#"
+                                            class="dropdown-item">پروژه‌های نفت
+                                            و گاز</a>
+                                        <a href="#"
+                                            class="dropdown-item">پروژه‌های
+                                            صنعتی</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main Dropdown: Products -->
+                            <div class="relative group">
+                                <button
+                                    onclick="window.location.href='products.html';"
+                                    class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                    <span>محصولات</span>
+                                </button>
+                                <!-- USES dropdown-menu class -->
+                                <div class="dropdown-menu">
+                                    <div class="p-1">
+
+                                        <!-- NESTED DROPDOWN ITEM: Low Voltage -->
+                                        <div class="relative group">
+                                            <div
+                                                class="dropdown-item flex items-center justify-between cursor-pointer">
+                                                <span>تابلو فشار ضعیف</span>
+
+                                            </div>
+                                            <!-- USES dropdown-menu-nested class -->
+                                            <div class="dropdown-menu-nested">
+                                                <div class="p-1">
+                                                    <a href="#"
+                                                        class="dropdown-item">کشویی</a>
+                                                    <a href="#"
+                                                        class="dropdown-item">Sivacon</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- NESTED DROPDOWN ITEM: Medium Voltage -->
+                                        <div class="relative group">
+                                            <div
+                                                class="dropdown-item flex items-center justify-between cursor-pointer">
+                                                <span>تابلو فشار متوسط</span>
+
+                                            </div>
+                                            <!-- USES dropdown-menu-nested class -->
+                                            <div class="dropdown-menu-nested">
+                                                <div class="p-1">
+                                                    <a href="#"
+                                                        class="dropdown-item">کشویی</a>
+                                                    <a href="#"
+                                                        class="dropdown-item">Compact</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Regular Dropdown Item -->
+                                        <a href="products.html"
+                                            class="dropdown-item">پست کیوسک</a>
+                                    </div>
+                                </div>
+                            </div>
+
                             <a href="about_capabilities.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">درباره
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">درباره
                                 ما</a>
                             <a href="technical_resources.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">بلاگ</a>
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">بلاگ</a>
                             <a href="contact_quote_request.html"
-                                class="btn-accent text-sm text-white">ثبت
-                                درخواست</a>
+                                class="btn-accent text-sm text-white">ارتباط با
+                                ما</a>
                         </div>
                     </div>
 
-                    <!-- Mobile menu button -->
-                    <div class="md:hidden">
-                        <button type="button"
-                            class="text-secondary-600 hover:text-primary p-2"
-                            onclick="toggleMobileMenu()">
-                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
+                    <!-- Mobile Navigation (UPDATED FOR SIMPLICITY) -->
+                    <div id="mobile-menu" class="md:hidden hidden">
+                        <div
+                            class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-secondary-200">
+                            <a href="homepage.html"
+                                class="nav-link block text-base">خانه</a>
+                            <a href="project_portfolio.html"
+                                class="nav-link block text-base">پروژه ها</a>
+                            <a href="products.html"
+                                class="nav-link block text-base">محصولات</a>
+                            <a href="custom_panel_design.html"
+                                class="nav-link block text-base">گواهینامه
+                                ها</a>
+                            <a href="about_capabilities.html"
+                                class="nav-link block text-base">درباره ما</a>
+                            <a href="technical_resources.html"
+                                class="nav-link block text-base">بلاگ</a>
+                            <a href="contact_quote_request.html"
+                                class="nav-link block text-base">ارتباط با
+                                ما</a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Mobile Navigation (No changes needed here) -->
-                <div id="mobile-menu" class="md:hidden hidden">
-                    ...
-                </div>
-            </nav>
+                    <!-- Mobile Navigation (No changes needed here) -->
+                    <div id="mobile-menu" class="md:hidden hidden">
+                        ...
+                    </div>
+                </nav>
         </header>
 
         <!-- Hero Section -->
         <section class="bg-primary text-white py-20 bg-projects-profile">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h1 class="text-hero font-sans font-bold mb-6">پروژه‌های
+                    <h1 class="text-hero text-blue-100 font-sans font-bold mb-6">پروژه‌های
                         انجام شده</h1>
                     <p class="text-body-lg opacity-90 max-w-3xl mx-auto mb-8">با
                         بیش از ۱۰۰۰ پروژه موفق در زمینه طراحی و ساخت تابلوهای
@@ -319,307 +409,170 @@
                 <!-- Project Grid -->
                 <div id="project-grid"
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project Card 1 -->
-                    <div
-                        class="project-card card-elevated group hover:shadow-industrial transition-all"
-                        data-industry="healthcare" data-size="large"
-                        data-service="emergency">
-                        <div class="relative overflow-hidden rounded-lg mb-6">
-                            <img
-                                src="https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600"
-                                alt="Regional Medical Center electrical upgrade"
-                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                                onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=600&auto=format&fit=crop'; this.onerror=null;" />
-                            <div
-                                class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">Healthcare</div>
-                            <div
-                                class="absolute top-4 right-4 bg-error text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">Emergency</div>
-                        </div>
-                        <h3
-                            class="text-heading font-sans font-bold text-primary mb-3">Regional
-                            Medical Center</h3>
-                        <p class="text-secondary-600 mb-4">Emergency power
-                            system upgrade during hurricane season with zero
-                            downtime to critical care systems.</p>
-                        <div
-                            class="flex justify-between items-center text-sm text-secondary-600 mb-4">
-                            <span>2,500A Service</span>
-                            <span>48 Hours</span>
-                            <span>99.99% Uptime</span>
-                        </div>
-                        <div class="border-t border-secondary-200 pt-4">
-                            <button onclick="toggleProjectSpecs('project-1')"
-                                class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">
-                                View Specifications →
-                            </button>
-                            <div id="project-1" class="hidden mt-4 space-y-2">
-                                <div class="bg-surface rounded p-3">
-                                    <p
-                                        class="text-sm"><strong>Electrical:</strong>
-                                        2,500A, 480V/277V, 3-phase</p>
-                                    <p
-                                        class="text-sm"><strong>Compliance:</strong>
-                                        NFPA 99, NEC Article 517</p>
-                                    <p
-                                        class="text-sm"><strong>Features:</strong>
-                                        Automatic transfer switches, emergency
-                                        generator tie-in</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Project Card 1: پالایشگاه نفت -->
+    <div class="project-card flex flex-col card-elevated group hover:shadow-industrial transition-all" data-industry="oilgas" data-size="large" data-service="emergency">
+        <div class="relative overflow-hidden rounded-lg mb-6">
+            <img src="../assets/images/apply-bg.jpg" alt="پروژه پالایشگاه نفت" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">نفت و گاز</div>
+            <div class="absolute top-4 left-4 bg-error text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">اضطراری</div>
+        </div>
+        <h3 class="text-heading font-sans font-bold text-primary mb-3">پالایشگاه نفت</h3>
+        <p class="text-secondary-600 mb-4 flex-grow">ارتقاء سیستم برق اضطراری در شرایط بحرانی بدون هیچ‌گونه وقفه در فعالیت‌های حیاتی پالایشگاه.</p>
+        <div class="flex justify-between items-center text-sm text-secondary-600 mb-4">
+            <span>سرویس ۲۵۰۰ آمپر</span>
+            <span>اتمام در ۴۸ ساعت</span>
+            <span>پایداری ۹۹.۹۹٪</span>
+        </div>
+        <div class="border-t border-secondary-200 pt-4">
+            <button onclick="toggleProjectSpecs('project-1')" class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">
+                مشاهده مشخصات →
+            </button>
+            <div id="project-1" class="hidden mt-4 space-y-2 text-right">
+                <div class="bg-surface rounded p-3">
+                    <p class="text-sm"><strong>مشخصات الکتریکی:</strong> ۲۵۰۰ آمپر، ۴۸۰/۲۷۷ ولت، سه‌فاز</p>
+                    <p class="text-sm"><strong>استانداردها:</strong> NFPA 99, NEC Article 517</p>
+                    <p class="text-sm"><strong>ویژگی‌ها:</strong> کلیدهای انتقال اتوماتیک، اتصال به ژنراتور اضطراری</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <!-- Project Card 2 -->
-                    <div
-                        class="project-card card-elevated group hover:shadow-industrial transition-all"
-                        data-industry="manufacturing" data-size="large"
-                        data-service="custom">
-                        <div class="relative overflow-hidden rounded-lg mb-6">
-                            <img
-                                src="https://images.pixabay.com/photo/2014/12/22/10/04/factory-577166_1280.jpg"
-                                alt="Automotive manufacturing facility power distribution"
-                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                                onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop'; this.onerror=null;" />
-                            <div
-                                class="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">Manufacturing</div>
-                            <div
-                                class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">Custom</div>
-                        </div>
-                        <h3
-                            class="text-heading font-sans font-bold text-primary mb-3">Automotive
-                            Plant Expansion</h3>
-                        <p class="text-secondary-600 mb-4">Custom switchgear and
-                            motor control centers for new production line with
-                            advanced monitoring capabilities.</p>
-                        <div
-                            class="flex justify-between items-center text-sm text-secondary-600 mb-4">
-                            <span>5,000A Capacity</span>
-                            <span>3 Weeks</span>
-                            <span>Zero Downtime</span>
-                        </div>
-                        <div class="border-t border-secondary-200 pt-4">
-                            <button onclick="toggleProjectSpecs('project-2')"
-                                class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">
-                                View Specifications →
-                            </button>
-                            <div id="project-2" class="hidden mt-4 space-y-2">
-                                <div class="bg-surface rounded p-3">
-                                    <p
-                                        class="text-sm"><strong>Electrical:</strong>
-                                        5,000A, 480V, 3-phase</p>
-                                    <p
-                                        class="text-sm"><strong>Features:</strong>
-                                        Motor control centers, VFD
-                                        integration</p>
-                                    <p
-                                        class="text-sm"><strong>Monitoring:</strong>
-                                        Real-time power quality, predictive
-                                        maintenance</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Project Card 2: کارخانه خودروسازی -->
+    <div class="project-card flex flex-col card-elevated group hover:shadow-industrial transition-all" data-industry="manufacturing" data-size="large" data-service="custom">
+        <div class="relative overflow-hidden rounded-lg mb-6">
+            <img src="../assets/images/apply-bg.jpg" alt="پروژه کارخانه خودروسازی" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">صنعتی</div>
+            <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">سفارشی</div>
+        </div>
+        <h3 class="text-heading font-sans font-bold text-primary mb-3">کارخانه خودروسازی</h3>
+        <p class="text-secondary-600 mb-4 flex-grow">طراحی و ساخت تابلوهای کنترل موتور و سوئیچ‌گیر سفارشی برای خط تولید جدید با قابلیت‌های مانیتورینگ پیشرفته.</p>
+        <div class="flex justify-between items-center text-sm text-secondary-600 mb-4">
+            <span>ظرفیت ۵۰۰۰ آمپر</span>
+            <span>تحویل ۳ هفته‌ای</span>
+            <span>بدون وقفه</div>
+        <div class="border-t border-secondary-200 pt-4">
+            <button onclick="toggleProjectSpecs('project-2')" class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">
+                مشاهده مشخصات →
+            </button>
+            <div id="project-2" class="hidden mt-4 space-y-2 text-right">
+                <div class="bg-surface rounded p-3">
+                    <p class="text-sm"><strong>مشخصات الکتریکی:</strong> ۵۰۰۰ آمپر، ۴۸۰ ولت، سه‌فاز</p>
+                    <p class="text-sm"><strong>ویژگی‌ها:</strong> مراکز کنترل موتور، ادغام با VFD</p>
+                    <p class="text-sm"><strong>مانیتورینگ:</strong> کیفیت برق لحظه‌ای، نگهداری پیش‌بینانه</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <!-- Project Card 3 -->
-                    <div
-                        class="project-card card-elevated group hover:shadow-industrial transition-all"
-                        data-industry="datacenter" data-size="large"
-                        data-service="custom">
-                        <div class="relative overflow-hidden rounded-lg mb-6">
-                            <img
-                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3"
-                                alt="Data center redundant power systems"
-                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                                onerror="this.src='https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
-                            <div
-                                class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">Data
-                                Center</div>
-                            <div
-                                class="absolute top-4 right-4 bg-success text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">Tier
-                                III</div>
-                        </div>
-                        <h3
-                            class="text-heading font-sans font-bold text-primary mb-3">Tier
-                            III Data Center Build</h3>
-                        <p class="text-secondary-600 mb-4">Redundant power
-                            distribution with automatic transfer switches and
-                            comprehensive monitoring systems.</p>
-                        <div
-                            class="flex justify-between items-center text-sm text-secondary-600 mb-4">
-                            <span>N+1 Redundancy</span>
-                            <span>72 Hours</span>
-                            <span>99.982% Uptime</span>
-                        </div>
-                        <div class="border-t border-secondary-200 pt-4">
-                            <button onclick="toggleProjectSpecs('project-3')"
-                                class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">
-                                View Specifications →
-                            </button>
-                            <div id="project-3" class="hidden mt-4 space-y-2">
-                                <div class="bg-surface rounded p-3">
-                                    <p class="text-sm"><strong>Design:</strong>
-                                        N+1 redundant power distribution</p>
-                                    <p
-                                        class="text-sm"><strong>Standards:</strong>
-                                        Tier III certified, 99.982% uptime</p>
-                                    <p
-                                        class="text-sm"><strong>Features:</strong>
-                                        Hot-swappable components, dual utility
-                                        feeds</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Project Card 3: مرکز داده -->
+    <div class="project-card flex flex-col card-elevated group hover:shadow-industrial transition-all" data-industry="datacenter" data-size="large" data-service="custom">
+        <div class="relative overflow-hidden rounded-lg mb-6">
+            <img src="../assets/images/apply-bg.jpg" alt="پروژه مرکز داده" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">مرکز داده</div>
+            <div class="absolute top-4 left-4 bg-success text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">Tier III</div>
+        </div>
+        <h3 class="text-heading font-sans font-bold text-primary mb-3">ساخت مرکز داده Tier III</h3>
+        <p class="text-secondary-600 mb-4 flex-grow">سیستم توزیع برق افزونه (Redundant) با کلیدهای انتقال اتوماتیک و سیستم‌های مانیتورینگ جامع.</p>
+        <div class="flex justify-between items-center text-sm text-secondary-600 mb-4">
+            <span>افزونگی N+1</span>
+            <span>اتمام در ۷۲ ساعت</span>
+            <span>پایداری ۹۹.۹۸۲٪</span>
+        </div>
+        <div class="border-t border-secondary-200 pt-4">
+            <button onclick="toggleProjectSpecs('project-3')" class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">
+                مشاهده مشخصات →
+            </button>
+            <div id="project-3" class="hidden mt-4 space-y-2 text-right">
+                <div class="bg-surface rounded p-3">
+                    <p class="text-sm"><strong>طراحی:</strong> توزیع برق افزونه N+1</p>
+                    <p class="text-sm"><strong>استانداردها:</strong> گواهی Tier III، پایداری ۹۹.۹۸۲٪</p>
+                    <p class="text-sm"><strong>ویژگی‌ها:</strong> قطعات Hot-swappable، ورودی دوگانه</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project Card 1: پالایشگاه نفت -->
+    <div class="project-card flex flex-col card-elevated group hover:shadow-industrial transition-all" data-industry="oilgas" data-size="large" data-service="emergency">
+        <div class="relative overflow-hidden rounded-lg mb-6">
+            <img src="../assets/images/apply-bg.jpg" alt="پروژه پالایشگاه نفت" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">نفت و گاز</div>
+            <div class="absolute top-4 left-4 bg-error text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">اضطراری</div>
+        </div>
+        <h3 class="text-heading font-sans font-bold text-primary mb-3">پالایشگاه نفت</h3>
+        <p class="text-secondary-600 mb-4 flex-grow">ارتقاء سیستم برق اضطراری در شرایط بحرانی بدون هیچ‌گونه وقفه در فعالیت‌های حیاتی پالایشگاه.</p>
+        <div class="flex justify-between items-center text-sm text-secondary-600 mb-4">
+            <span>سرویس ۲۵۰۰ آمپر</span>
+            <span>اتمام در ۴۸ ساعت</span>
+            <span>پایداری ۹۹.۹۹٪</span>
+        </div>
+        <div class="border-t border-secondary-200 pt-4">
+            <button onclick="toggleProjectSpecs('project-1')" class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">
+                مشاهده مشخصات →
+            </button>
+            <div id="project-1" class="hidden mt-4 space-y-2 text-right">
+                <div class="bg-surface rounded p-3">
+                    <p class="text-sm"><strong>مشخصات الکتریکی:</strong> ۲۵۰۰ آمپر، ۴۸۰/۲۷۷ ولت، سه‌فاز</p>
+                    <p class="text-sm"><strong>استانداردها:</strong> NFPA 99, NEC Article 517</p>
+                    <p class="text-sm"><strong>ویژگی‌ها:</strong> کلیدهای انتقال اتوماتیک، اتصال به ژنراتور اضطراری</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <!-- Project Card 4 -->
-                    <div
-                        class="project-card card-elevated group hover:shadow-industrial transition-all"
-                        data-industry="commercial" data-size="medium"
-                        data-service="standard">
-                        <div class="relative overflow-hidden rounded-lg mb-6">
-                            <img
-                                src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=600"
-                                alt="Office building electrical upgrade"
-                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                                onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop'; this.onerror=null;" />
-                            <div
-                                class="absolute top-4 left-4 bg-warning text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">Commercial</div>
-                            <div
-                                class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">Standard</div>
-                        </div>
-                        <h3
-                            class="text-heading font-sans font-bold text-primary mb-3">Corporate
-                            Headquarters</h3>
-                        <p class="text-secondary-600 mb-4">Main electrical
-                            service upgrade for 20-story office building with
-                            energy monitoring systems.</p>
-                        <div
-                            class="flex justify-between items-center text-sm text-secondary-600 mb-4">
-                            <span>1,600A Service</span>
-                            <span>2 Weeks</span>
-                            <span>Weekend Install</span>
-                        </div>
-                        <div class="border-t border-secondary-200 pt-4">
-                            <button onclick="toggleProjectSpecs('project-4')"
-                                class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">
-                                View Specifications →
-                            </button>
-                            <div id="project-4" class="hidden mt-4 space-y-2">
-                                <div class="bg-surface rounded p-3">
-                                    <p
-                                        class="text-sm"><strong>Electrical:</strong>
-                                        1,600A, 208V/120V, 3-phase</p>
-                                    <p
-                                        class="text-sm"><strong>Features:</strong>
-                                        Energy monitoring, load management</p>
-                                    <p
-                                        class="text-sm"><strong>Installation:</strong>
-                                        Weekend schedule, minimal disruption</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Project Card 2: کارخانه خودروسازی -->
+    <div class="project-card flex flex-col card-elevated group hover:shadow-industrial transition-all" data-industry="manufacturing" data-size="large" data-service="custom">
+        <div class="relative overflow-hidden rounded-lg mb-6">
+            <img src="../assets/images/apply-bg.jpg" alt="پروژه کارخانه خودروسازی" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">صنعتی</div>
+            <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">سفارشی</div>
+        </div>
+        <h3 class="text-heading font-sans font-bold text-primary mb-3">کارخانه خودروسازی</h3>
+        <p class="text-secondary-600 mb-4 flex-grow">طراحی و ساخت تابلوهای کنترل موتور و سوئیچ‌گیر سفارشی برای خط تولید جدید با قابلیت‌های مانیتورینگ پیشرفته.</p>
+        <div class="flex justify-between items-center text-sm text-secondary-600 mb-4">
+            <span>ظرفیت ۵۰۰۰ آمپر</span>
+            <span>تحویل ۳ هفته‌ای</span>
+            <span>بدون وقفه</div>
+        <div class="border-t border-secondary-200 pt-4">
+            <button onclick="toggleProjectSpecs('project-2')" class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">
+                مشاهده مشخصات →
+            </button>
+            <div id="project-2" class="hidden mt-4 space-y-2 text-right">
+                <div class="bg-surface rounded p-3">
+                    <p class="text-sm"><strong>مشخصات الکتریکی:</strong> ۵۰۰۰ آمپر، ۴۸۰ ولت، سه‌فاز</p>
+                    <p class="text-sm"><strong>ویژگی‌ها:</strong> مراکز کنترل موتور، ادغام با VFD</p>
+                    <p class="text-sm"><strong>مانیتورینگ:</strong> کیفیت برق لحظه‌ای، نگهداری پیش‌بینانه</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <!-- Project Card 5 -->
-                    <div
-                        class="project-card card-elevated group hover:shadow-industrial transition-all"
-                        data-industry="healthcare" data-size="medium"
-                        data-service="standard">
-                        <div class="relative overflow-hidden rounded-lg mb-6">
-                            <img
-                                src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?q=80&w=600&auto=format&fit=crop"
-                                alt="Outpatient clinic electrical installation"
-                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                                onerror="this.src='https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;" />
-                            <div
-                                class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">Healthcare</div>
-                            <div
-                                class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">Standard</div>
-                        </div>
-                        <h3
-                            class="text-heading font-sans font-bold text-primary mb-3">Outpatient
-                            Surgery Center</h3>
-                        <p class="text-secondary-600 mb-4">New construction
-                            electrical distribution for state-of-the-art
-                            outpatient surgical facility.</p>
-                        <div
-                            class="flex justify-between items-center text-sm text-secondary-600 mb-4">
-                            <span>1,200A Service</span>
-                            <span>4 Weeks</span>
-                            <span>New Construction</span>
-                        </div>
-                        <div class="border-t border-secondary-200 pt-4">
-                            <button onclick="toggleProjectSpecs('project-5')"
-                                class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">
-                                View Specifications →
-                            </button>
-                            <div id="project-5" class="hidden mt-4 space-y-2">
-                                <div class="bg-surface rounded p-3">
-                                    <p
-                                        class="text-sm"><strong>Electrical:</strong>
-                                        1,200A, 480V/277V, 3-phase</p>
-                                    <p
-                                        class="text-sm"><strong>Compliance:</strong>
-                                        NFPA 99, NEC Article 517</p>
-                                    <p
-                                        class="text-sm"><strong>Features:</strong>
-                                        Isolated power systems, emergency
-                                        lighting</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 6 -->
-                    <div
-                        class="project-card card-elevated group hover:shadow-industrial transition-all"
-                        data-industry="manufacturing" data-size="small"
-                        data-service="emergency">
-                        <div class="relative overflow-hidden rounded-lg mb-6">
-                            <img
-                                src="https://images.pixabay.com/photo/2016/11/19/15/32/factory-1840496_1280.jpg"
-                                alt="Food processing facility emergency repair"
-                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                                onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop'; this.onerror=null;" />
-                            <div
-                                class="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">Manufacturing</div>
-                            <div
-                                class="absolute top-4 right-4 bg-error text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">Emergency</div>
-                        </div>
-                        <h3
-                            class="text-heading font-sans font-bold text-primary mb-3">Food
-                            Processing Emergency</h3>
-                        <p class="text-secondary-600 mb-4">Emergency panel
-                            replacement during peak production season to prevent
-                            product loss.</p>
-                        <div
-                            class="flex justify-between items-center text-sm text-secondary-600 mb-4">
-                            <span>800A Service</span>
-                            <span>12 Hours</span>
-                            <span>Emergency Response</span>
-                        </div>
-                        <div class="border-t border-secondary-200 pt-4">
-                            <button onclick="toggleProjectSpecs('project-6')"
-                                class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">
-                                View Specifications →
-                            </button>
-                            <div id="project-6" class="hidden mt-4 space-y-2">
-                                <div class="bg-surface rounded p-3">
-                                    <p
-                                        class="text-sm"><strong>Electrical:</strong>
-                                        800A, 480V, 3-phase</p>
-                                    <p
-                                        class="text-sm"><strong>Response:</strong>
-                                        2-hour mobilization, 12-hour
-                                        completion</p>
-                                    <p class="text-sm"><strong>Result:</strong>
-                                        Zero product loss, production
-                                        resumed</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+    <!-- Project Card 3: مرکز داده -->
+    <div class="project-card flex flex-col card-elevated group hover:shadow-industrial transition-all" data-industry="datacenter" data-size="large" data-service="custom">
+        <div class="relative overflow-hidden rounded-lg mb-6">
+            <img src="../assets/images/apply-bg.jpg" alt="پروژه مرکز داده" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">مرکز داده</div>
+            <div class="absolute top-4 left-4 bg-success text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">Tier III</div>
+        </div>
+        <h3 class="text-heading font-sans font-bold text-primary mb-3">ساخت مرکز داده Tier III</h3>
+        <p class="text-secondary-600 mb-4 flex-grow">سیستم توزیع برق افزونه (Redundant) با کلیدهای انتقال اتوماتیک و سیستم‌های مانیتورینگ جامع.</p>
+        <div class="flex justify-between items-center text-sm text-secondary-600 mb-4">
+            <span>افزونگی N+1</span>
+            <span>اتمام در ۷۲ ساعت</span>
+            <span>پایداری ۹۹.۹۸۲٪</span>
+        </div>
+        <div class="border-t border-secondary-200 pt-4">
+            <button onclick="toggleProjectSpecs('project-3')" class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">
+                مشاهده مشخصات →
+            </button>
+            <div id="project-3" class="hidden mt-4 space-y-2 text-right">
+                <div class="bg-surface rounded p-3">
+                    <p class="text-sm"><strong>طراحی:</strong> توزیع برق افزونه N+1</p>
+                    <p class="text-sm"><strong>استانداردها:</strong> گواهی Tier III، پایداری ۹۹.۹۸۲٪</p>
+                    <p class="text-sm"><strong>ویژگی‌ها:</strong> قطعات Hot-swappable، ورودی دوگانه</p>
+                </div>
+            </div>
+        </div>
+    </div>
                     <!-- Additional project cards would continue here... -->
                     <!-- For brevity, showing 6 cards but the actual implementation would have more -->
                 </div>
@@ -634,25 +587,17 @@
         </section>
 
         <!-- Call to Action Section -->
-        <section class="py-20 bg-primary text-white">
-            <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                <h2 class="text-display font-sans font-bold mb-6">Ready to Start
-                    Your Next Project?</h2>
-                <p class="text-body-lg opacity-90 mb-8">Join 500+ satisfied
-                    clients who trust ElectroPanel Pro for their critical
-                    electrical infrastructure needs. From emergency response to
-                    complex custom installations, we deliver engineering
-                    excellence every time.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="contact_quote_request.html"
-                        class="btn-accent text-lg px-8 py-4">Request Custom
-                        Quote</a>
-                    <a href="custom_panel_design.html"
-                        class="bg-white text-primary font-sans font-semibold px-8 py-4 rounded-lg hover:bg-secondary-50 transition-colors">Explore
-                        Custom Design</a>
-                </div>
-            </div>
-        </section>
+        <!-- Call to Action Section -->
+<section class="py-20 bg-primary text-white">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-display font-sans font-bold mb-6">آماده شروع پروژه بعدی خود هستید؟</h2>
+        <p class="text-body-lg opacity-90 mb-8">به جمع بیش از ۱۰۰۰ مشتری راضی ما بپیوندید که برای نیازهای حیاتی زیرساخت برق خود به بهساز تابلو آسیا اعتماد کرده‌اند. از واکنش سریع در شرایط اضطراری تا نصب‌های پیچیده سفارشی، ما همواره برتری مهندسی را ارائه می‌دهیم.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact_quote_request.html" class="btn-accent text-lg px-8 py-4">درخواست پیشنهاد قیمت سفارشی</a>
+            <a href="custom_panel_design.html" class="bg-white text-primary font-sans font-semibold px-8 py-4 rounded-lg hover:bg-secondary-50 transition-colors">کاوش در طراحی سفارشی</a>
+        </div>
+    </div>
+</section>
 
         <!-- Footer -->
         <footer class="bg-secondary-900 text-white py-16">

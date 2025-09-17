@@ -18,57 +18,147 @@
             <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo -->
+                    <!-- Logo -->
                     <div class="flex-shrink-0">
-                        <a href="homepage.html" class="flex items-center">
-                            <img src alt>
+                        <!-- 1. Added gap-x-3 for clean spacing -->
+                        <a href="homepage.html"
+                            class="flex items-center gap-x-3">
+                            <!-- 3. Added logo with src, alt, and size -->
+                            <img src="../assets/images/logo.webp"
+                                alt="Behsaz Tablo Asia Logo"
+                                class="h-14 w-auto">
+                            <!-- 2. Text now comes first for RTL layout -->
                             <span
-                                class="ml-3 text-xl font-sans font-bold text-primary iran-sharp">بهساز
+                                class="text-xl font-sans font-bold text-primary">بهساز
                                 تابلو آسیا</span>
+
                         </a>
                     </div>
 
-                    <!-- Desktop Navigation (MODIFIED) -->
+                    <!-- Desktop Navigation (FINAL CORRECTED VERSION) -->
                     <div class="hidden md:block flex-grow">
-                        <div class="flex justify-end items-baseline gap-x-3">
+                        <div class="flex justify-end items-center gap-x-16">
+
                             <a href="homepage.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm iran-sharp">خانه</a>
-                            <a href="project_portfolio.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">پروژه
-                                ها</a>
-                            <a href="custom_panel_design.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">گواهینامه
-                                ها</a>
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">خانه</a>
+
+                            <!-- Dropdown 1: Projects -->
+                            <div class="relative group">
+                                <button
+                                    onclick="window.location.href='products.html';"
+                                    class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                    <span>پروژه ها</span>
+
+                                </button>
+                                <!-- USES dropdown-menu class -->
+                                <div class="dropdown-menu">
+                                    <div class="p-1">
+                                        <a href="project_portfolio.html"
+                                            class="dropdown-item">همه
+                                            پروژه‌ها</a>
+                                        <a href="#"
+                                            class="dropdown-item">پروژه‌های نفت
+                                            و گاز</a>
+                                        <a href="#"
+                                            class="dropdown-item">پروژه‌های
+                                            صنعتی</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main Dropdown: Products -->
+                            <div class="relative group">
+                                <button
+                                    onclick="window.location.href='products.html';"
+                                    class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                    <span>محصولات</span>
+                                </button>
+                                <!-- USES dropdown-menu class -->
+                                <div class="dropdown-menu">
+                                    <div class="p-1">
+
+                                        <!-- NESTED DROPDOWN ITEM: Low Voltage -->
+                                        <div class="relative group">
+                                            <div
+                                                class="dropdown-item flex items-center justify-between cursor-pointer">
+                                                <span>تابلو فشار ضعیف</span>
+
+                                            </div>
+                                            <!-- USES dropdown-menu-nested class -->
+                                            <div class="dropdown-menu-nested">
+                                                <div class="p-1">
+                                                    <a href="#"
+                                                        class="dropdown-item">کشویی</a>
+                                                    <a href="#"
+                                                        class="dropdown-item">Sivacon</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- NESTED DROPDOWN ITEM: Medium Voltage -->
+                                        <div class="relative group">
+                                            <div
+                                                class="dropdown-item flex items-center justify-between cursor-pointer">
+                                                <span>تابلو فشار متوسط</span>
+
+                                            </div>
+                                            <!-- USES dropdown-menu-nested class -->
+                                            <div class="dropdown-menu-nested">
+                                                <div class="p-1">
+                                                    <a href="#"
+                                                        class="dropdown-item">کشویی</a>
+                                                    <a href="#"
+                                                        class="dropdown-item">Compact</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Regular Dropdown Item -->
+                                        <a href="products.html"
+                                            class="dropdown-item">پست کیوسک</a>
+                                    </div>
+                                </div>
+                            </div>
+
                             <a href="about_capabilities.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">درباره
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">درباره
                                 ما</a>
                             <a href="technical_resources.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">بلاگ</a>
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">بلاگ</a>
                             <a href="contact_quote_request.html"
-                                class="btn-accent text-sm text-white">ثبت
-                                درخواست</a>
+                                class="btn-accent text-sm text-white">ارتباط با
+                                ما</a>
                         </div>
                     </div>
 
-                    <!-- Mobile menu button -->
-                    <div class="md:hidden">
-                        <button type="button"
-                            class="text-secondary-600 hover:text-primary p-2"
-                            onclick="toggleMobileMenu()">
-                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
+                    <!-- Mobile Navigation (UPDATED FOR SIMPLICITY) -->
+                    <div id="mobile-menu" class="md:hidden hidden">
+                        <div
+                            class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-secondary-200">
+                            <a href="homepage.html"
+                                class="nav-link block text-base">خانه</a>
+                            <a href="project_portfolio.html"
+                                class="nav-link block text-base">پروژه ها</a>
+                            <a href="products.html"
+                                class="nav-link block text-base">محصولات</a>
+                            <a href="custom_panel_design.html"
+                                class="nav-link block text-base">گواهینامه
+                                ها</a>
+                            <a href="about_capabilities.html"
+                                class="nav-link block text-base">درباره ما</a>
+                            <a href="technical_resources.html"
+                                class="nav-link block text-base">بلاگ</a>
+                            <a href="contact_quote_request.html"
+                                class="nav-link block text-base">ارتباط با
+                                ما</a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Mobile Navigation (No changes needed here) -->
-                <div id="mobile-menu" class="md:hidden hidden">
-                    ...
-                </div>
-            </nav>
+                    <!-- Mobile Navigation (No changes needed here) -->
+                    <div id="mobile-menu" class="md:hidden hidden">
+                        ...
+                    </div>
+                </nav>
         </header>
 
         <!-- Hero Carousel Section -->

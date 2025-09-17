@@ -19,57 +19,147 @@
             <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo -->
+                    <!-- Logo -->
                     <div class="flex-shrink-0">
-                        <a href="homepage.html" class="flex items-center">
-                            <img src alt>
+                        <!-- 1. Added gap-x-3 for clean spacing -->
+                        <a href="homepage.html"
+                            class="flex items-center gap-x-3">
+                            <!-- 3. Added logo with src, alt, and size -->
+                            <img src="../assets/images/logo.webp"
+                                alt="Behsaz Tablo Asia Logo"
+                                class="h-14 w-auto">
+                            <!-- 2. Text now comes first for RTL layout -->
                             <span
-                                class="ml-3 text-xl font-sans font-bold text-primary iran-sharp">بهساز
+                                class="text-xl font-sans font-bold text-primary">بهساز
                                 تابلو آسیا</span>
+
                         </a>
                     </div>
 
-                    <!-- Desktop Navigation (MODIFIED) -->
+                    <!-- Desktop Navigation (FINAL CORRECTED VERSION) -->
                     <div class="hidden md:block flex-grow">
-                        <div class="flex justify-end items-baseline gap-x-3">
+                        <div class="flex justify-end items-center gap-x-16">
+
                             <a href="homepage.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm iran-sharp">خانه</a>
-                            <a href="project_portfolio.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">پروژه
-                                ها</a>
-                            <a href="custom_panel_design.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">گواهینامه
-                                ها</a>
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">خانه</a>
+
+                            <!-- Dropdown 1: Projects -->
+                            <div class="relative group">
+                                <button
+                                    onclick="window.location.href='products.html';"
+                                    class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                    <span>پروژه ها</span>
+
+                                </button>
+                                <!-- USES dropdown-menu class -->
+                                <div class="dropdown-menu">
+                                    <div class="p-1">
+                                        <a href="project_portfolio.html"
+                                            class="dropdown-item">همه
+                                            پروژه‌ها</a>
+                                        <a href="#"
+                                            class="dropdown-item">پروژه‌های نفت
+                                            و گاز</a>
+                                        <a href="#"
+                                            class="dropdown-item">پروژه‌های
+                                            صنعتی</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main Dropdown: Products -->
+                            <div class="relative group">
+                                <button
+                                    onclick="window.location.href='products.html';"
+                                    class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                    <span>محصولات</span>
+                                </button>
+                                <!-- USES dropdown-menu class -->
+                                <div class="dropdown-menu">
+                                    <div class="p-1">
+
+                                        <!-- NESTED DROPDOWN ITEM: Low Voltage -->
+                                        <div class="relative group">
+                                            <div
+                                                class="dropdown-item flex items-center justify-between cursor-pointer">
+                                                <span>تابلو فشار ضعیف</span>
+
+                                            </div>
+                                            <!-- USES dropdown-menu-nested class -->
+                                            <div class="dropdown-menu-nested">
+                                                <div class="p-1">
+                                                    <a href="#"
+                                                        class="dropdown-item">کشویی</a>
+                                                    <a href="#"
+                                                        class="dropdown-item">Sivacon</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- NESTED DROPDOWN ITEM: Medium Voltage -->
+                                        <div class="relative group">
+                                            <div
+                                                class="dropdown-item flex items-center justify-between cursor-pointer">
+                                                <span>تابلو فشار متوسط</span>
+
+                                            </div>
+                                            <!-- USES dropdown-menu-nested class -->
+                                            <div class="dropdown-menu-nested">
+                                                <div class="p-1">
+                                                    <a href="#"
+                                                        class="dropdown-item">کشویی</a>
+                                                    <a href="#"
+                                                        class="dropdown-item">Compact</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Regular Dropdown Item -->
+                                        <a href="products.html"
+                                            class="dropdown-item">پست کیوسک</a>
+                                    </div>
+                                </div>
+                            </div>
+
                             <a href="about_capabilities.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">درباره
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">درباره
                                 ما</a>
                             <a href="technical_resources.html"
-                                class="text-secondary-600 hover:text-primary font-sans px-3 py-2 rounded-md text-sm transition-colors">بلاگ</a>
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">بلاگ</a>
                             <a href="contact_quote_request.html"
-                                class="btn-accent text-sm text-white">ثبت
-                                درخواست</a>
+                                class="btn-accent text-sm text-white">ارتباط با
+                                ما</a>
                         </div>
                     </div>
 
-                    <!-- Mobile menu button -->
-                    <div class="md:hidden">
-                        <button type="button"
-                            class="text-secondary-600 hover:text-primary p-2"
-                            onclick="toggleMobileMenu()">
-                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
+                    <!-- Mobile Navigation (UPDATED FOR SIMPLICITY) -->
+                    <div id="mobile-menu" class="md:hidden hidden">
+                        <div
+                            class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-secondary-200">
+                            <a href="homepage.html"
+                                class="nav-link block text-base">خانه</a>
+                            <a href="project_portfolio.html"
+                                class="nav-link block text-base">پروژه ها</a>
+                            <a href="products.html"
+                                class="nav-link block text-base">محصولات</a>
+                            <a href="custom_panel_design.html"
+                                class="nav-link block text-base">گواهینامه
+                                ها</a>
+                            <a href="about_capabilities.html"
+                                class="nav-link block text-base">درباره ما</a>
+                            <a href="technical_resources.html"
+                                class="nav-link block text-base">بلاگ</a>
+                            <a href="contact_quote_request.html"
+                                class="nav-link block text-base">ارتباط با
+                                ما</a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Mobile Navigation (No changes needed here) -->
-                <div id="mobile-menu" class="md:hidden hidden">
-                    ...
-                </div>
-            </nav>
+                    <!-- Mobile Navigation (No changes needed here) -->
+                    <div id="mobile-menu" class="md:hidden hidden">
+                        ...
+                    </div>
+                </nav>
         </header>
 
         <!-- Hero Section -->
@@ -85,7 +175,7 @@
             <!-- Layer 3: Text Content -->
             <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h1 class="text-hero font-sans font-bold mb-6">درباره
+                    <h1 class="text-hero text-white font-sans mb-6">درباره
                         ما</h1>
                     <p
                         class="text-body-lg mb-8 max-w-3xl mx-auto opacity-90">شریک
@@ -98,12 +188,102 @@
             </div>
         </section>
 
+        <!-- Company Introduction Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Right Column: Text Content -->
+            <div class="text-right">
+                <p class="font-sans font-semibold text-accent mb-4">بهساز تابلو آسیا</p>
+                <h2 class="text-display font-sans font-bold text-primary mb-6">پیشرو در مهندسی برق صنعتی</h2>
+                <p class="text-body-lg text-secondary-600 mb-6 leading-relaxed">
+                    شرکت بهساز تابلو آسیا از سال ۱۳۷۹ با تکیه بر دانش فنی، تجربه و تعهد به کیفیت، به عنوان یکی از تولیدکنندگان پیشرو در صنعت تابلوهای برق فشار ضعیف و متوسط در ایران شناخته می‌شود. ما با بهره‌گیری از تیمی متخصص و تجهیزات مدرن، راه‌حل‌های الکتریکی ایمن، قابل اعتماد و کاملاً سفارشی را برای پروژه‌های بزرگ در صنایع نفت، گاز، پتروشیمی، ساختمانی و بیمارستانی ارائه می‌دهیم.
+                </p>
+                <ul class="space-y-4 text-secondary-700">
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-success-600 ml-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>
+                            <strong class="font-semibold text-primary">تعهد به کیفیت:</strong>
+                            پایبندی کامل به استانداردهای جهانی و کنترل کیفی دقیق در تمام مراحل تولید.
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-success-600 ml-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>
+                            <strong class="font-semibold text-primary">نوآوری مهندسی:</strong>
+                            ارائه راه‌حل‌های سفارشی و بهینه برای پیچیده‌ترین چالش‌های الکتریکی.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Left Column: Image -->
+            <div>
+                <img src="../assets/images/apply-bg.jpg" alt="تیم مهندسی بهساز تابلو آسیا در حال کار بر روی یک پروژه" class="rounded-lg shadow-lg w-full h-auto object-cover">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Vision & Mission Section -->
+<section class="py-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-display font-sans font-bold text-primary mb-4">چشم‌انداز و مأموریت ما</h2>
+            <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto">اصول و ارزش‌هایی که مسیر ما را در ارائه برترین راه‌حل‌های مهندسی برق مشخص می‌کنند.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+            <!-- Our Vision Card -->
+            <div class="card-elevated">
+                <div class="flex items-center mb-6">
+                    <div class="bg-primary-50 rounded-full p-3 mr-4">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-heading font-sans font-bold text-primary">چشم‌انداز ما</h3>
+                </div>
+                <p class="text-secondary-600 text-lg leading-relaxed">
+                    چشم‌انداز ما تبدیل شدن به معیار اصلی کیفیت و نوآوری در صنعت تابلو برق ایران و منطقه است. ما در تلاشیم تا با بهره‌گیری از تکنولوژی‌های روز دنیا و تکیه بر دانش فنی تیم متخصص خود، راه‌حل‌هایی پایدار و هوشمند ارائه دهیم که ایمنی و بهره‌وری را برای تمامی صنایع به ارمغان می‌آورد.
+                </p>
+            </div>
+
+            <!-- Our Mission Card -->
+            <div class="card-elevated">
+                <div class="flex items-center mb-6">
+                    <div class="bg-accent-50 rounded-full p-3 mr-4">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-heading font-sans font-bold text-primary">مأموریت ما</h3>
+                </div>
+                <p class="text-secondary-600 text-lg leading-relaxed">
+                    مأموریت ما طراحی، تولید و ارائه تابلوهای برق فشار ضعیف و متوسط با بالاترین سطح کیفیت و مطابق با استانداردهای جهانی است. ما متعهد به ارائه خدمات مهندسی دقیق، پشتیبانی فنی قابل اعتماد و جلب رضایت کامل مشتریان خود از طریق نوآوری مستمر و بهبود فرآیندها هستیم.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
         <!-- Company Heritage Timeline -->
         <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2
-                        class="text-display font-sans font-bold text-primary mb-4">خط زمانی</h2>
+                        class="text-display font-sans font-bold text-primary mb-4">بیش از سه دهه پیشرفت</h2>
                     <p
                         class="text-body-lg text-secondary-600 max-w-3xl mx-auto">از
                         یک شرکت مهندسی کوچک تا تولیدکننده‌ای پیشرو در
@@ -593,52 +773,7 @@
             </div>
         </section>
 
-        <!-- Vision & Mission Section -->
-<section class="py-20 bg-surface">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Header -->
-        <div class="text-center mb-16">
-            <h2 class="text-display font-sans font-bold text-primary mb-4">چشم‌انداز و مأموریت ما</h2>
-            <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto">اصول و ارزش‌هایی که مسیر ما را در ارائه برترین راه‌حل‌های مهندسی برق مشخص می‌کنند.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-
-            <!-- Our Vision Card -->
-            <div class="card-elevated">
-                <div class="flex items-center mb-6">
-                    <div class="bg-primary-50 rounded-full p-3 mr-4">
-                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-heading font-sans font-bold text-primary">چشم‌انداز ما</h3>
-                </div>
-                <p class="text-secondary-600 text-lg leading-relaxed">
-                    چشم‌انداز ما تبدیل شدن به معیار اصلی کیفیت و نوآوری در صنعت تابلو برق ایران و منطقه است. ما در تلاشیم تا با بهره‌گیری از تکنولوژی‌های روز دنیا و تکیه بر دانش فنی تیم متخصص خود، راه‌حل‌هایی پایدار و هوشمند ارائه دهیم که ایمنی و بهره‌وری را برای تمامی صنایع به ارمغان می‌آورد.
-                </p>
-            </div>
-
-            <!-- Our Mission Card -->
-            <div class="card-elevated">
-                <div class="flex items-center mb-6">
-                    <div class="bg-accent-50 rounded-full p-3 mr-4">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-heading font-sans font-bold text-primary">مأموریت ما</h3>
-                </div>
-                <p class="text-secondary-600 text-lg leading-relaxed">
-                    مأموریت ما طراحی، تولید و ارائه تابلوهای برق فشار ضعیف و متوسط با بالاترین سطح کیفیت و مطابق با استانداردهای جهانی است. ما متعهد به ارائه خدمات مهندسی دقیق، پشتیبانی فنی قابل اعتماد و جلب رضایت کامل مشتریان خود از طریق نوآوری مستمر و بهبود فرآیندها هستیم.
-                </p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
+        
 
         <section class="py-20 bg-white">
             <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -648,9 +783,9 @@
                 <p class="text-body-lg text-secondary-600 mb-8">از ایده تا پیاده‌سازی؛ تیم تخصصی مهندسی ما آماده است تا با برترین کیفیت نیازهای شما را برآورده سازد.</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="contact_quote_request.html"
-                        class="btn-accent text-lg px-8 py-4">ثبت درخواست</a>
+                        class="btn-accent text-lg px-8 py-4">تماس با ما</a>
                     <a href="about_capabilities.html"
-                        class="btn-secondary text-lg px-8 py-4">مطالعه توانایی‌های ما</a>
+                        class="btn-secondary text-lg px-8 py-4">مشاهده گالری پروژه‌ها</a>
                 </div>
             </div>
         </section>

@@ -31,11 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
         mobileMenu.classList.toggle('hidden');
     };
 
-    // --- Mobile Menu Toggle ---
-    window.toggleMobileMenu = function() {
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.toggle('hidden');
-    };
 
     const metricsSection = document.getElementById('metrics-section');
     if (metricsSection) {
