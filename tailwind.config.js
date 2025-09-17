@@ -98,6 +98,9 @@ module.exports = {
         'body-sm': ['0.875rem', { lineHeight: '1.5' }],
         'caption': ['0.75rem', { lineHeight: '1.4' }],
       },
+      width: {
+        '44': '11rem', // Creates a new w-44 class
+      },
       spacing: {
         '18': '4.5rem',
         '88': '22rem',

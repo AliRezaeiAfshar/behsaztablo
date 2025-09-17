@@ -110,28 +110,59 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     // --- Carousel Functionality (if on homepage) ---
-    if (document.getElementById('hero-carousel')) {
-        let slideIndex = 1;
-        showSlides(slideIndex);
-        window.plusSlides = n => showSlides(slideIndex += n);
-        window.currentSlide = n => showSlides(slideIndex = n);
+    // if (document.getElementById('hero-carousel')) {
+    //     let slideIndex = 1;
+    //     showSlides(slideIndex);
+    //     window.plusSlides = n => showSlides(slideIndex += n);
+    //     window.currentSlide = n => showSlides(slideIndex = n);
         
-        function showSlides(n) {
-            let slides = document.getElementsByClassName("carousel-slide");
-            let dots = document.getElementsByClassName("carousel-dot");
-            if (slides.length === 0) return;
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
+    //     function showSlides(n) {
+    //         let slides = document.getElementsByClassName("carousel-slide");
+    //         let dots = document.getElementsByClassName("carousel-dot");
+    //         if (slides.length === 0) return;
+    //         if (n > slides.length) { slideIndex = 1 }
+    //         if (n < 1) { slideIndex = slides.length }
+    //         for (let i = 0; i < slides.length; i++) {
+    //             slides[i].style.opacity = "0";
+    //         }
+    //         for (let i = 0; i < dots.length; i++) {
+    //             dots[i].classList.remove("bg-opacity-100");
+    //             dots[i].classList.add("bg-opacity-50");
+    //         }
+    //         slides[slideIndex - 1].style.opacity = "1";
+    //         dots[slideIndex - 1].classList.add("bg-opacity-100");
+    //     }
+    //     setInterval(() => plusSlides(1), 3000);
+    // }
+    if (document.getElementById('hero-carousel')) {
+        let slideIndex = 0; // Start at 0 for easier array indexing
+        const slides = document.getElementsByClassName("carousel-slide");
+        
+        function showSlides() {
+            // Hide all slides
             for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
                 slides[i].style.opacity = "0";
             }
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].classList.remove("bg-opacity-100");
-                dots[i].classList.add("bg-opacity-50");
+
+            // Increment index and loop back to 0 if at the end
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
             }
-            slides[slideIndex - 1].style.opacity = "1";
-            dots[slideIndex - 1].classList.add("bg-opacity-100");
+
+            // Show the current slide
+            if (slides[slideIndex - 1]) {
+                slides[slideIndex - 1].classList.add('active');
+                slides[slideIndex - 1].style.opacity = "1";
+            }
         }
-        setInterval(() => plusSlides(1), 3000);
+        
+        // Initial call to show the first slide
+        if (slides.length > 0) {
+            showSlides(); 
+            // Set the interval to change slides every 5 seconds (5000 ms)
+            setInterval(showSlides, 4000);
+        }
     }
 });

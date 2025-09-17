@@ -14,6 +14,10 @@
 }
 
 @layer components {
+  
+  .carousel-slide {
+    @apply transition-opacity duration-1000 ease-in-out; /* 1-second fade */
+  }
 
   #image-modal.modal-open {
     @apply opacity-100 pointer-events-auto;
@@ -21,17 +25,27 @@
   #image-modal.modal-open > div {
     @apply scale-100;
   }
-  .dropdown-menu {
-  @apply absolute right-0 top-full pt-2 w-56 origin-top-right;
+  .dropdown-base {
+  @apply absolute w-56 origin-top-right;
   @apply bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none;
-  @apply opacity-0 scale-95 pointer-events-none; /* Hidden state */
-  @apply transition-all duration-200 ease-out; /* Smooth transition */
+  @apply opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out;
 }
 
-  /* The visible state when the parent group is hovered */
-  .group:hover .dropdown-menu {
-    @apply opacity-100 scale-100 pointer-events-auto;
-  }
+/* Positioning for the main (level 1) dropdown */
+.dropdown-menu {
+  @apply dropdown-base right-0 top-full pt-2;
+}
+
+/* Positioning for the nested (level 2) dropdown */
+.dropdown-menu-nested {
+  @apply dropdown-base w-44 -left-[11.25rem] top-0;
+}
+
+/* Show the direct child menu (level 1 or 2) on hover */
+.group:hover > .dropdown-menu,
+.group:hover > .dropdown-menu-nested {
+  @apply opacity-100 scale-100 pointer-events-auto;
+}
 
   /* The style for each link inside the dropdown */
   .dropdown-item {
@@ -266,6 +280,7 @@
 @layer base {
   html {
     font-family: iran-sharp;
+    @apply scroll-smooth;
   }
   
   h1, h2, h3, h4, h5, h6 {
