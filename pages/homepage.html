@@ -14,112 +14,113 @@
     </head>
     <body class="font-sans text-text-primary bg-background">
         <!-- Navigation Header -->
-        <header id="main-header" class="bg-white shadow-card sticky top-0 z-50 transition-all duration-300">
-            <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header id="main-header"
+            class="bg-white shadow-card sticky top-0 z-50 transition-all duration-300">
+            <nav class="max-w-full ml-auto mr-0 pl-4 pr-0 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo -->
-                    <!-- Logo -->
                     <div class="flex-shrink-0">
-                        <!-- 1. Added gap-x-3 for clean spacing -->
                         <a href="homepage.html"
                             class="flex items-center gap-x-3">
-                            <!-- 3. Added logo with src, alt, and size -->
                             <img src="../assets/images/logo.webp"
                                 alt="Behsaz Tablo Asia Logo"
                                 class="h-14 w-auto">
-                            <!-- 2. Text now comes first for RTL layout -->
                             <span
                                 class="text-xl font-sans font-bold text-primary">بهساز
                                 تابلو آسیا</span>
-
+                            
                         </a>
                     </div>
 
-                    <!-- Desktop Navigation (FINAL CORRECTED VERSION) -->
-                    <div class="hidden md:block flex-grow">
-                        <div class="flex justify-end items-center gap-x-16">
-
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:block flex-grow">
+                        <div class="flex justify-end items-center gap-x-12">
                             <a href="homepage.html"
                                 class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">خانه</a>
-
                             <!-- Dropdown 1: Projects -->
-                            <div class="relative group">
-                                <button
-                                    onclick="window.location.href='products.html';"
-                                    class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
-                                    <span>پروژه ها</span>
+                                <div class="relative group">
+                                    <button
+                                        onclick="window.location.href='project_portfolio.html';"
+                                        class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                        <span>پروژه ها</span>
 
-                                </button>
-                                <!-- USES dropdown-menu class -->
-                                <div class="dropdown-menu">
-                                    <div class="p-1">
-                                        <a href="project_portfolio.html"
-                                            class="dropdown-item">همه
-                                            پروژه‌ها</a>
-                                        <a href="#"
-                                            class="dropdown-item">پروژه‌های نفت
-                                            و گاز</a>
-                                        <a href="#"
-                                            class="dropdown-item">پروژه‌های
-                                            صنعتی</a>
+                                    </button>
+                                    <!-- USES dropdown-menu class -->
+                                    <div class="dropdown-menu">
+                                        <div class="p-1">
+                                            <a href="project_portfolio.html"
+                                                class="dropdown-item">همه
+                                                پروژه‌ها</a>
+                                            <a href="#"
+                                                class="dropdown-item">پروژه‌های
+                                                نفت
+                                                و گاز</a>
+                                            <a href="#"
+                                                class="dropdown-item">پروژه‌های
+                                                صنعتی</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Main Dropdown: Products -->
-                            <div class="relative group">
-                                <button
-                                    onclick="window.location.href='products.html';"
-                                    class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
-                                    <span>محصولات</span>
-                                </button>
-                                <!-- USES dropdown-menu class -->
-                                <div class="dropdown-menu">
-                                    <div class="p-1">
+                                <!-- Main Dropdown: Products -->
+                                <div class="relative group">
+                                    <button
+                                        onclick="window.location.href='products.html';"
+                                        class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                        <span>محصولات</span>
+                                    </button>
+                                    <!-- USES dropdown-menu class -->
+                                    <div class="dropdown-menu">
+                                        <div class="p-1">
 
-                                        <!-- NESTED DROPDOWN ITEM: Low Voltage -->
-                                        <div class="relative group">
-                                            <div
-                                                class="dropdown-item flex items-center justify-between cursor-pointer">
-                                                <span>تابلو فشار ضعیف</span>
+                                            <!-- NESTED DROPDOWN ITEM: Low Voltage -->
+                                            <div class="relative group">
+                                                <div
+                                                    class="dropdown-item flex items-center justify-between cursor-pointer">
+                                                    <span>تابلو فشار ضعیف</span>
 
-                                            </div>
-                                            <!-- USES dropdown-menu-nested class -->
-                                            <div class="dropdown-menu-nested">
-                                                <div class="p-1">
-                                                    <a href="#"
-                                                        class="dropdown-item">کشویی</a>
-                                                    <a href="#"
-                                                        class="dropdown-item">Sivacon</a>
+                                                </div>
+                                                <!-- USES dropdown-menu-nested class -->
+                                                <div
+                                                    class="dropdown-menu-nested">
+                                                    <div class="p-1">
+                                                        <a href="products.html#product-lv-withdrawable"
+                                                            class="dropdown-item">Switchgear Withdrawable</a>
+                                                        <a href="products.html#product-lv-fixed"
+                                                            class="dropdown-item">Switchgear Fixed</a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <!-- NESTED DROPDOWN ITEM: Medium Voltage -->
-                                        <div class="relative group">
-                                            <div
-                                                class="dropdown-item flex items-center justify-between cursor-pointer">
-                                                <span>تابلو فشار متوسط</span>
+                                            <!-- NESTED DROPDOWN ITEM: Medium Voltage -->
+                                            <div class="relative group">
+                                                <div
+                                                    class="dropdown-item flex items-center justify-between cursor-pointer">
+                                                    <span>تابلو فشار
+                                                        متوسط</span>
 
-                                            </div>
-                                            <!-- USES dropdown-menu-nested class -->
-                                            <div class="dropdown-menu-nested">
-                                                <div class="p-1">
-                                                    <a href="#"
-                                                        class="dropdown-item">کشویی</a>
-                                                    <a href="#"
-                                                        class="dropdown-item">Compact</a>
+                                                </div>
+                                                <!-- USES dropdown-menu-nested class -->
+                                                <div
+                                                    class="dropdown-menu-nested">
+                                                    <div class="p-1">
+                                                        <a href="products.html#product-mv-withdrawable"
+                                                            class="dropdown-item">Mv Switchgear Withdrawable</a>
+                                                        <a href="products.html#product-mv-unisafe"
+                                                            class="dropdown-item">Mv Switchgear Unisafe</a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <!-- Regular Dropdown Item -->
-                                        <a href="products.html"
-                                            class="dropdown-item">پست کیوسک</a>
+                                            <!-- Regular Dropdown Item -->
+                                            <a href="products.html#product-kiosk-post"
+                                                class="dropdown-item">پست
+                                                کیوسک</a>
+                                                <a href="products.html#product-compact"
+                                                class="dropdown-item">Compact</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
                             <a href="about_capabilities.html"
                                 class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">درباره
                                 ما</a>
@@ -131,35 +132,48 @@
                         </div>
                     </div>
 
-                    <!-- Mobile Navigation (UPDATED FOR SIMPLICITY) -->
-                    <div id="mobile-menu" class="md:hidden hidden">
-                        <div
-                            class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-secondary-200">
-                            <a href="homepage.html"
-                                class="nav-link block text-base">خانه</a>
-                            <a href="project_portfolio.html"
-                                class="nav-link block text-base">پروژه ها</a>
-                            <a href="products.html"
-                                class="nav-link block text-base">محصولات</a>
-                            <a href="custom_panel_design.html"
-                                class="nav-link block text-base">گواهینامه
-                                ها</a>
-                            <a href="about_capabilities.html"
-                                class="nav-link block text-base">درباره ما</a>
-                            <a href="technical_resources.html"
-                                class="nav-link block text-base">بلاگ</a>
-                            <a href="contact_quote_request.html"
-                                class="nav-link block text-base">ارتباط با
-                                ما</a>
-                        </div>
+                    <!-- ADD THIS BLOCK BACK IN: Mobile menu button -->
+                    <div class="lg:hidden">
+                        <button type="button"
+                            class="text-secondary-600 hover:text-primary p-2"
+                            onclick="toggleMobileMenu()">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
                     </div>
 
-                    <!-- Mobile Navigation (No changes needed here) -->
-                    <div id="mobile-menu" class="md:hidden hidden">
-                        ...
+                </div>
+
+                <!-- This is your existing mobile menu panel, it should be OUTSIDE the flex container above -->
+                <div id="mobile-menu" class="lg:hidden hidden">
+                    <div
+                        class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-secondary-200">
+                        <a href="homepage.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">خانه</a>
+                        <a href="project_portfolio.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">پروژه
+                            ها</a>
+                        <a href="products.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">محصولات</a>
+                        <a href="custom_panel_design.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">گواهینامه
+                            ها</a>
+                        <a href="about_capabilities.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">درباره
+                            ما</a>
+                        <a href="contact_quote_request.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">ارتباط
+                            با ما</a>
                     </div>
-                </nav>
+                </div>
+            </nav>
         </header>
+
 
         <!-- Hero Carousel Section -->
         <section class="relative h-screen overflow-hidden">
@@ -168,7 +182,7 @@
                 <div
                     class="carousel-slide active absolute inset-0 w-full h-full">
                     <img
-                        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
+                        src="../assets/images/apply-bg.jpg"
                         alt="Hospital emergency power system installation"
                         class="w-full h-full object-cover"
                         onerror="this.src='https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=2940'; this.onerror=null;" />
@@ -178,8 +192,7 @@
                         class="absolute inset-0 flex items-center justify-center">
                         <div class="text-center text-white max-w-4xl px-4">
                             <h1
-                                class="text-hero font-sans font-bold mb-6">Powering
-                                Critical Healthcare Infrastructure</h1>
+                                class="text-hero font-sans font-bold mb-6">پروژه خفن پتروشیمی</h1>
                             <p class="text-xl mb-4 font-sans">2,500 amp
                                 emergency service installation</p>
                             <p class="text-lg mb-8 opacity-90">Ensuring 99.99%
@@ -201,7 +214,7 @@
                 <div
                     class="carousel-slide absolute inset-0 w-full h-full opacity-0">
                     <img
-                        src="https://images.pixabay.com/photo/2016/11/19/15/32/factory-1840496_1280.jpg"
+                        src="../assets/images/apply-bg.jpg"
                         alt="Manufacturing facility main distribution center"
                         class="w-full h-full object-cover"
                         onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
@@ -211,8 +224,7 @@
                         class="absolute inset-0 flex items-center justify-center">
                         <div class="text-center text-white max-w-4xl px-4">
                             <h1
-                                class="text-hero font-sans font-bold mb-6">Industrial
-                                Manufacturing Excellence</h1>
+                                class="text-hero font-sans font-bold mb-6">پروژه خفن عمرانی</h1>
                             <p class="text-xl mb-4 font-sans">5,000 amp main
                                 distribution upgrade</p>
                             <p class="text-lg mb-8 opacity-90">Zero downtime
@@ -234,7 +246,7 @@
                 <div
                     class="carousel-slide absolute inset-0 w-full h-full opacity-0">
                     <img
-                        src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=2940"
+                        src="../assets/images/apply-bg.jpg"
                         alt="Data center critical infrastructure setup"
                         class="w-full h-full object-cover"
                         onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
@@ -243,8 +255,7 @@
                         class="absolute inset-0 flex items-center justify-center">
                         <div class="text-center text-white max-w-4xl px-4">
                             <h1
-                                class="text-hero font-sans font-bold mb-6">Mission-Critical
-                                Data Infrastructure</h1>
+                                class="text-hero font-sans font-bold mb-6">پروژه خفن بیمارستانی</h1>
                             <p class="text-xl mb-4 font-sans">Redundant power
                                 distribution system</p>
                             <p class="text-lg mb-8 opacity-90">72-hour emergency
@@ -728,7 +739,7 @@
     <!-- Layer 3: Text Content -->
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-display font-sans font-bold mb-4">کیفیت بی‌نظیر</h2>
+            <h2 class="text-display font-sans font-bold mb-4">پیشتاز در صنعت</h2>
             <p class="text-body-lg opacity-90 max-w-3xl mx-auto iran-sharp">بیست و پنج سال درخشش موفق در تولید تابلوهای فشار ضعیف و متوسط</p>
         </div>
 
@@ -757,7 +768,7 @@
 
         <div class="mt-16 text-center">
             <div class="inline-flex items-center bg-white bg-opacity-10 rounded-lg px-6 py-4">
-                <span class="text-lg font-sans font-semibold">با رعایت تمام استانداردها</span>
+                <span class="text-lg font-sans font-semibold">با رعایت تمام استانداردهای جهانی</span>
                 <svg class="w-6 h-6 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                 </svg>
@@ -765,29 +776,14 @@
         </div>
     </div>
 </section>
-        <!-- Call to Action Section -->
-        <section class="py-20 bg-white">
-            <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                <h2
-                    class="text-display font-sans font-bold text-primary mb-6">پروژه‌تان
-                    را به ما بسپارید</h2>
-                <p class="text-body-lg text-secondary-600 mb-8">از ایده تا پیاده‌سازی؛ تیم تخصصی مهندسی ما آماده است تا با برترین کیفیت نیازهای شما را برآورده سازد.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="contact_quote_request.html"
-                        class="btn-accent text-lg px-8 py-4">ثبت درخواست</a>
-                    <a href="about_capabilities.html"
-                        class="btn-secondary text-lg px-8 py-4">مطالعه توانایی‌های ما</a>
-                </div>
-            </div>
-        </section>
-
+        
         <!-- Trusted By Section -->
         <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Section Header -->
                 <div class="text-center mb-16">
                     <h2
-                        class="text-display font-sans font-bold text-primary mb-4">همکاران ما</h2>
+                        class="text-display font-sans font-bold text-primary mb-4">مشتریان ما</h2>
                     <p
                         class="text-body-lg text-secondary-600 max-w-3xl mx-auto">ما
                         مفتخریم که با شرکت‌های پیشرو در صنایع مختلف برای تامین
@@ -852,6 +848,22 @@
                             alt="ABB Logo"
                             class="w-48 h-24 object-contain filter grayscale hover:grayscale-0 transition-all duration-300 ease-in-out">
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+                <h2
+                    class="text-display font-sans font-bold text-primary mb-6">پروژه‌تان
+                    را به ما بسپارید</h2>
+                <p class="text-body-lg text-secondary-600 mb-8">از ایده تا پیاده‌سازی؛ تیم تخصصی مهندسی ما آماده است تا با برترین کیفیت نیازهای شما را برآورده سازد.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact_quote_request.html"
+                        class="btn-accent text-lg px-8 py-4">ثبت درخواست</a>
+                    <a href="about_capabilities.html"
+                        class="btn-secondary text-lg px-8 py-4">مطالعه توانایی‌های ما</a>
                 </div>
             </div>
         </section>

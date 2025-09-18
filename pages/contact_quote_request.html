@@ -13,89 +13,114 @@
             src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Felectropan3871back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
     </head>
     <body class="font-sans text-text-primary bg-background">
-        <!-- ADD THIS TOAST CONTAINER -->
-        <div id="toast-notification"
-            class="fixed top-5 right-5 bg-success-600 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-x-3 opacity-0 transition-all duration-300 transform translate-y-[-20px]">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd" />
-            </svg>
-            <span id="toast-message">Your message has been sent!</span>
-        </div>
         <!-- Navigation Header -->
         <header id="main-header"
             class="bg-white shadow-card sticky top-0 z-50 transition-all duration-300">
-            <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="max-w-full ml-auto mr-0 pl-4 pr-0 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo -->
                     <div class="flex-shrink-0">
                         <a href="homepage.html"
                             class="flex items-center gap-x-3">
-                            <span
-                                class="text-xl font-sans font-bold text-primary">بهساز
-                                تابلو آسیا</span>
                             <img src="../assets/images/logo.webp"
                                 alt="Behsaz Tablo Asia Logo"
                                 class="h-14 w-auto">
+                            <span
+                                class="text-xl font-sans font-bold text-primary">بهساز
+                                تابلو آسیا</span>
+                            
                         </a>
                     </div>
 
                     <!-- Desktop Navigation -->
                     <div class="hidden lg:block flex-grow">
-                        <div class="flex justify-end items-center gap-x-6">
+                        <div class="flex justify-end items-center gap-x-12">
                             <a href="homepage.html"
                                 class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">خانه</a>
-                            <!-- Projects Dropdown -->
-                            <div class="relative group">
-                                <button
-                                    class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
-                                    <span>پروژه ها</span>
-                                    <svg
-                                        class="w-4 h-4 mr-1 transition-transform duration-200 group-hover:rotate-180"
-                                        fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24"><path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path></svg>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <div class="p-1">
-                                        <a href="project_portfolio.html"
-                                            class="dropdown-item">همه
-                                            پروژه‌ها</a>
-                                        <a href="#"
-                                            class="dropdown-item">پروژه‌های نفت
-                                            و گاز</a>
-                                        <a href="#"
-                                            class="dropdown-item">پروژه‌های
-                                            صنعتی</a>
+                            <!-- Dropdown 1: Projects -->
+                                <div class="relative group">
+                                    <button
+                                        onclick="window.location.href='project_portfolio.html';"
+                                        class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                        <span>پروژه ها</span>
+
+                                    </button>
+                                    <!-- USES dropdown-menu class -->
+                                    <div class="dropdown-menu">
+                                        <div class="p-1">
+                                            <a href="project_portfolio.html"
+                                                class="dropdown-item">همه
+                                                پروژه‌ها</a>
+                                            <a href="#"
+                                                class="dropdown-item">پروژه‌های
+                                                نفت
+                                                و گاز</a>
+                                            <a href="#"
+                                                class="dropdown-item">پروژه‌های
+                                                صنعتی</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Products Dropdown -->
-                            <div class="relative group">
-                                <button
-                                    class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
-                                    <span>محصولات</span>
-                                    <svg
-                                        class="w-4 h-4 mr-1 transition-transform duration-200 group-hover:rotate-180"
-                                        fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24"><path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path></svg>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <div class="p-1">
-                                        <a href="products.html"
-                                            class="dropdown-item">همه
-                                            محصولات</a>
+
+                                <!-- Main Dropdown: Products -->
+                                <div class="relative group">
+                                    <button
+                                        onclick="window.location.href='products.html';"
+                                        class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                        <span>محصولات</span>
+                                    </button>
+                                    <!-- USES dropdown-menu class -->
+                                    <div class="dropdown-menu">
+                                        <div class="p-1">
+
+                                            <!-- NESTED DROPDOWN ITEM: Low Voltage -->
+                                            <div class="relative group">
+                                                <div
+                                                    class="dropdown-item flex items-center justify-between cursor-pointer">
+                                                    <span>تابلو فشار ضعیف</span>
+
+                                                </div>
+                                                <!-- USES dropdown-menu-nested class -->
+                                                <div
+                                                    class="dropdown-menu-nested">
+                                                    <div class="p-1">
+                                                        <a href="products.html#product-lv-withdrawable"
+                                                            class="dropdown-item">Switchgear Withdrawable</a>
+                                                        <a href="products.html#product-lv-fixed"
+                                                            class="dropdown-item">Switchgear Fixed</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- NESTED DROPDOWN ITEM: Medium Voltage -->
+                                            <div class="relative group">
+                                                <div
+                                                    class="dropdown-item flex items-center justify-between cursor-pointer">
+                                                    <span>تابلو فشار
+                                                        متوسط</span>
+
+                                                </div>
+                                                <!-- USES dropdown-menu-nested class -->
+                                                <div
+                                                    class="dropdown-menu-nested">
+                                                    <div class="p-1">
+                                                        <a href="products.html#product-mv-withdrawable"
+                                                            class="dropdown-item">Mv Switchgear Withdrawable</a>
+                                                        <a href="products.html#product-mv-unisafe"
+                                                            class="dropdown-item">Mv Switchgear Unisafe</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Regular Dropdown Item -->
+                                            <a href="products.html#product-kiosk-post"
+                                                class="dropdown-item">پست
+                                                کیوسک</a>
+                                                <a href="products.html#product-compact"
+                                                class="dropdown-item">Compact</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             <a href="about_capabilities.html"
                                 class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">درباره
                                 ما</a>
@@ -151,7 +176,7 @@
 
         <!-- Emergency Services Banner -->
         <!-- Emergency Services Banner -->
-        <section class="hidden md:block bg-blue-500 text-white py-4">
+        <section class="hidden md:block bg-orange-500 text-white py-4">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Main Container: Changed space-y and space-x to gap -->
                 <div
@@ -180,9 +205,10 @@
                                 class="font-sans font-semibold mr-2">021-88543614</span>
                         </div>
                         <div class="text-sm opacity-90">
-                            میانگین پاسخگویی: <span
+                            در کوتاه‌ترین زمان ممکن پاسخگوی شما هستیم 
+                            <!-- <span
                                 class="font-sans font-semibold">45
-                                دقیقه</span>
+                                دقیقه</span> -->
                         </div>
                     </div>
                 </div>
@@ -331,6 +357,7 @@
                 </div>
             </div>
         </section>
+        
 
         <!-- Main Content -->
         <section class="py-20 bg-surface">
@@ -763,12 +790,12 @@
                                 <div class="flex items-start gap-x-4">
                                     <!-- Icon Wrapper -->
                                     <div class="flex-shrink-0 pt-1">
-                                        <svg class="w-6 h-6 text-accent"
-                                            fill="currentColor"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                                        </svg>
+                                        <svg class="w-8 h-8 text-accent"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"><path
+                                            fill-rule="evenodd"
+                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            clip-rule="evenodd" /></svg>
                                     </div>
                                     <!-- Text Content -->
                                     <div>
@@ -807,7 +834,29 @@
                                             class="text-secondary-600">sales@behsaztablo.ir</div>
                                         <div
                                             class="text-sm text-secondary-500">پاسخ
-                                            در ظرف 4 ساعت</div>
+                                            در ظرف 1 ساعت</div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-x-4">
+                                    <!-- Icon Wrapper -->
+                                    <div class="flex-shrink-0 pt-1">
+                                        <svg class="w-6 h-6 text-accent"
+                                            fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path
+                                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                        </svg>
+                                        
+                                    </div>
+                                    <!-- Text Content -->
+                                    <div>
+                                        <div
+                                            class="font-sans font-semibold text-primary">تماس با ما</div>
+                                        <div
+                                            class="text-secondary-600">021-88543614</div>
+                                        <div
+                                            class="text-sm text-secondary-500">021-88545093</div>
                                     </div>
                                 </div>
 
@@ -839,79 +888,7 @@
                             </div>
                         </div>
 
-                        <!-- Team Contacts -->
-                        <div class="card-elevated">
-                            <h3
-                                class="text-heading font-sans font-bold text-primary mb-6">تیم
-                                ما</h3>
-                            <div class="space-y-6">
-
-                                <!-- Michael Chen -->
-                                <!-- MODIFIED: Added gap-x-4 to the parent div -->
-                                <div class="flex items-start gap-x-4">
-                                    <!-- MODIFIED: Removed mr-4, added mt-1 -->
-                                    <img
-                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop&ixlib=rb-4.0.3"
-                                        alt="Michael Chen - Senior Engineering Manager"
-                                        class="w-12 h-12 rounded-full object-cover mt-1"
-                                        onerror="this.src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=100'; this.onerror=null;" />
-                                    <div>
-                                        <div
-                                            class="font-sans font-semibold text-primary">ایمان
-                                            ایرانی</div>
-                                        <div
-                                            class="text-sm text-secondary-600">Chief
-                                            Executive Officer</div>
-                                        <div
-                                            class="text-sm text-secondary-500">CEO@behsaztablo.ir</div>
-                                    </div>
-                                </div>
-
-                                <!-- Sarah Rodriguez -->
-                                <!-- MODIFIED: Added gap-x-4 to the parent div -->
-                                <div class="flex items-start gap-x-4">
-                                    <!-- MODIFIED: Removed mr-4, added mt-1 -->
-                                    <img
-                                        src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100"
-                                        alt="Sarah Rodriguez - Sales Specialist"
-                                        class="w-12 h-12 rounded-full object-cover mt-1"
-                                        onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop'; this.onerror=null;" />
-                                    <div>
-                                        <div
-                                            class="font-sans font-semibold text-primary">میثم
-                                            صمدالهی</div>
-                                        <div
-                                            class="text-sm text-secondary-600">Marketing
-                                            Manager</div>
-                                        <div
-                                            class="text-sm text-secondary-500">MM@behsaztablo.ir</div>
-                                    </div>
-                                </div>
-
-                                <!-- David Park -->
-                                <!-- MODIFIED: Added gap-x-4 to the parent div -->
-                                <div class="flex items-start gap-x-4">
-                                    <!-- MODIFIED: Removed mr-4, added mt-1 -->
-                                    <img
-                                        src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg"
-                                        alt="David Park - Emergency Coordinator"
-                                        class="w-12 h-12 rounded-full object-cover mt-1"
-                                        onerror="this.src='https://images.unsplash.com/photo-1494790108375-2616b612b786?q=80&w=100&auto=format&fit=crop'; this.onerror=null;" />
-                                    <div>
-                                        <div
-                                            class="font-sans font-semibold text-primary">نگار
-                                            کلخرانی</div>
-                                        <div
-                                            class="text-sm text-secondary-600">Senior
-                                            Sales Specialist</div>
-                                        <div
-                                            class="text-sm text-secondary-500">SSS@behsaztablo.ir</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
+                        
                         <!-- Recent Projects
                         <div class="card-elevated">
                             <h3
@@ -946,30 +923,77 @@
         </section>
 
         <!-- Regional Coverage Map -->
-        <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2
-                        class="text-display font-sans font-bold text-primary mb-4">آدرس
-                        دفتر مرکزی</h2>
-                    <!-- <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto">برای مشاوره حضوری ما را در نقشه پیدا کنید.</p> -->
-                </div>
+<section class="py-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-display font-sans font-bold text-primary mb-4">موقعیت ما</h2>
+            <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto">ما را در نقشه پیدا کنید و برای مشاوره حضوری مراجعه فرمایید.</p>
+        </div>
 
-                <!-- This is the container that will make the map responsive -->
-                <div
-                    class="map-container rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                    <!-- 
-                PASTE YOUR IFRAME CODE FROM GOOGLE MAPS HERE.
-                The example below is just a placeholder.
-            -->
+        <!-- Main Grid Container -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            
+            <!-- Right Column: Location Details -->
+            <div class="bg-primary text-white p-8 rounded-lg flex flex-col justify-center">
+                <h3 class="text-4xl text-white font-sans font-bold mb-8">مراکز ما</h3>
+                <!-- Card 1: Phone Number (Clickable) -->
+                        <div
+                            class="mb-3 relative bg-white bg-opacity-10 rounded-lg backdrop-blur-sm border border-white/20 text-right w-full sm:w-auto transition-all duration-300 hover:bg-opacity-20 hover:border-white/40">
+                            <a href="tel:+982188543614"
+                                class="block p-4 md:p-6">
+                                <div
+                                    class="flex items-center justify-between mb-2">
+                                    <p
+                                        class="font-sans font-semibold text-lg">دفتر مرکزی</p>
+                                    <svg class="w-8 h-8 text-accent"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"><path
+                                            fill-rule="evenodd"
+                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            clip-rule="evenodd" /></svg>
+                                </div>
+                                <p class="opacity-80" dir="ltr">تهران، سهروردی شمالی، خیابات عشقیار، کوچه چهارم، پلاک هشت</p>
+                            </a>
+                        </div>
+                        <!-- Card 1: Phone Number (Clickable) -->
+                        <div
+                            class="relative bg-white bg-opacity-10 rounded-lg backdrop-blur-sm border border-white/20 text-right w-full sm:w-auto transition-all duration-300 hover:bg-opacity-20 hover:border-white/40">
+                            <a href="tel:+982188543614"
+                                class="block p-4 md:p-6">
+                                <div
+                                    class="flex items-center justify-between mb-2">
+                                    <p
+                                        class="font-sans font-semibold text-lg">کارخانه</p>
+                                    <svg class="w-8 h-8 text-accent"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"><path
+                                            fill-rule="evenodd"
+                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            clip-rule="evenodd" /></svg>
+                                </div>
+                                <p class="opacity-80" dir="ltr">شهرک صنعتی ایوانکی، فاز دوم، بلوار تلاش، کوچه تلاش چهار، پلاک 8
+                                </p>
+                            </a>
+                        </div>
+            </div>
+
+            <!-- Left Column: Map -->
+            <div class="lg:order-first">
+                <!-- The map-container will make the iframe responsive and fill this column -->
+                <div class="map-container rounded-lg overflow-hidden h-full">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1619.2869198101469!2d51.431484816114626!3d35.736697996518856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dfd606c6b9da7%3A0x121bf84820d5806!2sBehsaz%20Tablou%20Asia!5e0!3m2!1sen!2sde!4v1757840037905!5m2!1sen!2sde"
-                        width="600" height="450" style="border:0;"
+                        style="border:0;"
                         allowfullscreen loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
-        </section>
+            
+
+        </div>
+    </div>
+</section>
 
         <!-- Footer -->
         <footer class="bg-secondary-900 text-white py-16">

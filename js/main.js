@@ -1,10 +1,33 @@
 // js/main.js - Final Version
 
 document.addEventListener("DOMContentLoaded", function() {
+    const pdfModal = document.getElementById('pdf-modal');
+    const pdfViewer = document.getElementById('pdf-viewer');
 
+    window.openPdfModal = function(pdfSrc) {
+        if (pdfModal && pdfViewer) {
+            pdfViewer.src = pdfSrc;
+            pdfModal.classList.add('modal-open');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+    }
+
+    window.closePdfModal = function(event) {
+        // This condition allows closing by clicking the background overlay
+        if (event && event.target !== pdfModal) {
+            return;
+        }
+        if (pdfModal) {
+            pdfModal.classList.remove('modal-open');
+            pdfViewer.src = ''; // Clear the src to stop the PDF from loading in the background
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    }
     // --- Image Modal Functionality ---
     const modal = document.getElementById('image-modal');
     const modalImage = document.getElementById('modal-image');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerButton = document.getElementById('hamburger-button');
 
     window.openImageModal = function(imageSrc) {
         if (modal && modalImage) {
@@ -13,6 +36,12 @@ document.addEventListener("DOMContentLoaded", function() {
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
         }
     }
+     window.toggleMobileMenu = function() {
+        if (mobileMenu) {
+            mobileMenu.classList.toggle('menu-open');
+            mobileMenu.classList.toggle('hidden');
+        }
+    };
 
     window.closeImageModal = function(event) {
         // This condition allows closing by clicking the background but not the image itself
@@ -25,11 +54,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     
-    // --- Mobile Menu Toggle ---
-    window.toggleMobileMenu = function() {
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.toggle('hidden');
-    };
+    document.addEventListener('click', function(event) {
+        // Check if the menu exists, is open, and the click was outside both the menu and the button
+        if (mobileMenu && mobileMenu.classList.contains('menu-open')) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnHamburger = hamburgerButton.contains(event.target);
+
+            if (!isClickInsideMenu && !isClickOnHamburger) {
+                mobileMenu.classList.remove('menu-open'); // Close the menu
+            }
+        }
+    });
 
 
     const metricsSection = document.getElementById('metrics-section');

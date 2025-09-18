@@ -16,111 +16,111 @@
         <!-- Navigation Header -->
         <header id="main-header"
             class="bg-white shadow-card sticky top-0 z-50 transition-all duration-300">
-            <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="max-w-full ml-auto mr-0 pl-4 pr-0 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo -->
-                    <!-- Logo -->
                     <div class="flex-shrink-0">
-                        <!-- 1. Added gap-x-3 for clean spacing -->
                         <a href="homepage.html"
                             class="flex items-center gap-x-3">
-                            <!-- 3. Added logo with src, alt, and size -->
                             <img src="../assets/images/logo.webp"
                                 alt="Behsaz Tablo Asia Logo"
                                 class="h-14 w-auto">
-                            <!-- 2. Text now comes first for RTL layout -->
                             <span
                                 class="text-xl font-sans font-bold text-primary">بهساز
                                 تابلو آسیا</span>
-
+                            
                         </a>
                     </div>
 
-                    <!-- Desktop Navigation (FINAL CORRECTED VERSION) -->
-                    <div class="hidden md:block flex-grow">
-                        <div class="flex justify-end items-center gap-x-16">
-
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:block flex-grow">
+                        <div class="flex justify-end items-center gap-x-12">
                             <a href="homepage.html"
                                 class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">خانه</a>
-
                             <!-- Dropdown 1: Projects -->
-                            <div class="relative group">
-                                <button
-                                    onclick="window.location.href='products.html';"
-                                    class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
-                                    <span>پروژه ها</span>
+                                <div class="relative group">
+                                    <button
+                                        onclick="window.location.href='project_portfolio.html';"
+                                        class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                        <span>پروژه ها</span>
 
-                                </button>
-                                <!-- USES dropdown-menu class -->
-                                <div class="dropdown-menu">
-                                    <div class="p-1">
-                                        <a href="project_portfolio.html"
-                                            class="dropdown-item">همه
-                                            پروژه‌ها</a>
-                                        <a href="#"
-                                            class="dropdown-item">پروژه‌های نفت
-                                            و گاز</a>
-                                        <a href="#"
-                                            class="dropdown-item">پروژه‌های
-                                            صنعتی</a>
+                                    </button>
+                                    <!-- USES dropdown-menu class -->
+                                    <div class="dropdown-menu">
+                                        <div class="p-1">
+                                            <a href="project_portfolio.html"
+                                                class="dropdown-item">همه
+                                                پروژه‌ها</a>
+                                            <a href="#"
+                                                class="dropdown-item">پروژه‌های
+                                                نفت
+                                                و گاز</a>
+                                            <a href="#"
+                                                class="dropdown-item">پروژه‌های
+                                                صنعتی</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Main Dropdown: Products -->
-                            <div class="relative group">
-                                <button
-                                    onclick="window.location.href='products.html';"
-                                    class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
-                                    <span>محصولات</span>
-                                </button>
-                                <!-- USES dropdown-menu class -->
-                                <div class="dropdown-menu">
-                                    <div class="p-1">
+                                <!-- Main Dropdown: Products -->
+                                <div class="relative group">
+                                    <button
+                                        onclick="window.location.href='products.html';"
+                                        class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                        <span>محصولات</span>
+                                    </button>
+                                    <!-- USES dropdown-menu class -->
+                                    <div class="dropdown-menu">
+                                        <div class="p-1">
 
-                                        <!-- NESTED DROPDOWN ITEM: Low Voltage -->
-                                        <div class="relative group">
-                                            <div
-                                                class="dropdown-item flex items-center justify-between cursor-pointer">
-                                                <span>تابلو فشار ضعیف</span>
+                                            <!-- NESTED DROPDOWN ITEM: Low Voltage -->
+                                            <div class="relative group">
+                                                <div
+                                                    class="dropdown-item flex items-center justify-between cursor-pointer">
+                                                    <span>تابلو فشار ضعیف</span>
 
-                                            </div>
-                                            <!-- USES dropdown-menu-nested class -->
-                                            <div class="dropdown-menu-nested">
-                                                <div class="p-1">
-                                                    <a href="#"
-                                                        class="dropdown-item">کشویی</a>
-                                                    <a href="#"
-                                                        class="dropdown-item">Sivacon</a>
+                                                </div>
+                                                <!-- USES dropdown-menu-nested class -->
+                                                <div
+                                                    class="dropdown-menu-nested">
+                                                    <div class="p-1">
+                                                        <a href="products.html#product-lv-withdrawable"
+                                                            class="dropdown-item">Switchgear Withdrawable</a>
+                                                        <a href="products.html#product-lv-fixed"
+                                                            class="dropdown-item">Switchgear Fixed</a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <!-- NESTED DROPDOWN ITEM: Medium Voltage -->
-                                        <div class="relative group">
-                                            <div
-                                                class="dropdown-item flex items-center justify-between cursor-pointer">
-                                                <span>تابلو فشار متوسط</span>
+                                            <!-- NESTED DROPDOWN ITEM: Medium Voltage -->
+                                            <div class="relative group">
+                                                <div
+                                                    class="dropdown-item flex items-center justify-between cursor-pointer">
+                                                    <span>تابلو فشار
+                                                        متوسط</span>
 
-                                            </div>
-                                            <!-- USES dropdown-menu-nested class -->
-                                            <div class="dropdown-menu-nested">
-                                                <div class="p-1">
-                                                    <a href="#"
-                                                        class="dropdown-item">کشویی</a>
-                                                    <a href="#"
-                                                        class="dropdown-item">Compact</a>
+                                                </div>
+                                                <!-- USES dropdown-menu-nested class -->
+                                                <div
+                                                    class="dropdown-menu-nested">
+                                                    <div class="p-1">
+                                                        <a href="products.html#product-mv-withdrawable"
+                                                            class="dropdown-item">Mv Switchgear Withdrawable</a>
+                                                        <a href="products.html#product-mv-unisafe"
+                                                            class="dropdown-item">Mv Switchgear Unisafe</a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <!-- Regular Dropdown Item -->
-                                        <a href="products.html"
-                                            class="dropdown-item">پست کیوسک</a>
+                                            <!-- Regular Dropdown Item -->
+                                            <a href="products.html#product-kiosk-post"
+                                                class="dropdown-item">پست
+                                                کیوسک</a>
+                                                <a href="products.html#product-compact"
+                                                class="dropdown-item">Compact</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
                             <a href="about_capabilities.html"
                                 class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">درباره
                                 ما</a>
@@ -132,35 +132,48 @@
                         </div>
                     </div>
 
-                    <!-- Mobile Navigation (UPDATED FOR SIMPLICITY) -->
-                    <div id="mobile-menu" class="md:hidden hidden">
-                        <div
-                            class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-secondary-200">
-                            <a href="homepage.html"
-                                class="nav-link block text-base">خانه</a>
-                            <a href="project_portfolio.html"
-                                class="nav-link block text-base">پروژه ها</a>
-                            <a href="products.html"
-                                class="nav-link block text-base">محصولات</a>
-                            <a href="custom_panel_design.html"
-                                class="nav-link block text-base">گواهینامه
-                                ها</a>
-                            <a href="about_capabilities.html"
-                                class="nav-link block text-base">درباره ما</a>
-                            <a href="technical_resources.html"
-                                class="nav-link block text-base">بلاگ</a>
-                            <a href="contact_quote_request.html"
-                                class="nav-link block text-base">ارتباط با
-                                ما</a>
-                        </div>
+                    <!-- ADD THIS BLOCK BACK IN: Mobile menu button -->
+                    <div class="lg:hidden">
+                        <button type="button"
+                            class="text-secondary-600 hover:text-primary p-2"
+                            onclick="toggleMobileMenu()">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
                     </div>
 
-                    <!-- Mobile Navigation (No changes needed here) -->
-                    <div id="mobile-menu" class="md:hidden hidden">
-                        ...
+                </div>
+
+                <!-- This is your existing mobile menu panel, it should be OUTSIDE the flex container above -->
+                <div id="mobile-menu" class="lg:hidden hidden">
+                    <div
+                        class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-secondary-200">
+                        <a href="homepage.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">خانه</a>
+                        <a href="project_portfolio.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">پروژه
+                            ها</a>
+                        <a href="products.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">محصولات</a>
+                        <a href="custom_panel_design.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">گواهینامه
+                            ها</a>
+                        <a href="about_capabilities.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">درباره
+                            ما</a>
+                        <a href="contact_quote_request.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">ارتباط
+                            با ما</a>
                     </div>
-                </nav>
+                </div>
+            </nav>
         </header>
+
 
         <!-- Hero Section -->
         <section class="relative py-20 text-white overflow-hidden">
@@ -279,150 +292,94 @@
 
 
         <!-- Company Heritage Timeline -->
-        <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2
-                        class="text-display font-sans font-bold text-primary mb-4">بیش از سه دهه پیشرفت</h2>
-                    <p
-                        class="text-body-lg text-secondary-600 max-w-3xl mx-auto">از
-                        یک شرکت مهندسی کوچک تا تولیدکننده‌ای پیشرو در
-                        زیرساخت‌های حیاتی برق.</p>
-                </div>
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-display font-sans font-bold text-primary mb-4">بیش از سه دهه پیشرفت</h2>
+            <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto">از یک شرکت مهندسی کوچک تا تولیدکننده‌ای پیشرو در زیرساخت‌های حیاتی برق.</p>
+        </div>
 
-                <div class="relative">
-                    <!-- Timeline Line -->
-                    <div
-                        class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-secondary-200"></div>
+        <div class="relative">
+            <!-- Timeline Line -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-secondary-200"></div>
 
-                    <!-- Timeline Items -->
-                    <div class="space-y-16">
+            <!-- Timeline Items -->
+            <div class="space-y-16">
 
-                        <!-- 1379 - Founding -->
-                        <div class="relative flex items-center">
-                            <div class="flex-1 text-right pr-8">
-                                <div class="card-elevated">
-                                    <h3
-                                        class="text-heading font-sans font-bold text-primary mb-2">ثبت
-                                        شرکت - ۱۳۷۹</h3>
-                                    <!-- NEW PERSIAN DESCRIPTION -->
-                                    <p class="text-secondary-600">شرکت بهساز
-                                        تابلو آسیا با هدف ارائه راه‌حل‌های نوین
-                                        و مهندسی‌شده در صنعت برق کشور تاسیس
-                                        گردید. چشم‌انداز ما از همان ابتدا،
-                                        ارتقاء کیفیت و ایمنی در زیرساخت‌های
-                                        الکتریکی بود.</p>
-                                </div>
-                            </div>
-                            <div
-                                class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-card"></div>
-                            <div class="flex-1 pl-8"></div>
+                <!-- 1379 - Founding -->
+                <div class="relative flex items-center group">
+                    <div class="flex-1 text-right pr-8">
+                        <div class="card-elevated">
+                            <h3 class="text-2xl md:text-heading font-sans font-bold text-primary mb-2">ثبت شرکت - ۱۳۷۹</h3>
+                            <p class="text-secondary-600">شرکت بهساز تابلو آسیا با هدف ارائه راه‌حل‌های نوین و مهندسی‌شده در صنعت برق کشور تاسیس گردید. چشم‌انداز ما از همان ابتدا، ارتقاء کیفیت و ایمنی در زیرساخت‌های الکتریکی بود.</p>
                         </div>
-
-                        <!-- 1385 - Factory Upgrade -->
-                        <div class="relative flex items-center">
-                            <div class="flex-1 pr-8"></div>
-                            <div
-                                class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow-card"></div>
-                            <div class="flex-1 text-left pl-8">
-                                <div class="card-elevated">
-                                    <h3
-                                        class="text-heading font-sans font-bold text-primary mb-2">ارتقا
-                                        محیط و ابزار کارخانه - ۱۳۸۵</h3>
-                                    <!-- NEW PERSIAN DESCRIPTION -->
-                                    <p class="text-secondary-600">با گسترش
-                                        کارخانه و مدرن‌سازی تجهیزات تولیدی،
-                                        توانستیم اولین پروژه بزرگ بیمارستانی خود
-                                        را با موفقیت به اتمام برسانیم و جایگاه
-                                        خود را در پروژه‌های حیاتی تثبیت
-                                        کنیم.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 1389 - Certifications -->
-                        <div class="relative flex items-center">
-                            <div class="flex-1 text-right pr-8">
-                                <div class="card-elevated">
-                                    <h3
-                                        class="text-heading font-sans font-bold text-primary mb-2">اخذ
-                                        گواهینامه‌ها - ۱۳۸۹</h3>
-                                    <!-- NEW PERSIAN DESCRIPTION -->
-                                    <p class="text-secondary-600">در راستای تعهد
-                                        به کیفیت، موفق به دریافت گواهینامه‌های
-                                        معتبر ملی و بین‌المللی شدیم. این
-                                        دستاورد، استانداردهای تولید ما را به سطح
-                                        جدیدی ارتقا داد.</p>
-                                </div>
-                            </div>
-                            <div
-                                class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-white shadow-card"></div>
-                            <div class="flex-1 pl-8"></div>
-                        </div>
-
-                        <!-- 1393 - Major Partnerships -->
-                        <div class="relative flex items-center">
-                            <div class="flex-1 pr-8"></div>
-                            <div
-                                class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-success-600 rounded-full border-4 border-white shadow-card"></div>
-                            <div class="flex-1 text-left pl-8">
-                                <div class="card-elevated">
-                                    <h3
-                                        class="text-heading font-sans font-bold text-primary mb-2">همکاری
-                                        با صنایع بزرگ - ۱۳۹۳</h3>
-                                    <!-- NEW PERSIAN DESCRIPTION -->
-                                    <p class="text-secondary-600">با کسب اعتماد
-                                        شرکت‌های پیشرو در صنایع نفت، گاز و
-                                        پتروشیمی، وارد فصل جدیدی از همکاری‌های
-                                        استراتژیک شدیم و پروژه‌های بزرگی را در
-                                        سطح ملی آغاز کردیم.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 1395 - Team Expansion -->
-                        <div class="relative flex items-center">
-                            <div class="flex-1 text-right pr-8">
-                                <div class="card-elevated">
-                                    <h3
-                                        class="text-heading font-bold text-primary mb-2">گسترش
-                                        و افزایش پرسنل - ۱۳۹۵</h3>
-                                    <!-- NEW PERSIAN DESCRIPTION -->
-                                    <p class="text-secondary-600">با گسترش دامنه
-                                        فعالیت‌ها و افزایش تقاضا، تیم مهندسی و
-                                        تولیدی خود را با جذب متخصصان برجسته
-                                        تقویت کردیم تا پاسخگوی پروژه‌های
-                                        پیچیده‌تر باشیم.</p>
-                                </div>
-                            </div>
-                            <div
-                                class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-card"></div>
-                            <div class="flex-1 pl-8"></div>
-                        </div>
-
-                        <!-- 1400 - Industry Leadership -->
-                        <div class="relative flex items-center">
-                            <div class="flex-1 pr-8"></div>
-                            <div
-                                class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow-card"></div>
-                            <div class="flex-1 text-left pl-8">
-                                <div class="card-elevated">
-                                    <h3
-                                        class="text-heading font-sans font-bold text-primary mb-2">رهبری
-                                        در صنعت - ۱۴۰۰</h3>
-                                    <!-- NEW PERSIAN DESCRIPTION -->
-                                    <p class="text-secondary-600">با عبور از مرز
-                                        ۱۰۰۰ پروژه موفق و حفظ رکورد بدون حادثه
-                                        ایمنی، جایگاه خود را به عنوان یکی از
-                                        رهبران قابل اعتماد صنعت تابلو برق در
-                                        کشور تثبیت نمودیم.</p>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-card z-10"></div>
+                    <!-- REPLACED empty div with an image -->
+                    <div class="flex-1 pl-8">
+                        <div class="overflow-hidden rounded-lg shadow-lg">
+                            <img src="../assets/images/about-hero1.jpg" alt="اسناد تاسیس شرکت" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300">
                         </div>
                     </div>
                 </div>
+
+                <!-- 1385 - Factory Upgrade -->
+                <div class="relative flex items-center group">
+                    <!-- REPLACED empty div with an image -->
+                    <div class="flex-1 pr-8">
+                        <div class="overflow-hidden rounded-lg shadow-lg">
+                            <img src="../assets/images/about-hero1.jpg" alt="ارتقا کارخانه" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow-card"></div>
+                    <div class="flex-1 text-left pl-8">
+                        <div class="card-elevated">
+                            <h3 class="text-2xl md:text-heading font-sans font-bold text-primary mb-2">ارتقا محیط و ابزار کارخانه - ۱۳۸۵</h3>
+                            <p class="text-secondary-600">با گسترش کارخانه و مدرن‌سازی تجهیزات تولیدی، توانستیم اولین پروژه بزرگ بیمارستانی خود را با موفقیت به اتمام برسانیم و جایگاه خود را در پروژه‌های حیاتی تثبیت کنیم.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1389 - Certifications -->
+                <div class="relative flex items-center group">
+                    <div class="flex-1 text-right pr-8">
+                        <div class="card-elevated">
+                            <h3 class="text-2xl md:text-heading font-sans font-bold text-primary mb-2">اخذ گواهینامه‌ها - ۱۳۸۹</h3>
+                            <p class="text-secondary-600">در راستای تعهد به کیفیت، موفق به دریافت گواهینامه‌های معتبر ملی و بین‌المللی شدیم. این دستاورد، استانداردهای تولید ما را به سطح جدیدی ارتقا داد.</p>
+                        </div>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-white shadow-card z-10"></div>
+                    <!-- REPLACED empty div with an image -->
+                    <div class="flex-1 pl-8">
+                        <div class="overflow-hidden rounded-lg shadow-lg">
+                            <img src="../assets/images/about-hero1.jpg" alt="گواهینامه ISO" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1393 - Major Partnerships -->
+                <div class="relative flex items-center group">
+                    <!-- REPLACED empty div with an image -->
+                    <div class="flex-1 pr-8">
+                        <div class="overflow-hidden rounded-lg shadow-lg">
+                            <img src="../assets/images/about-hero1.jpg" alt="همکاری با صنعت نفت و گاز" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-success-600 rounded-full border-4 border-white shadow-card"></div>
+                    <div class="flex-1 text-left pl-8">
+                        <div class="card-elevated">
+                            <h3 class="text-2xl md:text-heading font-sans font-bold text-primary mb-2">همکاری با صنایع بزرگ - ۱۳۹۳</h3>
+                            <p class="text-secondary-600">با کسب اعتماد شرکت‌های پیشرو در صنایع نفت، گاز و پتروشیمی، وارد فصل جدیدی از همکاری‌های استراتژیک شدیم و پروژه‌های بزرگی را در سطح ملی آغاز کردیم.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ... Repeat this pattern for the remaining items ... -->
+                
             </div>
-        </section>
+        </div>
+    </div>
+</section>
         <!-- Virtual Facility Tour -->
         <section id="facility-tour" class="py-20 bg-surface">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -773,7 +730,175 @@
             </div>
         </section>
 
-        
+        <!-- ... after Certifications section ... -->
+
+<!-- Our Catalog Section -->
+<section class="py-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg-px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left Column: Image -->
+            <div class="lg:order-last">
+                <img src="../assets/files/Behsaz Tablo Asia Catalogue_page-0001.jpg" alt="تصویر جلد کاتالوگ بهساز تابلو آسیا" class="rounded-lg shadow-2xl w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300">
+            </div>
+
+            <!-- Right Column: Text Content -->
+            <div class="text-right">
+                <h2 class="text-display font-sans font-bold text-primary mb-6">کاتالوگ جامع محصولات</h2>
+                <p class="text-body-lg text-secondary-600 mb-8 leading-relaxed">
+                    کاتالوگ کامل ما را دانلود کنید تا به مشخصات فنی دقیق، راهنماهای نصب و جزئیات کامل تمامی محصولات ما، از تابلوهای فشار ضعیف و متوسط تا پست‌های کمپکت، دسترسی پیدا کنید.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <!-- Live Preview Button -->
+                    <button onclick="openPdfModal('../assets/files/Behsaz Tablo Asia Catalogue.pdf')" class="btn-primary text-lg px-8 py-4 flex-1">
+                        <svg class="w-6 h-6 inline ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+                        مشاهده آنلاین
+                    </button>
+                    <!-- Download Link (styled as a button) -->
+                    <a href="../assets/files/Behsaz Tablo Asia Catalogue.pdf" download class="btn-accent text-lg px-8 py-4 flex-1 text-center">
+                        <svg class="w-6 h-6 inline ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                        دانلود فایل PDF
+                    </a>
+                </div>
+                <div class="mt-12 border-t border-secondary-200 pt-8">
+                    <h4 class="text-xl font-sans font-bold text-primary mb-4">آنچه در کاتالوگ خواهید یافت:</h4>
+                    <ul class="space-y-3 text-secondary-700">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success-600 ml-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span>مشخصات کامل تابلوهای فشار ضعیف (کشویی و Sivacon)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success-600 ml-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span>جزئیات فنی تابلوهای فشار متوسط (کمپکت و Metal-Clad)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success-600 ml-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span>نمونه دیاگرام‌های تک‌خطی و جانمایی</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success-600 ml-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span>جداول راهنمای انتخاب محصول و استانداردها</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success-600 ml-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span>مشخصات کامل تابلوهای فشار ضعیف (کشویی و Sivacon)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success-600 ml-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span>جزئیات فنی تابلوهای فشار متوسط (کمپکت و Metal-Clad)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success-600 ml-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span>نمونه دیاگرام‌های تک‌خطی و جانمایی</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success-600 ml-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span>جداول راهنمای انتخاب محصول و استانداردها</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success-600 ml-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span>مشخصات کامل تابلوهای فشار ضعیف (کشویی و Sivacon)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success-600 ml-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span>جزئیات فنی تابلوهای فشار متوسط (کمپکت و Metal-Clad)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success-600 ml-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span>نمونه دیاگرام‌های تک‌خطی و جانمایی</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success-600 ml-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <span>جداول راهنمای انتخاب محصول و استانداردها</span>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+
+        </div>
+    </div>
+</section>
+<!-- Facilities & Technology Section -->
+<section class="py-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-display font-sans font-bold text-primary mb-4">کارخانه و تکنولوژی ما</h2>
+            <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto">ترکیبی از فضای تولیدی پیشرفته و تکنولوژی‌های مدرن برای ساخت محصولاتی با کیفیت جهانی.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Card 1: Manufacturing Space -->
+            <div class="card-elevated p-8">
+                <div class="bg-primary-50 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                </div>
+                <h3 class="text-heading font-sans font-bold text-primary mb-3">فضای تولیدی مجهز</h3>
+                <p class="text-secondary-600">کارخانه ما با فضای گسترده و خطوط تولید بهینه، ظرفیت تولید پروژه‌های بزرگ در کوتاه‌ترین زمان ممکن را داراست.</p>
+            </div>
+
+            <!-- Card 2: Advanced Machinery -->
+            <div class="card-elevated p-8">
+                <div class="bg-accent-50 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                </div>
+                <h3 class="text-heading font-sans font-bold text-primary mb-3">ماشین‌آلات پیشرفته</h3>
+                <p class="text-secondary-600">ما با سرمایه‌گذاری بر روی ماشین‌آلات CNC و تجهیزات اتوماسیون، دقت و تکرارپذیری بی‌نظیری را در فرآیند ساخت تضمین می‌کنیم.</p>
+            </div>
+
+            <!-- Card 3: Testing Lab -->
+            <div class="card-elevated p-8">
+                <div class="bg-secondary-50 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547a2 2 0 00-.547 1.806l.477 2.387a6 6 0 00.517 3.86l.158.318a6 6 0 01.517 3.86l.477 2.387a2 2 0 001.806.547a2 2 0 00.547-1.806l-.477-2.387a6 6 0 00-.517-3.86l-.158-.318a6 6 0 01-.517-3.86l-.477-2.387a2 2 0 011.806-.547a2 2 0 01.547 1.806l.477 2.387a6 6 0 003.86.517l.318-.158a6 6 0 013.86-.517l2.387.477a2 2 0 001.806-.547a2 2 0 00.547-1.806l-.477-2.387a6 6 0 00-.517-3.86l-.158-.318a6 6 0 01-.517-3.86l.477-2.387a2 2 0 011.806-.547a2 2 0 01.547 1.806l-.477 2.387a6 6 0 00-.517 3.86l.158.318a6 6 0 01.517 3.86l.477 2.387a2 2 0 001.806.547a2 2 0 00.547-1.806z"></path></svg>
+                </div>
+                <h3 class="text-heading font-sans font-bold text-primary mb-3">آزمایشگاه تخصصی</h3>
+                <p class="text-secondary-600">آزمایشگاه مجهز ما این امکان را فراهم می‌کند تا تمامی تست‌های عملکردی و ایمنی را مطابق با استانداردهای جهانی انجام دهیم.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Commitment to Quality & Safety Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left Column: Image -->
+            <div class="lg:order-last">
+                <div class="relative">
+                    <img src="../assets/images/apply-bg.jpg" alt="A technician performing a detailed safety check on an electrical panel" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    <div class="absolute -bottom-4 -right-4 bg-accent text-white p-6 rounded-lg shadow-2xl max-w-xs">
+                        <svg class="w-10 h-10 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        <p class="font-sans font-bold text-xl">رکورد ایمنی بی‌نقص در بیش از ۱۰۰۰ پروژه</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Text Content -->
+            <div class="text-right">
+                <h2 class="text-display font-sans font-bold text-primary mb-6">تعهد ما به کیفیت و ایمنی</h2>
+                <p class="text-body-lg text-secondary-600 mb-8 leading-relaxed">
+                    در بهساز تابلو آسیا، کیفیت و ایمنی تنها یک استاندارد نیستند، بلکه هسته اصلی فرهنگ سازمانی ما را تشکیل می‌دهند. ما درک می‌کنیم که محصولات ما در قلب زیرساخت‌های حیاتی کشور قرار می‌گیرند و به همین دلیل، هیچ‌گاه در مورد استانداردها مصالحه نمی‌کنیم.
+                </p>
+                <div class="space-y-6">
+                    <div class="bg-surface p-6 rounded-lg">
+                        <h4 class="text-xl font-sans font-bold text-primary mb-2">کنترل کیفی چندمرحله‌ای</h4>
+                        <p class="text-secondary-700">هر محصول از مرحله طراحی تا تولید نهایی، تحت بازرسی‌های دقیق و آزمون‌های عملکردی متعدد قرار می‌گیرد تا از انطباق کامل با مشخصات فنی و استانداردهای جهانی اطمینان حاصل شود.</p>
+                    </div>
+                    <div class="bg-surface p-6 rounded-lg">
+                        <h4 class="text-xl font-sans font-bold text-primary mb-2">اولویت ایمنی</h4>
+                        <p class="text-secondary-700">ما با رعایت سختگیرانه پروتکل‌های ایمنی، محصولاتی را طراحی می‌کنیم که نه تنها از تجهیزات شما محافظت می‌کنند، بلکه ایمنی کامل پرسنل و اپراتورها را نیز تضمین می‌نمایند.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ... before Call to Action section ... -->
 
         <section class="py-20 bg-white">
             <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -902,6 +1027,24 @@
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             <img id="modal-image" src="" alt="Certificate Preview" class="w-full h-auto">
+        </div>
+    </div>
+        <!-- ... Your other scripts ... -->
+
+    <!-- ADD THIS: PDF Viewer Modal -->
+    <div id="pdf-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4 opacity-0 pointer-events-none transition-opacity duration-300" onclick="closePdfModal(event)">
+        <div class="bg-gray-200 rounded-lg shadow-2xl relative max-w-4xl w-full h-[90vh] flex flex-col transform scale-95 transition-transform duration-300">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between p-4 bg-white border-b rounded-t-lg">
+                <h3 class="text-lg font-sans font-bold text-primary">پیش‌نمایش کاتالوگ</h3>
+                <button onclick="closePdfModal()" class="text-gray-500 hover:text-black">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <!-- PDF Viewer -->
+            <div class="flex-grow">
+                <iframe id="pdf-viewer" src="" frameborder="0" class="w-full h-full"></iframe>
+            </div>
         </div>
     </div>
 
