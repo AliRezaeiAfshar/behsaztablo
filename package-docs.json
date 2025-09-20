@@ -1,0 +1,13 @@
+{
+  "name": "electropanel-pro-docs",
+  "version": "1.0.0",
+  "description": "PDF documentation generator for ElectroPanel Pro",
+  "main": "generate-pdf.js",
+  "scripts": {
+    "generate-pdf": "node generate-pdf.js",
+    "install-puppeteer": "npm install puppeteer"
+  },
+  "devDependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Converter</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .converter-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn {
+            background: #1E3A8A;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        .btn:hover {
+            background: #1E40AF;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border-left: 4px solid #1E3A8A;
+        }
+        .step {
+            margin: 15px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 4px;
+            border-left: 3px solid #EA580C;
+        }
+    </style>
+</head>
+<body>
+    <div class="converter-container">
+        <h1>📄 ElectroPanel Pro Documentation</h1>
+        <p>Convert the project documentation to PDF using the methods below:</p>
+
+        <div class="instructions">
+            <h3>🖨️ Method 1: Browser Print to PDF</h3>
+            <div class="step">
+                <strong>Step 1:</strong> Open the documentation file
+                <br>
+                <button class="btn" onclick="window.open('PROJECT_DOCUMENTATION.html', '_blank')">
+                    📖 Open Documentation
+                </button>
+            </div>
+            <div class="step">
+                <strong>Step 2:</strong> Use browser's print function (Ctrl+P or Cmd+P)
+            </div>
+            <div class="step">
+                <strong>Step 3:</strong> Select "Save as PDF" as destination
+            </div>
+            <div class="step">
+                <strong>Step 4:</strong> Adjust settings:
+                <ul>
+                    <li>Paper size: A4</li>
+                    <li>Margins: Normal</li>
+                    <li>Include headers and footers: Off</li>
+                    <li>Background graphics: On</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>🔧 Method 2: Online PDF Converters</h3>
+            <div class="step">
+                <strong>Option A:</strong> Use online HTML to PDF converters
+                <br>
+                <button class="btn" onclick="window.open('https://www.html-to-pdf.net/', '_blank')">
+                    🌐 HTML to PDF Converter
+                </button>
+            </div>
+            <div class="step">
+                <strong>Option B:</strong> Use WeasyPrint (Python)
+                <pre style="background: #f1f1f1; padding: 10px; border-radius: 4px; font-size: 12px;">
+pip install weasyprint
+weasyprint PROJECT_DOCUMENTATION.html ElectroPanel_Pro_Documentation.pdf
+                </pre>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>📋 What's Included in the Documentation</h3>
+            <ul>
+                <li>✅ Complete project overview and objectives</li>
+                <li>✅ Detailed technology stack and dependencies</li>
+                <li>✅ Architecture and structural analysis</li>
+                <li>✅ Development methodologies and best practices</li>
+                <li>✅ Feature specifications and capabilities</li>
+                <li>✅ File structure and organization details</li>
+                <li>✅ Configuration and setup instructions</li>
+                <li>✅ Deployment and build process documentation</li>
+                <li>✅ Maintenance guidelines and performance monitoring</li>
+                <li>✅ Technical appendix with specifications</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="btn" onclick="downloadDocumentation()">
+                💾 Download Documentation HTML
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function downloadDocumentation() {
+            // Create a link to download the documentation file
+            const link = document.createElement('a');
+            link.href = 'PROJECT_DOCUMENTATION.html';
+            link.download = 'ElectroPanel_Pro_Documentation.html';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>

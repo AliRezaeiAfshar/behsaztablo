@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroPanel Pro - Project Documentation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1E293B;
+            background: #ffffff;
+            font-size: 12px;
+        }
+        
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #1E3A8A;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #1E3A8A;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2em;
+            color: #64748B;
+            font-weight: 400;
+        }
+        
+        .toc {
+            background: #F8FAFC;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #1E3A8A;
+        }
+        
+        .toc h2 {
+            color: #1E3A8A;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .toc ul {
+            list-style: none;
+        }
+        
+        .toc li {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+        
+        .toc a {
+            color: #475569;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .toc a:hover {
+            color: #1E3A8A;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+        
+        .section h2 {
+            color: #1E3A8A;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #E2E8F0;
+            padding-bottom: 10px;
+        }
+        
+        .section h3 {
+            color: #334155;
+            font-size: 1.4em;
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+        }
+        
+        .section h4 {
+            color: #475569;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+            font-weight: 500;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .tech-card {
+            background: #F8FAFC;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #EA580C;
+        }
+        
+        .tech-card h4 {
+            color: #1E3A8A;
+            margin-bottom: 10px;
+        }
+        
+        .code-block {
+            background: #0F172A;
+            color: #E2E8F0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        .file-structure {
+            background: #F8FAFC;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            border-left: 4px solid #10B981;
+        }
+        
+        .highlight {
+            background: #FFF7ED;
+            padding: 15px;
+            border-left: 4px solid #EA580C;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        
+        .feature-list {
+            background: #ECFDF5;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #10B981;
+        }
+        
+        .feature-list ul {
+            margin-left: 20px;
+        }
+        
+        .feature-list li {
+            margin: 8px 0;
+        }
+        
+        .methodology-box {
+            background: #FEF3C7;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #D97706;
+            margin: 20px 0;
+        }
+        
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .table th,
+        .table td {
+            border: 1px solid #E2E8F0;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .table th {
+            background: #F8FAFC;
+            font-weight: 600;
+            color: #1E3A8A;
+        }
+        
+        .badge {
+            background: #1E3A8A;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+        
+        @media print {
+            body {
+                font-size: 11px;
+            }
+            .container {
+                max-width: none;
+                margin: 0;
+                padding: 15mm;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>ElectroPanel Pro</h1>
+            <div class="subtitle">Professional Electrical Panel Solutions - Technical Documentation</div>
+            <div style="margin-top: 15px; color: #64748B;">
+                <strong>Version:</strong> 1.0.0 | 
+                <strong>Date:</strong> September 2025 | 
+                <strong>Author:</strong> Ali Rezaei Afshar
+            </div>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>📋 Table of Contents</h2>
+            <ul>
+                <li><a href="#overview">1. Project Overview</a></li>
+                <li><a href="#technologies">2. Technologies & Stack</a></li>
+                <li><a href="#architecture">3. Architecture & Structure</a></li>
+                <li><a href="#methodologies">4. Development Methodologies</a></li>
+                <li><a href="#features">5. Features & Capabilities</a></li>
+                <li><a href="#file-structure">6. File Structure & Organization</a></li>
+                <li><a href="#configuration">7. Configuration & Setup</a></li>
+                <li><a href="#deployment">8. Deployment & Build Process</a></li>
+                <li><a href="#maintenance">9. Maintenance & Best Practices</a></li>
+                <li><a href="#appendix">10. Appendix</a></li>
+            </ul>
+        </div>
+
+        <!-- Section 1: Project Overview -->
+        <div class="section" id="overview">
+            <h2>1. 🎯 Project Overview</h2>
+            
+            <h3>1.1 Project Description</h3>
+            <p>
+                ElectroPanel Pro is a comprehensive web-based platform designed for professional electrical panel 
+                manufacturing and engineering services. The project represents a modern, responsive website 
+                showcasing industrial electrical panel solutions with a focus on critical infrastructure projects.
+            </p>
+
+            <div class="highlight">
+                <h4>🎯 Primary Objectives</h4>
+                <ul>
+                    <li>Showcase professional electrical panel manufacturing capabilities</li>
+                    <li>Present portfolio of industrial projects and technical expertise</li>
+                    <li>Provide comprehensive product catalog and technical resources</li>
+                    <li>Enable customer engagement and quote requests</li>
+                    <li>Demonstrate company's 25+ years of experience and zero safety incidents record</li>
+                </ul>
+            </div>
+
+            <h3>1.2 Target Audience</h3>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>Industrial Engineers</h4>
+                    <p>Professionals seeking electrical panel solutions for critical infrastructure projects.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Project Managers</h4>
+                    <p>Decision-makers requiring reliable electrical panel manufacturing partners.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Technical Consultants</h4>
+                    <p>Experts evaluating electrical panel specifications and capabilities.</p>
+                </div>
+            </div>
+
+            <h3>1.3 Business Context</h3>
+            <p>
+                The platform serves as the digital front for "بهساز تابلو آسیا" (Behsaz Tablo Asia), 
+                specializing in low-voltage and medium-voltage electrical panels, kiosk posts, and compact 
+                switchgear solutions for oil & gas, industrial, and infrastructure projects.
+            </p>
+        </div>
+
+        <!-- Section 2: Technologies & Stack -->
+        <div class="section page-break" id="technologies">
+            <h2>2. 🛠️ Technologies & Stack</h2>
+
+            <h3>2.1 Frontend Technologies</h3>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>HTML5 <span class="badge">Core</span></h4>
+                    <p>Modern semantic HTML structure with accessibility features and best practices implementation.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Tailwind CSS <span class="badge">Framework</span></h4>
+                    <p>Utility-first CSS framework for rapid UI development with custom design system integration.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Vanilla JavaScript <span class="badge">Functionality</span></h4>
+                    <p>Pure JavaScript for interactive components, modal systems, and dynamic content management.</p>
+                </div>
+            </div>
+
+            <h3>2.2 Development Tools & Dependencies</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Technology</th>
+                        <th>Version</th>
+                        <th>Purpose</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tailwind CSS</td>
+                        <td>^3.4.17</td>
+                        <td>Primary CSS framework</td>
+                        <td>DevDependency</td>
+                    </tr>
+                    <tr>
+                        <td>@dhiwise/component-tagger</td>
+                        <td>^1.0.10</td>
+                        <td>Component automation</td>
+                        <td>Dependency</td>
+                    </tr>
+                    <tr>
+                        <td>@tailwindcss/forms</td>
+                        <td>^0.5.7</td>
+                        <td>Form styling enhancement</td>
+                        <td>Dependency</td>
+                    </tr>
+                    <tr>
+                        <td>tailwindcss-animate</td>
+                        <td>^1.0.7</td>
+                        <td>Animation utilities</td>
+                        <td>Dependency</td>
+                    </tr>
+                    <tr>
+                        <td>tailwindcss-elevation</td>
+                        <td>^2.0.0</td>
+                        <td>Material Design shadows</td>
+                        <td>Dependency</td>
+                    </tr>
+                    <tr>
+                        <td>@11ty/eleventy</td>
+                        <td>^3.1.2</td>
+                        <td>Static site generation</td>
+                        <td>DevDependency</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>2.3 Font System</h3>
+            <div class="feature-list">
+                <h4>Typography Stack</h4>
+                <ul>
+                    <li><strong>Iran Sharp:</strong> Custom Persian/Farsi font for RTL content</li>
+                    <li><strong>Inter:</strong> Modern sans-serif for headlines and UI elements</li>
+                    <li><strong>Source Serif 4:</strong> Professional serif for body text and technical content</li>
+                    <li><strong>JetBrains Mono:</strong> Monospace font for technical specifications and code</li>
+                </ul>
+            </div>
+
+            <h3>2.4 External Integrations</h3>
+            <div class="methodology-box">
+                <h4>🔗 Third-Party Services</h4>
+                <ul>
+                    <li><strong>Rocket.new Platform:</strong> Backend services and hosting infrastructure</li>
+                    <li><strong>Google Fonts:</strong> Web font delivery and optimization</li>
+                    <li><strong>Custom CDN:</strong> Asset delivery and performance optimization</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 3: Architecture & Structure -->
+        <div class="section page-break" id="architecture">
+            <h2>3. 🏗️ Architecture & Structure</h2>
+
+            <h3>3.1 Application Architecture</h3>
+            <p>
+                ElectroPanel Pro follows a static site architecture with modular HTML pages, 
+                centralized styling, and progressive enhancement through JavaScript. The architecture 
+                emphasizes performance, accessibility, and maintainability.
+            </p>
+
+            <div class="highlight">
+                <h4>🏛️ Architectural Principles</h4>
+                <ul>
+                    <li><strong>Progressive Enhancement:</strong> Core functionality works without JavaScript</li>
+                    <li><strong>Responsive Design:</strong> Mobile-first approach with adaptive layouts</li>
+                    <li><strong>Component-Based:</strong> Reusable UI components and patterns</li>
+                    <li><strong>Performance-First:</strong> Optimized assets and minimal dependencies</li>
+                    <li><strong>Accessibility:</strong> WCAG compliance and semantic markup</li>
+                </ul>
+            </div>
+
+            <h3>3.2 Page Structure & Navigation</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Purpose</th>
+                        <th>Key Features</th>
+                        <th>Target Users</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>homepage.html</td>
+                        <td>Main landing page</td>
+                        <td>Hero carousel, metrics, project highlights</td>
+                        <td>All visitors</td>
+                    </tr>
+                    <tr>
+                        <td>products.html</td>
+                        <td>Product catalog</td>
+                        <td>Product categories, specifications, gallery</td>
+                        <td>Engineers, buyers</td>
+                    </tr>
+                    <tr>
+                        <td>project_portfolio.html</td>
+                        <td>Portfolio showcase</td>
+                        <td>Case studies, project gallery, achievements</td>
+                        <td>Decision makers</td>
+                    </tr>
+                    <tr>
+                        <td>about_capabilities.html</td>
+                        <td>Company information</td>
+                        <td>Company history, capabilities, certifications</td>
+                        <td>Partners, clients</td>
+                    </tr>
+                    <tr>
+                        <td>contact_quote_request.html</td>
+                        <td>Contact & quotes</td>
+                        <td>Contact forms, location, quote requests</td>
+                        <td>Potential clients</td>
+                    </tr>
+                    <tr>
+                        <td>technical_resources.html</td>
+                        <td>Technical blog</td>
+                        <td>Articles, resources, technical insights</td>
+                        <td>Technical audience</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.3 Component Architecture</h3>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>Navigation System</h4>
+                    <p>Responsive header with dropdown menus, mobile hamburger menu, and active state management.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Modal System</h4>
+                    <p>Reusable modal components for image galleries and PDF viewing with overlay management.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Carousel Component</h4>
+                    <p>Auto-advancing hero carousel with fade transitions and performance optimization.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Form Components</h4>
+                    <p>Styled form elements with validation, accessibility features, and responsive design.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Development Methodologies -->
+        <div class="section page-break" id="methodologies">
+            <h2>4. 📋 Development Methodologies</h2>
+
+            <h3>4.1 Design System Approach</h3>
+            <div class="methodology-box">
+                <h4>🎨 Color System</h4>
+                <p>
+                    A comprehensive color palette based on industrial design principles with semantic color tokens:
+                </p>
+                <ul>
+                    <li><strong>Primary (Deep Industrial Blue):</strong> #1E3A8A - Professional, trustworthy</li>
+                    <li><strong>Secondary (Professional Slate):</strong> #475569 - Neutral, technical</li>
+                    <li><strong>Accent (Safety Orange):</strong> #EA580C - Action, attention, safety</li>
+                    <li><strong>Status Colors:</strong> Success (Green), Warning (Amber), Error (Red)</li>
+                </ul>
+            </div>
+
+            <h3>4.2 Responsive Design Methodology</h3>
+            <div class="feature-list">
+                <h4>📱 Breakpoint Strategy</h4>
+                <ul>
+                    <li><strong>Mobile First:</strong> Base styles for 320px and up</li>
+                    <li><strong>sm (640px+):</strong> Small tablets and large phones</li>
+                    <li><strong>md (768px+):</strong> Tablets and small desktops</li>
+                    <li><strong>lg (1024px+):</strong> Desktop and large screens</li>
+                    <li><strong>xl (1280px+):</strong> Large desktops</li>
+                    <li><strong>2xl (1536px+):</strong> Extra large screens</li>
+                </ul>
+            </div>
+
+            <h3>4.3 Code Organization Principles</h3>
+            <div class="code-block">
+// File naming convention
+pages/               // Individual HTML pages
+├── homepage.html    // Landing page
+├── products.html    // Product catalog
+├── about_*.html     // About and capabilities
+└── contact_*.html   // Contact and forms
+
+css/                 // Styling assets
+├── tailwind.css     // Source CSS with custom utilities
+└── main.css         // Compiled output
+
+js/                  // JavaScript functionality
+└── main.js          // Main application logic
+            </div>
+
+            <h3>4.4 Performance Optimization Strategy</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Technique</th>
+                        <th>Implementation</th>
+                        <th>Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CSS Purging</td>
+                        <td>Tailwind CSS unused class removal</td>
+                        <td>Reduced bundle size</td>
+                    </tr>
+                    <tr>
+                        <td>Image Optimization</td>
+                        <td>WebP format with fallbacks</td>
+                        <td>Faster loading times</td>
+                    </tr>
+                    <tr>
+                        <td>Font Loading</td>
+                        <td>Google Fonts with display=swap</td>
+                        <td>Improved FOIT/FOUT</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript Minification</td>
+                        <td>Production build optimization</td>
+                        <td>Reduced script size</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>4.5 Accessibility Implementation</h3>
+            <div class="highlight">
+                <h4>♿ WCAG 2.1 Compliance</h4>
+                <ul>
+                    <li><strong>Semantic HTML:</strong> Proper heading hierarchy and landmark elements</li>
+                    <li><strong>Keyboard Navigation:</strong> Full keyboard accessibility for all interactive elements</li>
+                    <li><strong>Screen Reader Support:</strong> ARIA labels and descriptions</li>
+                    <li><strong>Color Contrast:</strong> WCAG AA compliance for text contrast ratios</li>
+                    <li><strong>Focus Management:</strong> Visible focus indicators and logical tab order</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 5: Features & Capabilities -->
+        <div class="section page-break" id="features">
+            <h2>5. ⚡ Features & Capabilities</h2>
+
+            <h3>5.1 Core Features</h3>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>🏠 Homepage Features</h4>
+                    <ul>
+                        <li>Auto-advancing hero carousel</li>
+                        <li>Animated metrics counters</li>
+                        <li>Project highlights section</li>
+                        <li>Company overview and achievements</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h4>📦 Product Catalog</h4>
+                    <ul>
+                        <li>Low-voltage switchgear (Withdrawable/Fixed)</li>
+                        <li>Medium-voltage switchgear (Withdrawable/Unisafe)</li>
+                        <li>Kiosk posts and compact solutions</li>
+                        <li>Technical specifications and galleries</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h4>🏗️ Project Portfolio</h4>
+                    <ul>
+                        <li>Oil & gas industry projects</li>
+                        <li>Industrial infrastructure projects</li>
+                        <li>Case studies with technical details</li>
+                        <li>Project image galleries</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h4>📞 Contact & Quotes</h4>
+                    <ul>
+                        <li>Contact form with validation</li>
+                        <li>Quote request system</li>
+                        <li>Company location and map</li>
+                        <li>Multiple communication channels</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>5.2 Interactive Components</h3>
+            <div class="feature-list">
+                <h4>🔧 JavaScript Functionality</h4>
+                <ul>
+                    <li><strong>Modal System:</strong> Image and PDF viewing with overlay management</li>
+                    <li><strong>Navigation:</strong> Mobile menu toggle and active state management</li>
+                    <li><strong>Carousel:</strong> Automatic slideshow with smooth transitions</li>
+                    <li><strong>Animations:</strong> Scroll-triggered counter animations</li>
+                    <li><strong>Glass Effect:</strong> Dynamic header styling on scroll</li>
+                    <li><strong>Form Handling:</strong> Client-side validation and submission</li>
+                </ul>
+            </div>
+
+            <h3>5.3 User Experience Features</h3>
+            <div class="methodology-box">
+                <h4>🎯 UX Enhancements</h4>
+                <ul>
+                    <li><strong>Bilingual Support:</strong> Persian (RTL) and English content</li>
+                    <li><strong>Responsive Design:</strong> Optimal viewing on all devices</li>
+                    <li><strong>Fast Loading:</strong> Optimized assets and lazy loading</li>
+                    <li><strong>Professional Aesthetics:</strong> Industrial design language</li>
+                    <li><strong>Intuitive Navigation:</strong> Clear information architecture</li>
+                </ul>
+            </div>
+
+            <h3>5.4 Technical Capabilities</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Capability</th>
+                        <th>Technology</th>
+                        <th>Implementation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Responsive Layout</td>
+                        <td>Tailwind CSS Grid/Flexbox</td>
+                        <td>Mobile-first responsive design</td>
+                    </tr>
+                    <tr>
+                        <td>Custom Animations</td>
+                        <td>CSS Transitions/Keyframes</td>
+                        <td>Smooth UI transitions and effects</td>
+                    </tr>
+                    <tr>
+                        <td>Component Reusability</td>
+                        <td>CSS Classes/JS Functions</td>
+                        <td>Modular component architecture</td>
+                    </tr>
+                    <tr>
+                        <td>Performance Optimization</td>
+                        <td>Asset Optimization</td>
+                        <td>Minimized CSS/JS bundles</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 6: File Structure -->
+        <div class="section page-break" id="file-structure">
+            <h2>6. 📁 File Structure & Organization</h2>
+
+            <h3>6.1 Complete Directory Structure</h3>
+            <div class="file-structure">
+electropanel_pro/
+├── index.html                    # Entry point with redirect logic
+├── package.json                  # Project dependencies and scripts
+├── tailwind.config.js           # Tailwind CSS configuration
+├── README.md                     # Project documentation
+├── npx.txt                      # NPX command reference
+│
+├── css/                         # Styling assets
+│   ├── main.css                 # Compiled Tailwind CSS output
+│   └── tailwind.css             # Source CSS with custom utilities
+│
+├── js/                          # JavaScript functionality
+│   └── main.js                  # Main application logic (198 lines)
+│
+├── pages/                       # HTML page templates
+│   ├── homepage.html            # Main landing page (969 lines)
+│   ├── products.html            # Product catalog page
+│   ├── project_portfolio.html   # Project showcase page
+_capabilities.html    # Company information page
+│   ├── contact_quote_request.html # Contact and quote page
+│   ├── custom_panel_design.html   # Custom design page
+│   ├── technical_resources.html   # Technical blog page
+│   ├── maintenance.html           # Maintenance page
+│   └── 404.html                   # Error page
+│
+├── public/                      # Static assets
+│   └── manifest.json             # Web app manifest
+│
+└── assets/                      # Media assets (referenced)
+    ├── images/                  # Project images
+    └── documents/               # PDF documents
+            </div>
+
+            <h3>6.2 File Size Analysis</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>File</th>
+                        <th>Size</th>
+                        <th>Lines</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>homepage.html</td>
+                        <td>61.4KB</td>
+                        <td>969</td>
+                        <td>Main landing page with carousel and features</td>
+                    </tr>
+                    <tr>
+                        <td>about_capabilities.html</td>
+                        <td>76.6KB</td>
+                        <td>~1200</td>
+                        <td>Company information and capabilities</td>
+                    </tr>
+                    <tr>
+                        <td>custom_panel_design.html</td>
+                        <td>75.6KB</td>
+                        <td>~1200</td>
+                        <td>Custom design services page</td>
+                    </tr>
+                    <tr>
+                        <td>contact_quote_request.html</td>
+                        <td>69.2KB</td>
+                        <td>~1100</td>
+                        <td>Contact forms and quote requests</td>
+                    </tr>
+                    <tr>
+                        <td>products.html</td>
+                        <td>53.9KB</td>
+                        <td>~850</td>
+                        <td>Product catalog and specifications</td>
+                    </tr>
+                    <tr>
+                        <td>technical_resources.html</td>
+                        <td>49.4KB</td>
+                        <td>~780</td>
+                        <td>Technical blog and resources</td>
+                    </tr>
+                    <tr>
+                        <td>main.js</td>
+                        <td>~8KB</td>
+                        <td>198</td>
+                        <td>Core JavaScript functionality</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>6.3 Asset Organization Strategy</h3>
+            <div class="highlight">
+                <h4>📂 Asset Management</h4>
+                <ul>
+                    <li><strong>Images:</strong> WebP format for optimal compression with fallbacks</li>
+                    <li><strong>Fonts:</strong> Custom Persian fonts with Google Fonts integration</li>
+                    <li><strong>Documents:</strong> PDF resources for technical specifications</li>
+                    <li><strong>Icons:</strong> SVG icons for scalability and performance</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 7: Configuration & Setup -->
+        <div class="section page-break" id="configuration">
+            <h2>7. ⚙️ Configuration & Setup</h2>
+
+            <h3>7.1 Tailwind CSS Configuration</h3>
+            <div class="code-block">
+// tailwind.config.js - Key configurations
+module.exports = {
+  content: ["./pages/*.{html,js}", "./index.html", "./js/*.js"],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: "#1E3A8A",
+          50: "#EFF6FF",
+          // ... full color scale
+        },
+        secondary: {
+          DEFAULT: "#475569",
+          // ... slate color scale
+        },
+        accent: {
+          DEFAULT: "#EA580C",
+          // ... orange color scale
+        }
+      },
+      fontFamily: {
+        sans: ['iran-sharp', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        serif: ['Source Serif 4', 'serif'],
+        mono: ['JetBrains Mono', 'monospace']
+      },
+      fontSize: {
+        'hero': ['3.5rem', { lineHeight: '1.1' }],
+        'display': ['2.5rem', { lineHeight: '1.2' }]
+      }
+    }
+  }
+}
+            </div>
+
+            <h3>7.2 Package.json Configuration</h3>
+            <div class="methodology-box">
+                <h4>📦 NPM Scripts</h4>
+                <ul>
+                    <li><strong>build:css:</strong> Compiles Tailwind CSS with component tagging</li>
+                    <li><strong>watch:css:</strong> Watches for changes and rebuilds CSS automatically</li>
+                    <li><strong>dev:</strong> Starts development mode with CSS watching</li>
+                </ul>
+            </div>
+
+            <h3>7.3 Development Environment Setup</h3>
+            <div class="feature-list">
+                <h4>🔧 Prerequisites & Installation</h4>
+                <ul>
+                    <li><strong>Node.js:</strong> Version 12.x or higher required</li>
+                    <li><strong>NPM/Yarn:</strong> Package manager for dependency installation</li>
+                    <li><strong>Modern Browser:</strong> Chrome, Firefox, Safari, or Edge</li>
+                    <li><strong>Code Editor:</strong> VS Code recommended with Tailwind CSS extension</li>
+                </ul>
+            </div>
+
+            <div class="code-block">
+# Installation steps
+1. Clone the repository
+2. Install dependencies:
+   npm install
+   # or
+   yarn install
+
+3. Start development server:
+   npm run dev
+   # or
+   yarn dev
+
+4. Build for production:
+   npm run build:css
+   # or
+   yarn build:css
+            </div>
+
+            <h3>7.4 Custom CSS Utilities</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Utility Class</th>
+                        <th>Purpose</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>.btn-accent</td>
+                        <td>Primary action button</td>
+                        <td>Call-to-action elements</td>
+                    </tr>
+                    <tr>
+                        <td>.nav-link</td>
+                        <td>Navigation link styling</td>
+                        <td>Header navigation</td>
+                    </tr>
+                    <tr>
+                        <td>.dropdown-menu</td>
+                        <td>Dropdown menu container</td>
+                        <td>Navigation dropdowns</td>
+                    </tr>
+                    <tr>
+                        <td>.carousel-slide</td>
+                        <td>Hero carousel slides</td>
+                        <td>Homepage carousel</td>
+                    </tr>
+                    <tr>
+                        <td>.bg-metrics</td>
+                        <td>Parallax background</td>
+                        <td>Statistics sections</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 8: Deployment & Build Process -->
+        <div class="section page-break" id="deployment">
+            <h2>8. 🚀 Deployment & Build Process</h2>
+
+            <h3>8.1 Build Pipeline</h3>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>1. Component Tagging</h4>
+                    <p>@dhiwise/component-tagger analyzes and tags HTML components for optimization.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>2. CSS Compilation</h4>
+                    <p>Tailwind CSS processes source files and generates optimized stylesheets.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>3. Asset Optimization</h4>
+                    <p>Images, fonts, and other assets are optimized for web delivery.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>4. Production Bundle</h4>
+                    <p>Final bundle is created with minified CSS and optimized assets.</p>
+                </div>
+            </div>
+
+            <h3>8.2 Hosting & Infrastructure</h3>
+            <div class="highlight">
+                <h4>🌐 Deployment Platform</h4>
+                <ul>
+                    <li><strong>Primary Platform:</strong> Rocket.new hosting infrastructure</li>
+                    <li><strong>CDN Integration:</strong> Global content delivery network</li>
+                    <li><strong>SSL/HTTPS:</strong> Secure connection with SSL certificates</li>
+                    <li><strong>Performance Monitoring:</strong> Built-in analytics and monitoring</li>
+                </ul>
+            </div>
+
+            <h3>8.3 Production Optimization</h3>
+            <div class="methodology-box">
+                <h4>⚡ Performance Enhancements</h4>
+                <ul>
+                    <li><strong>CSS Purging:</strong> Unused Tailwind classes removed in production</li>
+                    <li><strong>Asset Compression:</strong> Gzip compression for all text assets</li>
+                    <li><strong>Image Optimization:</strong> WebP format with appropriate sizing</li>
+                    <li><strong>Caching Strategy:</strong> Browser caching for static assets</li>
+                    <li><strong>Font Optimization:</strong> Font display optimization for better FOIT/FOUT</li>
+                </ul>
+            </div>
+
+            <h3>8.4 Quality Assurance Process</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Test Type</th>
+                        <th>Tools/Methods</th>
+                        <th>Criteria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cross-browser Testing</td>
+                        <td>Chrome, Firefox, Safari, Edge</td>
+                        <td>Consistent functionality across browsers</td>
+                    </tr>
+                    <tr>
+                        <td>Responsive Testing</td>
+                        <td>Device simulators, real devices</td>
+                        <td>Optimal experience on all screen sizes</td>
+                    </tr>
+                    <tr>
+                        <td>Performance Testing</td>
+                        <td>Lighthouse, PageSpeed Insights</td>
+                        <td>90+ performance score target</td>
+                    </tr>
+                    <tr>
+                        <td>Accessibility Testing</td>
+                        <td>WAVE, axe DevTools</td>
+                        <td>WCAG 2.1 AA compliance</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 9: Maintenance & Best Practices -->
+        <div class="section page-break" id="maintenance">
+            <h2>9. 🔧 Maintenance & Best Practices</h2>
+
+            <h3>9.1 Code Maintenance Guidelines</h3>
+            <div class="feature-list">
+                <h4>📝 Development Standards</h4>
+                <ul>
+                    <li><strong>HTML:</strong> Semantic markup with proper heading hierarchy</li>
+                    <li><strong>CSS:</strong> Utility-first approach with custom component classes</li>
+                    <li><strong>JavaScript:</strong> Vanilla JS with modern ES6+ features</li>
+                    <li><strong>Comments:</strong> Comprehensive code documentation</li>
+                    <li><strong>Naming:</strong> Descriptive and consistent naming conventions</li>
+                </ul>
+            </div>
+
+            <h3>9.2 Content Management</h3>
+            <div class="methodology-box">
+                <h4>📄 Content Updates</h4>
+                <ul>
+                    <li><strong>Project Portfolio:</strong> Regular updates with new projects and case studies</li>
+                    <li><strong>Product Catalog:</strong> Specifications and imagery updates</li>
+                    <li><strong>Technical Blog:</strong> Industry insights and technical articles</li>
+                    <li><strong>Company Information:</strong> Achievements, certifications, and milestones</li>
+                </ul>
+            </div>
+
+            <h3>9.3 Performance Monitoring</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Target</th>
+                        <th>Tool</th>
+                        <th>Frequency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Page Load Time</td>
+                        <td>&lt; 3 seconds</td>
+                        <td>Google PageSpeed</td>
+                        <td>Weekly</td>
+                    </tr>
+                    <tr>
+                        <td>Lighthouse Score</td>
+                        <td>90+</td>
+                        <td>Chrome DevTools</td>
+                        <td>After each update</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Usability</td>
+                        <td>100%</td>
+                        <td>Google Search Console</td>
+                        <td>Monthly</td>
+                    </tr>
+                    <tr>
+                        <td>Accessibility Score</td>
+                        <td>95+</td>
+                        <td>WAVE, axe</td>
+                        <td>Before deployment</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>9.4 Security Best Practices</h3>
+            <div class="highlight">
+                <h4>🔒 Security Measures</h4>
+                <ul>
+                    <li><strong>HTTPS Enforcement:</strong> All connections secured with SSL/TLS</li>
+                    <li><strong>Content Security:</strong> Proper CSP headers for XSS protection</li>
+                    <li><strong>Dependency Management:</strong> Regular updates of NPM packages</li>
+                    <li><strong>Input Validation:</strong> Client and server-side form validation</li>
+                    <li><strong>Asset Integrity:</strong> Subresource integrity for external resources</li>
+                </ul>
+            </div>
+
+            <h3>9.5 Backup and Version Control</h3>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>Version Control</h4>
+                    <p>Git-based version control with meaningful commit messages and branch management.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Content Backup</h4>
+                    <p>Regular backups of content, configurations, and asset files.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Rollback Strategy</h4>
+                    <p>Documented procedures for quick rollback in case of issues.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Documentation</h4>
+                    <p>Comprehensive documentation for maintenance and future development.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 10: Appendix -->
+        <div class="section page-break" id="appendix">
+            <h2>10. 📋 Appendix</h2>
+
+            <h3>10.1 Technical Specifications Summary</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Technology</th>
+                        <th>Version/Details</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Frontend Framework</td>
+                        <td>Tailwind CSS</td>
+                        <td>v3.4.17</td>
+                        <td>Primary styling framework</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Vanilla ES6+</td>
+                        <td>Modern JavaScript</td>
+                        <td>Interactive functionality</td>
+                    </tr>
+                    <tr>
+                        <td>Build Tool</td>
+                        <td>Tailwind CLI</td>
+                        <td>Native compiler</td>
+                        <td>CSS compilation</td>
+                    </tr>
+                    <tr>
+                        <td>Font System</td>
+                        <td>Multi-stack</td>
+                        <td>Custom + Google Fonts</td>
+                        <td>Typography</td>
+                    </tr>
+                    <tr>
+                        <td>Hosting</td>
+                        <td>Rocket.new</td>
+                        <td>Cloud platform</td>
+                        <td>Deployment & hosting</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>10.2 Feature Implementation Details</h3>
+            <div class="methodology-box">
+                <h4>🎯 Key Features Breakdown</h4>
+                <ul>
+                    <li><strong>Multi-language Support:</strong> Persian (RTL) primary with English elements</li>
+                    <li><strong>Responsive Navigation:</strong> Desktop dropdown menus + mobile hamburger</li>
+                    <li><strong>Image Gallery System:</strong> Modal-based viewing with overlay management</li>
+                    <li><strong>Auto-carousel:</strong> 3-second intervals with fade transitions</li>
+                    <li><strong>Animated Counters:</strong> Scroll-triggered statistics animation</li>
+                    <li><strong>Glass Morphism:</strong> Dynamic header styling on scroll</li>
+                </ul>
+            </div>
+
+            <h3>10.3 Browser Compatibility</h3>
+            <div class="feature-list">
+                <h4>🌍 Supported Browsers</h4>
+                <ul>
+                    <li><strong>Chrome:</strong> Version 90+ (primary target)</li>
+                    <li><strong>Firefox:</strong> Version 88+ (full support)</li>
+                    <li><strong>Safari:</strong> Version 14+ (full support)</li>
+                    <li><strong>Edge:</strong> Version 90+ (full support)</li>
+                    <li><strong>Mobile Browsers:</strong> iOS Safari 14+, Chrome Mobile 90+</li>
+                </ul>
+            </div>
+
+            <h3>10.4 Performance Benchmarks</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Desktop</th>
+                        <th>Mobile</th>
+                        <th>Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>First Contentful Paint</td>
+                        <td>&lt; 1.5s</td>
+                        <td>&lt; 2.0s</td>
+                        <td>Good</td>
+                    </tr>
+                    <tr>
+                        <td>Largest Contentful Paint</td>
+                        <td>&lt; 2.5s</td>
+                        <td>&lt; 3.0s</td>
+                        <td>Good</td>
+                    </tr>
+                    <tr>
+                        <td>Cumulative Layout Shift</td>
+                        <td>&lt; 0.1</td>
+                        <td>&lt; 0.1</td>
+                        <td>Good</td>
+                    </tr>
+                    <tr>
+                        <td>First Input Delay</td>
+                        <td>&lt; 100ms</td>
+                        <td>&lt; 100ms</td>
+                        <td>Good</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>10.5 Future Enhancement Roadmap</h3>
+            <div class="highlight">
+                <h4>🚀 Planned Improvements</h4>
+                <ul>
+                    <li><strong>PWA Implementation:</strong> Service worker for offline functionality</li>
+                    <li><strong>Advanced Analytics:</strong> Detailed user behavior tracking</li>
+                    <li><strong>Content Management:</strong> Headless CMS integration</li>
+                    <li><strong>Internationalization:</strong> Full multi-language support</li>
+                    <li><strong>API Integration:</strong> Dynamic content loading</li>
+                    <li><strong>Advanced Animations:</strong> Intersection Observer-based animations</li>
+                </ul>
+            </div>
+
+            <h3>10.6 Contact Information</h3>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>Project Details</h4>
+                    <ul>
+                        <li><strong>Project Name:</strong> ElectroPanel Pro</li>
+                        <li><strong>Version:</strong> 1.0.0</li>
+                        <li><strong>Developer:</strong> Ali Rezaei Afshar</li>
+                        <li><strong>License:</strong> MIT</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h4>Company Information</h4>
+                    <ul>
+                        <li><strong>Company:</strong> بهساز تابلو آسیا</li>
+                        <li><strong>Industry:</strong> Electrical Panel Manufacturing</li>
+                        <li><strong>Experience:</strong> 25+ Years</li>
+                        <li><strong>Safety Record:</strong> Zero Incidents</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="margin-top: 60px; padding-top: 30px; border-top: 2px solid #E2E8F0; text-align: center; color: #64748B; font-size: 0.9em;">
+            <p><strong>ElectroPanel Pro - Technical Documentation</strong></p>
+            <p>Generated on September 2025 | Version 1.0.0 | © 2025 بهساز تابلو آسیا</p>
+            <p style="margin-top: 15px; font-size: 0.8em;">This document provides comprehensive technical documentation for the ElectroPanel Pro web platform, covering all aspects of development, deployment, and maintenance.</p>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Print optimization
+        if (window.matchMedia) {
+            const mediaQueryList = window.matchMedia('print');
+            mediaQueryList.addListener(function(mql) {
+                if (mql.matches) {
+                    document.body.style.fontSize = '11px';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
