@@ -8,6 +8,164 @@
         <link rel="icon" type="image/x-icon" href="../public/favicon.ico">
         <meta name="description"
             content="ElectroPanel Pro delivers precision-engineered electrical panels for critical infrastructure. 25+ years experience, 500+ projects, zero safety incidents. ثبت درخواست today." />
+        
+        <!-- JSON-LD Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://electropanelpro.com/#organization",
+                    "name": "ElectroPanel Pro - Behsaz Tablo Asia",
+                    "alternateName": "بهساز تابلو آسیا",
+                    "url": "https://electropanelpro.com",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://electropanelpro.com/assets/images/logo.webp",
+                        "width": 200,
+                        "height": 56
+                    },
+                    "description": "Industrial electrical panel manufacturing and engineering with 25+ years experience, 500+ projects, zero safety incidents",
+                    "foundingDate": "1998",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressCountry": "IR",
+                        "addressRegion": "Iran"
+                    },
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "contactType": "customer service",
+                        "availableLanguage": ["Persian", "English"],
+                        "serviceArea": {
+                            "@type": "Country",
+                            "name": "Iran"
+                        }
+                    },
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "Electrical Panel Solutions",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Low Voltage Switchgear",
+                                    "description": "Professional low voltage electrical panel manufacturing"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Medium Voltage Switchgear",
+                                    "description": "Industrial medium voltage electrical panel solutions"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Kiosk Post Solutions",
+                                    "description": "Custom electrical kiosk and post installations"
+                                }
+                            }
+                        ]
+                    },
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "4.9",
+                        "reviewCount": "150",
+                        "bestRating": "5"
+                    }
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://electropanelpro.com/#website",
+                    "url": "https://electropanelpro.com",
+                    "name": "ElectroPanel Pro",
+                    "description": "Professional electrical panel solutions and industrial manufacturing",
+                    "publisher": {
+                        "@id": "https://electropanelpro.com/#organization"
+                    },
+                    "potentialAction": [
+                        {
+                            "@type": "SearchAction",
+                            "target": {
+                                "@type": "EntryPoint",
+                                "urlTemplate": "https://electropanelpro.com/search?q={search_term_string}"
+                            },
+                            "query-input": "required name=search_term_string"
+                        }
+                    ]
+                },
+                {
+                    "@type": "WebPage",
+                    "@id": "https://electropanelpro.com/pages/homepage.html",
+                    "url": "https://electropanelpro.com/pages/homepage.html",
+                    "name": "ElectroPanel Pro - Industrial Electrical Panel Manufacturing & Engineering",
+                    "description": "ElectroPanel Pro delivers precision-engineered electrical panels for critical infrastructure. 25+ years experience, 500+ projects, zero safety incidents.",
+                    "isPartOf": {
+                        "@id": "https://electropanelpro.com/#website"
+                    },
+                    "about": {
+                        "@id": "https://electropanelpro.com/#organization"
+                    },
+                    "mainEntity": {
+                        "@id": "https://electropanelpro.com/#organization"
+                    },
+                    "datePublished": "2024-01-01",
+                    "dateModified": "2025-01-20",
+                    "breadcrumb": {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "خانه",
+                                "item": "https://electropanelpro.com/pages/homepage.html"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "Service",
+                    "@id": "https://electropanelpro.com/#electrical-panel-manufacturing",
+                    "name": "Electrical Panel Manufacturing",
+                    "description": "Professional industrial electrical panel manufacturing and engineering services",
+                    "provider": {
+                        "@id": "https://electropanelpro.com/#organization"
+                    },
+                    "areaServed": {
+                        "@type": "Country",
+                        "name": "Iran"
+                    },
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "Electrical Panel Services",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Product",
+                                    "name": "Low Voltage Switchgear Withdrawable",
+                                    "category": "Electrical Equipment"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Product",
+                                    "name": "Medium Voltage Switchgear",
+                                    "category": "Electrical Equipment"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+        </script>
         <link rel="stylesheet" href="../css/main.css" />
         <script type="module"
             src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Felectropan3871back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
@@ -184,7 +342,7 @@
                     <img
                         src="../assets/images/abadan.webp"
                         alt="Hospital emergency power system installation"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover data-darkreader-ignore"
                         onerror="this.src='https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=2940'; this.onerror=null;" />
                     <div
                         class="absolute inset-0 bg-primary bg-opacity-60"></div>
@@ -214,7 +372,7 @@
                     <img
                         src="../assets/images/zarafshan.webp"
                         alt="Manufacturing facility main distribution center"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover data-darkreader-ignore"
                         onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
                     <div
                         class="absolute inset-0 bg-secondary-800 bg-opacity-60"></div>
@@ -244,7 +402,7 @@
                     <img
                         src="../assets/images/iranmal.webp"
                         alt="Data center critical infrastructure setup"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover data-darkreader-ignore"
                         onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
                     <div class="absolute inset-0 bg-slate-600 bg-opacity-60"></div>
                     <div
@@ -376,29 +534,8 @@
                     <div
                         class="card-elevated text-right group hover:shadow-industrial transition-all flex flex-col h-full">
                         <div
-                            class="bg-primary-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-100 transition-colors">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <!-- Front face of the panel -->
-                                <path d="M4 4h14v16H4z"></path>
-
-                                <!-- Right side panel for 3D effect -->
-                                <path d="M18 4l3-2v16l-3 2"></path>
-
-                                <!-- Door seam in the middle -->
-                                <line x1="11" y1="4" x2="11" y2="20"></line>
-
-                                <!-- Lightning bolt symbol -->
-                                <path d="M15 9l-2 4h3l-2 4"></path>
-                            </svg>
+                            class="rounded-md group-hover:scale-105 transition-transform duration-300 overflow-hidden mx-auto mb-6 group-hover:bg-primary-100 transition-colors">
+                            <img src="../assets/images/apply-bg.jpg" alt="Sivacon Panels Icon" class="h-full w-full object-cover">
                         </div>
                         <h3
                             class="text-heading font-sans font-bold text-primary mb-4">تابلوهای
@@ -416,31 +553,8 @@
                     <div
                         class="card-elevated text-right group hover:shadow-industrial transition-all flex flex-col h-full">
                         <div
-                            class="bg-secondary-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-secondary-100 transition-colors">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <!-- Main box of the rack -->
-                                <path d="M5 3h12v18H5z"></path>
-
-                                <!-- Right side panel for 3D effect -->
-                                <path d="M17 3l4-2v18l-4 2"></path>
-
-                                <!-- Vents at the top -->
-                                <line x1="7" y1="6" x2="15" y2="6"></line>
-                                <line x1="7" y1="8" x2="15" y2="8"></line>
-
-                                <!-- Lines representing server blades/slots, extending to the side -->
-                                <line x1="5" y1="13" x2="21" y2="13"></line>
-                                <line x1="5" y1="16" x2="21" y2="16"></line>
-                            </svg>
+                            class="rounded-md group-hover:scale-105 transition-transform duration-300 overflow-hidden mx-auto mb-6 group-hover:bg-primary-100 transition-colors">
+                            <img src="../assets/images/apply-bg.jpg" alt="Sivacon Panels Icon" class="h-full w-full object-cover">
                         </div>
                         <h3
                             class="text-heading font-sans font-bold text-primary mb-4">تابلوهای
@@ -458,29 +572,8 @@
                     <div
                         class="card-elevated text-right group hover:shadow-industrial transition-all flex flex-col h-full">
                         <div
-                            class="bg-accent-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-accent-100 transition-colors">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <!-- Main faceplate of the outlet -->
-                                <path d="M4 7h16v10H4z"></path>
-
-                                <!-- Right side for 3D effect -->
-                                <path d="M20 7l-3-2v10l3 2"></path>
-
-                                <!-- Sockets (using a trick: M moves, h .01 draws a dot with round caps) -->
-                                <path
-                                    d="M9 10h.01v0 M11 10h.01v0 M10 14h.01v0"></path>
-                                <path
-                                    d="M13 10h.01v0 M15 10h.01v0 M14 14h.01v0"></path>
-                            </svg>
+                            class="rounded-md group-hover:scale-105 transition-transform duration-300 overflow-hidden mx-auto mb-6 group-hover:bg-primary-100 transition-colors">
+                            <img src="../assets/images/apply-bg.jpg" alt="Sivacon Panels Icon" class="h-full w-full object-cover">
                         </div>
                         <h3
                             class="text-heading font-sans font-bold text-primary mb-4">تابلوهای
@@ -498,31 +591,8 @@
                     <div
                         class="card-elevated text-right group hover:shadow-industrial transition-all flex flex-col h-full">
                         <div
-                            class="bg-error-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-error-100 transition-colors">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round">
-
-                                <!-- Main box/door of the panel -->
-                                <rect x="4" y="2" width="16" height="20"
-                                    rx="2"></rect>
-
-                                <!-- Vertical line for the door hinge/seam -->
-                                <line x1="12" y1="2" x2="12" y2="22"></line>
-
-                                <!-- Simple latch on the side -->
-                                <line x1="17" y1="12" x2="18" y2="12"></line>
-
-                                <!-- Lightning bolt symbol on the door -->
-                                <path d="M13 8l-3 5h4l-3 5"></path>
-                            </svg>
+                            class="rounded-md group-hover:scale-105 transition-transform duration-300 overflow-hidden mx-auto mb-6 group-hover:bg-primary-100 transition-colors">
+                            <img src="../assets/images/apply-bg.jpg" alt="Sivacon Panels Icon" class="h-full w-full object-cover">
                         </div>
                         <h3
                             class="text-heading font-sans font-bold text-primary mb-4">تابلوهای

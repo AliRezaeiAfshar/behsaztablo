@@ -1,0 +1,52 @@
+RewriteEngine On
+
+# Handle URLs with spaces - convert spaces to hyphens and load corresponding files
+RewriteRule ^about\s+us/?$ pages/about_capabilities.html [NC,L]
+RewriteRule ^contact\s+us/?$ pages/contact_quote_request.html [NC,L]
+RewriteRule ^custom\s+panel\s+design/?$ pages/custom_panel_design.html [NC,L]
+RewriteRule ^project\s+portfolio/?$ pages/project_portfolio.html [NC,L]
+RewriteRule ^technical\s+resources/?$ pages/technical_resources.html [NC,L]
+RewriteRule ^contact\s+quote\s+request/?$ pages/contact_quote_request.html [NC,L]
+
+# Handle URLs with hyphens (clean URLs)
+RewriteRule ^about-us/?$ pages/about_capabilities.html [NC,L]
+RewriteRule ^contact-us/?$ pages/contact_quote_request.html [NC,L]
+RewriteRule ^custom-panel-design/?$ pages/custom_panel_design.html [NC,L]
+RewriteRule ^project-portfolio/?$ pages/project_portfolio.html [NC,L]
+RewriteRule ^technical-resources/?$ pages/technical_resources.html [NC,L]
+RewriteRule ^contact-quote-request/?$ pages/contact_quote_request.html [NC,L]
+
+# Handle single word pages
+RewriteRule ^products/?$ pages/products.html [NC,L]
+RewriteRule ^maintenance/?$ pages/maintenance.html [NC,L]
+RewriteRule ^gachsaran/?$ pages/gachsaran.html [NC,L]
+RewriteRule ^jofeir/?$ pages/jofeir.html [NC,L]
+RewriteRule ^homepage/?$ pages/homepage.html [NC,L]
+
+# Handle URL-encoded spaces (%20)
+RewriteRule ^about%20us/?$ pages/about_capabilities.html [NC,L]
+RewriteRule ^contact%20us/?$ pages/contact_quote_request.html [NC,L]
+RewriteRule ^custom%20panel%20design/?$ pages/custom_panel_design.html [NC,L]
+RewriteRule ^project%20portfolio/?$ pages/project_portfolio.html [NC,L]
+RewriteRule ^technical%20resources/?$ pages/technical_resources.html [NC,L]
+
+# Handle plus signs (alternative space encoding)
+RewriteRule ^about\+us/?$ pages/about_capabilities.html [NC,L]
+RewriteRule ^contact\+us/?$ pages/contact_quote_request.html [NC,L]
+
+# Generic rule for removing .html extension (optional)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Redirect .html to clean URLs (for SEO - optional)
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1? [NC,L,R=301]
+
+# Handle 404 errors
+ErrorDocument 404 /pages/404.html
+
+# This rule tells the server what to show when someone visits the root of
+# your website (e.g., "https://yourdomain.com/").
+# It will serve the content of your homepage.
+DirectoryIndex pages/homepage.html
