@@ -1,6 +1,63 @@
 // js/main.js - Final Version
 
 document.addEventListener("DOMContentLoaded", function() {
+    // Marquee functionality
+    const root = document.documentElement;
+    const marqueeContent = document.querySelector("ul.marquee-content");
+    
+    if (marqueeContent) {
+        const marqueeElementsDisplayed = parseInt(getComputedStyle(root).getPropertyValue("--marquee-elements-displayed").trim());
+        const originalItemsCount = marqueeContent.children.length;
+        
+        console.log('Marquee setup:', {
+            originalItems: originalItemsCount,
+            elementsDisplayed: marqueeElementsDisplayed
+        });
+        
+        // Set the CSS variables needed for animation calculations
+        root.style.setProperty("--marquee-elements", originalItemsCount * 2);
+        root.style.setProperty("--marquee-original-elements", originalItemsCount);
+        
+        // Create array of original elements to avoid issues with live HTMLCollection
+        const originalItems = Array.from(marqueeContent.children);
+        
+        // Clone all original items to create seamless loop
+        originalItems.forEach(item => {
+            const clone = item.cloneNode(true);
+            marqueeContent.appendChild(clone);
+        });
+        
+        console.log('Marquee after cloning:', {
+            totalItems: marqueeContent.children.length,
+            cssVariable: getComputedStyle(root).getPropertyValue("--marquee-elements")
+        });
+        
+        // Force a reflow to ensure CSS variables are applied
+        marqueeContent.offsetHeight;
+        
+        // Ensure animation is running by adding a class
+        marqueeContent.classList.add('marquee-active');
+        
+        // Double-check after a short delay
+        setTimeout(() => {
+            const computedDuration = getComputedStyle(marqueeContent).animationDuration;
+            const computedName = getComputedStyle(marqueeContent).animationName;
+            console.log('Animation status:', {
+                animationDuration: computedDuration,
+                animationName: computedName,
+                hasAnimation: computedName !== 'none'
+            });
+            
+            // If animation is not running, force it
+            if (computedName === 'none' || computedDuration === '0s') {
+                console.log('Forcing animation restart...');
+                marqueeContent.style.animation = 'scrolling 15s linear infinite';
+            }
+        }, 100);
+        
+    } else {
+        console.error('Marquee content not found!');
+    }
     const pdfModal = document.getElementById('pdf-modal');
     const pdfViewer = document.getElementById('pdf-viewer');
 

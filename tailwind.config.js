@@ -1,6 +1,22 @@
 module.exports = {
   content: ["./pages/*.{html,js}", "./index.html", "./js/*.js"],
   theme: {
+    fontSize: {
+      'xs':   'clamp(0.75rem, 0.65rem + 0.5vw, 1rem)',      // Extra Small
+      'sm':   'clamp(0.875rem, 0.55rem + 0.625vw, 1rem)', // Small
+      'base': 'clamp(1rem, 0.85rem + 0.75vw, 1.375rem)',    // Base (paragraph)
+      'lg':   'clamp(1rem, 0.5rem + 0.875vw, 1.2rem)',   // Large
+      'xl':   'clamp(1.25rem, 0.6rem + 1vw, 1.75rem)',     // Extra Large
+      '2xl':  'clamp(1.5rem, 0.3rem + 1.875vw, 1.8rem)',  // 2XL
+      '3xl':  'clamp(1.875rem, 0.6rem + 1.875vw, 2.125rem)',  // 3XL
+      '4xl':  'clamp(2rem, 0.8rem + 2vw, 3rem)',   // 4XL
+      '5xl':  'clamp(3rem, 2.5rem + 2.5vw, 4rem)',       // 5XL
+      // Your custom text sizes, now made fluid
+      'body-lg': 'clamp(1.125rem, 0.8rem + 0.875vw, 1.2rem)',
+      'heading': 'clamp(1.5rem, 1.75rem + 1.25vw, 1.3rem)',
+      'display': 'clamp(2.5rem, 2rem + 0.5vw, 3rem)',
+      'hero':    'clamp(1rem, 2.5rem + 1vw, 3.5rem)',
+    },
     extend: {
       colors: {
         // Primary Colors - Deep Industrial Blue
@@ -88,18 +104,28 @@ module.exports = {
         mono: ['JetBrains Mono', 'monospace'],
         technical: ['JetBrains Mono', 'monospace'],
       },
-      fontSize: {
-        'hero': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'display': ['2.5rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
-        'heading': ['2rem', { lineHeight: '1.3' }],
-        'subheading': ['1.5rem', { lineHeight: '1.4' }],
-        'body-lg': ['1.125rem', { lineHeight: '1.6' }],
-        'body': ['1rem', { lineHeight: '1.6' }],
-        'body-sm': ['0.875rem', { lineHeight: '1.5' }],
-        'caption': ['0.75rem', { lineHeight: '1.4' }],
-      },
+      
+      // fontSize: {
+      //   'hero': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+      //   'display': ['2.5rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+      //   'heading': ['2rem', { lineHeight: '1.3' }],
+      //   'subheading': ['1.5rem', { lineHeight: '1.4' }],
+      //   'body-lg': ['1.125rem', { lineHeight: '1.6' }],
+      //   'body': ['1rem', { lineHeight: '1.6' }],
+      //   'body-sm': ['0.875rem', { lineHeight: '1.5' }],
+      //   'caption': ['0.75rem', { lineHeight: '1.4' }],
+      // },
       width: {
         '44': '11rem', // Creates a new w-44 class
+      },
+      animation: {
+        'infinite-scroll': 'infinite-scroll 40s linear infinite',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        }
       },
       spacing: {
         '18': '4.5rem',

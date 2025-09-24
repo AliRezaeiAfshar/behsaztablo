@@ -1,9 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@import url("https://css.gg/css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+/* .marquee-content:hover {
+  animation-play-state: paused;
+} */
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+}
+
+
+@media (max-width: 600px) {
+  html { font-size: 12px; }
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 10vh;
+    --marquee-elements-displayed: 3;
+    --marquee-animation-duration: 12s;
+  }
+  .marquee:before, .marquee:after { width: 2rem; }
+  
+  .marquee-content li {
+    width: 25vw;
+    margin: 0 0.25rem;
+  }
+  
+  @keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-25vw * 5 - 1.25rem)); }
+  }
+}
 
 @font-face {
   font-family: 'iran-sharp';
@@ -14,6 +47,85 @@
 }
 
 @layer components {
+  :root {
+  --marquee-width: 80vw;
+  --marquee-height: 13vh;
+  /* --marquee-elements: 12; */ /* defined with JavaScript */
+  --marquee-elements-displayed: 5;
+  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+  --marquee-animation-duration: 15s;
+}
+
+.marquee {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.marquee:before, .marquee:after {
+  position: absolute;
+  top: 0;
+  width: 4rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+.marquee:before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff 0%, transparent 100%);
+}
+.marquee:after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff 0%, transparent 100%);
+}
+.marquee-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-width: fit-content;
+}
+
+.marquee-content.marquee-active {
+  animation: scrolling 15s linear infinite !important;
+  min-width: calc(16vw * 10 + 10rem); /* Ensure container fits all 10 items */
+}
+
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-16vw * 5 - 2.5rem)); } /* Move exactly 5 items worth */
+}
+  .marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 16vw;
+  height: 100%;
+  max-height: 100%;
+  white-space: nowrap;
+  margin: 0 0.5rem;
+}
+
+.marquee-content li img {
+  max-width: 100%;
+  max-height: 80%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.marquee-content li img:hover {
+  filter: grayscale(0%);
+}
 
   #pdf-modal.modal-open {
     @apply opacity-100 pointer-events-auto;
