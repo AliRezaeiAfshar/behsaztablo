@@ -1,0 +1,161 @@
+<!-- Navigation Header -->
+        <header id="main-header"
+            class="bg-white shadow-card sticky top-0 z-50 transition-all duration-300">
+            <nav class="max-w-full ml-auto mr-0 pl-4 pr-0 sm:px-6 lg:px-8 font-bold">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0">
+                        <a href="homepage.html"
+                            class="flex items-center gap-x-3">
+                            <img src="../assets/images/logo.webp"
+                                alt="Behsaz Tablo Asia Logo"
+                                class="h-14 w-auto">
+                            <span
+                                class="text-xl font-sans font-bold text-primary">بهساز
+                                تابلو آسیا</span>
+                            
+                        </a>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:block flex-grow">
+                        <div class="flex justify-end items-center gap-x-12">
+                            <a href="homepage.html"
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">خانه</a>
+                            <!-- Dropdown 1: Projects -->
+                                <div class="relative group">
+                                    <button
+                                        onclick="window.location.href='project_portfolio.html';"
+                                        class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                        <span>پروژه ها</span>
+
+                                    </button>
+                                    <!-- USES dropdown-menu class -->
+                                    <div class="dropdown-menu">
+                                        <div class="p-1">
+                                            <a href="project_portfolio.html"
+                                                class="dropdown-item">همه
+                                                پروژه‌ها</a>
+                                            <a href="#"
+                                                class="dropdown-item">پروژه‌های
+                                                نفت
+                                                و گاز</a>
+                                            <a href="#"
+                                                class="dropdown-item">پروژه‌های
+                                                صنعتی</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Main Dropdown: Products -->
+                                <div class="relative group">
+                                    <button
+                                        onclick="window.location.href='products.html';"
+                                        class="nav-link flex items-center text-secondary-600 hover:text-primary font-sans text-sm transition-colors focus:outline-none">
+                                        <span>محصولات</span>
+                                    </button>
+                                    <!-- USES dropdown-menu class -->
+                                    <div class="dropdown-menu">
+                                        <div class="p-1">
+
+                                            <!-- NESTED DROPDOWN ITEM: Low Voltage -->
+                                            <div class="relative group">
+                                                <div
+                                                    class="dropdown-item flex items-center justify-between cursor-pointer">
+                                                    <span>تابلو فشار ضعیف</span>
+
+                                                </div>
+                                                <!-- USES dropdown-menu-nested class -->
+                                                <div
+                                                    class="dropdown-menu-nested">
+                                                    <div class="p-1">
+                                                        <a href="products.html#product-lv-withdrawable"
+                                                            class="dropdown-item">Switchgear Withdrawable</a>
+                                                        <a href="products.html#product-lv-fixed"
+                                                            class="dropdown-item">Switchgear Fixed</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- NESTED DROPDOWN ITEM: Medium Voltage -->
+                                            <div class="relative group">
+                                                <div
+                                                    class="dropdown-item flex items-center justify-between cursor-pointer">
+                                                    <span>تابلو فشار
+                                                        متوسط</span>
+
+                                                </div>
+                                                <!-- USES dropdown-menu-nested class -->
+                                                <div
+                                                    class="dropdown-menu-nested">
+                                                    <div class="p-1">
+                                                        <a href="products.html#product-mv-withdrawable"
+                                                            class="dropdown-item">Mv Switchgear Withdrawable</a>
+                                                        <a href="products.html#product-mv-unisafe"
+                                                            class="dropdown-item">Mv Switchgear Unisafe</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Regular Dropdown Item -->
+                                            <a href="products.html#product-kiosk-post"
+                                                class="dropdown-item">پست
+                                                کیوسک</a>
+                                                <a href="products.html#product-compact"
+                                                class="dropdown-item">Compact</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <a href="about_capabilities.html"
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">درباره
+                                ما</a>
+                            <a href="maintenance.html"
+                                class="nav-link text-secondary-600 hover:text-primary font-sans text-sm">بلاگ</a>
+                            <a href="contact_quote_request.html"
+                                class="btn-accent text-sm text-white">ارتباط با
+                                ما</a>
+                        </div>
+                    </div>
+
+                    <!-- ADD THIS BLOCK BACK IN: Mobile menu button -->
+                    <div class="lg:hidden">
+                        <button type="button"
+                            class="text-secondary-600 hover:text-primary p-2"
+                            onclick="toggleMobileMenu()">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- This is your existing mobile menu panel, it should be OUTSIDE the flex container above -->
+                <div id="mobile-menu" class="lg:hidden hidden">
+                    <div
+                        class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-secondary-200">
+                        <a href="homepage.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">خانه</a>
+                        <a href="project_portfolio.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">پروژه
+                            ها</a>
+                        <a href="products.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">محصولات</a>
+                        <a href="custom_panel_design.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">گواهینامه
+                            ها</a>
+                        <a href="about_capabilities.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">درباره
+                            ما</a>
+                        <a href="contact_quote_request.html"
+                            class="nav-link block text-base text-secondary-600 hover:text-primary p-2">ارتباط
+                            با ما</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>

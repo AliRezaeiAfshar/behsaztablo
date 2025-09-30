@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Redirect /info to /about
+RewriteRule ^info/?$ /about-us [R=301,L]
+
 # Handle URLs with spaces - convert spaces to hyphens and load corresponding files
 RewriteRule ^about\s+us/?$ pages/about_capabilities.html [NC,L]
 RewriteRule ^contact\s+us/?$ pages/contact_quote_request.html [NC,L]

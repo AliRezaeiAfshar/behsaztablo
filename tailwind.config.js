@@ -120,11 +120,16 @@ module.exports = {
       },
       animation: {
         'infinite-scroll': 'infinite-scroll 40s linear infinite',
+        'scroll-rtl': 'scroll-rtl 30s linear infinite',
       },
       keyframes: {
         'infinite-scroll': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
+        },
+        'scroll-rtl': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         }
       },
       spacing: {
@@ -169,5 +174,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

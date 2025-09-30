@@ -45,8 +45,38 @@
 .iran-sharp {
   font-family: 'iran-sharp', iran-sharp;
 }
-
+@keyframes cert-scroll {
+                from { transform: translateX(150%); }
+                to { transform: translateX(50%); }
+            }
 @layer components {
+  .cert-animate {
+                animation: cert-scroll 10s linear infinite;
+            }
+  
+  .prose {
+    text-align: right;
+  }
+  .prose blockquote {
+    border-right: 0.25rem solid #e2e8f0;
+    border-left: none;
+    padding-right: 1em;
+    padding-left: 0;
+  }
+  .prose ul {
+    padding-right: 1.5em;
+    padding-left: 0;
+  }
+
+  .pagination-btn {
+    @apply h-10 w-10 flex items-center justify-center rounded-md font-semibold text-secondary-600 bg-white border border-secondary-200 transition-all duration-200 hover:bg-secondary-50;
+  }
+  .pagination-btn.active {
+    @apply bg-primary text-white border-primary cursor-default;
+  }
+  .pagination-btn:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
   :root {
   --marquee-width: 80vw;
   --marquee-height: 13vh;

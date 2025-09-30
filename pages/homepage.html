@@ -481,70 +481,31 @@
             </button> -->
         </section>
 
-        
+       
         <!-- Trust Bar Section -->
-        <section class="bg-secondary-50 py-12">
+        <section class="bg-secondary-50 py-12" aria-labelledby="certifications-heading">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-start">
-                    <!-- Certifications -->
-                    <div class="text-center">
-                        <div class="flex justify-center mb-3">
-                            <img
-                                src="../assets/images/anjomansenfi.webp"
-                                alt="UL Certification" class="h-12 w-auto"
-                                onerror="this.src='https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=100'; this.onerror=null;" />
-                        </div>
-                        <p
-                            class="text-sm font-sans font-semibold text-secondary-700">وزارت
-                            نفت</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="flex justify-center mb-3">
-                            <img
-                                src="../assets/images/anjomansenfi.webp"
-                                alt="NEMA Certification" class="h-12 w-auto"
-                                onerror="this.src='https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=100&auto=format&fit=crop'; this.onerror=null;" />
-                        </div>
-                        <p
-                            class="text-sm font-sans font-semibold text-secondary-700">انجمن
-                            صنفی تابلوسازان</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="flex justify-center mb-3">
-                            <img
-                                src="../assets/images/anjomansenfi.webp"
-                                alt="IEEE Standards" class="h-12 w-auto"
-                                onerror="this.src='https://images.pixabay.com/photo/2017/06/10/07/18/list-2389219_1280.png'; this.onerror=null;" />
-                        </div>
-                        <p
-                            class="text-sm font-sans font-semibold text-secondary-700">Type
-                            Test</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="flex justify-center mb-3">
-                            <img
-                                src="../assets/images/anjomansenfi.webp"
-                                alt="IEEE Standards" class="h-12 w-auto"
-                                onerror="this.src='https://images.pixabay.com/photo/2017/06/10/07/18/list-2389219_1280.png'; this.onerror=null;" />
-                        </div>
-                        <p
-                            class="text-sm font-sans font-semibold text-secondary-700">ISO
-                            9001:2008</p>
-                        <p class="text-xs text-secondary-500">Zero Safety
-                            Incidents</p>
+                <div class="text-center mb-12">
+                    <h2 id="certifications-heading" class="text-heading font-semibold text-secondary-700 uppercase tracking-wider">
+                        دارای گواهینامه‌های معتبر ملی و بین‌المللی
+                    </h2>
+                </div>
+                <!-- Logo Slider Container -->
+                <div id="cert-slider" class="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
+                    <!-- The track that will be animated -->
+                    <div id="cert-track" class="flex items-center">
+                        <!-- Logos will be dynamically inserted here by the script -->
                     </div>
                 </div>
             </div>
         </section>
-        
 
         <!-- Capabilities Overview Section -->
         <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2
-                        class="text-display font-sans font-bold text-primary mb-4">خدمات
-                        ما</h2>
+                        class="text-display font-sans font-bold text-primary mb-4">محصولات ما</h2>
                     <p
                         class="text-body-lg text-secondary-600 max-w-3xl mx-auto">طراحی،
                         ساخت و نصب انواع تابلوهای برق با به‌روزترین تکنولوژی و
@@ -575,9 +536,7 @@
                             این تابلوها استانداردهای جهانی را برای توزیع برق در
                             زیرساخت‌ها تعیین کرده‌اند، تا 7000 آمپر را پوشش
                             می‌دهند و ایمنی بالایی برای پرسنل و تجهیزات فراهم
-                            می‌کنند. طراحی مدولار و بهینه آن‌ها، قابلیت
-                            انعطاف‌پذیری برای تطابق با نیازهای مختلف را
-                            داراست</p>
+                            می‌کنند. </p>
                         <!-- REMOVED mt-auto HERE -->
                         <a href="custom_panel_design.html"
                             class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">مطالعه
@@ -672,7 +631,6 @@
                 </div>
             </div>
         </section>
-        
 
         <!-- Featured Projects Section -->
         <section class="py-20 bg-surface">
@@ -847,8 +805,6 @@
             </div>
         </section>
 
-        
-
         <!-- Performance Metrics Section -->
         <!-- ADDED id="metrics-section" to be observed by the script -->
         <section id="metrics-section" class="relative py-20 text-white">
@@ -916,6 +872,140 @@
             </div>
         </section>
 
+        <!-- News & Events Section -->
+        <section class="py-20 bg-surface">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2
+                        class="text-display font-sans font-bold text-primary mb-4">اخبار
+                        و رویدادها</h2>
+                    <p
+                        class="text-body-lg text-secondary-600 max-w-3xl mx-auto">از
+                        آخرین دستاوردها، پروژه‌های جدید و حضور ما در رویدادهای
+                        صنعتی مطلع شوید.</p>
+                </div>
+
+                <!-- News Grid -->
+                <div id="news-grid"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- News Item 1 -->
+                    <div
+                        class="news-item card-elevated group hover:shadow-industrial transition-all h-full flex flex-col">
+                        <div class="relative overflow-hidden rounded-lg mb-6">
+                            <img src="../assets/images/zarafshan.webp"
+                                alt="مشارکت در نمایشگاه بین‌المللی صنعت برق"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div
+                                class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">رویداد</div>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-sm text-secondary-500 mb-2">۱۴ شهریور
+                                ۱۴۰۴</p>
+                            <h3
+                                class="text-heading font-sans font-bold text-primary mb-3">حضور
+                                موفق در نمایشگاه بین‌المللی صنعت برق</h3>
+                            <p class="text-secondary-600">شرکت بهساز تابلو آسیا
+                                با ارائه آخرین دستاوردهای خود در زمینه تابلوهای
+                                فشار متوسط و ضعیف، حضور پررنگی در بیست و چهارمین
+                                نمایشگاه صنعت برق داشت.</p>
+                        </div>
+                        <a href="news-template.html?id=news-1"
+                            class="text-primary font-sans font-semibold hover:text-accent transition-colors mt-6 inline-block">ادامه
+                            مطلب →</a>
+                    </div>
+
+                    <!-- News Item 2 -->
+                    <div
+                        class="news-item card-elevated group hover:shadow-industrial transition-all h-full flex flex-col">
+                        <div class="relative overflow-hidden rounded-lg mb-6">
+                            <img src="../assets/images/zarafshan.webp"
+                                alt="پروژه جدید پالایشگاه نفت"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div
+                                class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">اخبار</div>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-sm text-secondary-500 mb-2">۰۵ مرداد
+                                ۱۴۰۴</p>
+                            <h3
+                                class="text-heading font-sans font-bold text-primary mb-3">راه‌اندازی
+                                موفق پروژه پالایشگاه نفت زرافشان</h3>
+                            <p class="text-secondary-600">پروژه تأمین و نصب
+                                تابلوهای فشار متوسط پالایشگاه نفت زرافشان با
+                                موفقیت به پایان رسید و مورد تحسین کارشناسان قرار
+                                گرفت.</p>
+                        </div>
+                        <a href="news-template.html?id=news-2"
+                            class="text-primary font-sans font-semibold hover:text-accent transition-colors mt-6 inline-block">ادامه
+                            مطلب →</a>
+                    </div>
+
+                    <!-- News Item 3 -->
+                    <div
+                        class="news-item card-elevated group hover:shadow-industrial transition-all h-full flex flex-col">
+                        <div class="relative overflow-hidden rounded-lg mb-6">
+                            <img src="../assets/images/zarafshan.webp"
+                                alt="دریافت گواهینامه ISO 9001:2015"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div
+                                class="absolute top-4 right-4 bg-success-600 text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">اخبار</div>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-sm text-secondary-500 mb-2">۱۸ تیر
+                                ۱۴۰۴</p>
+                            <h3
+                                class="text-heading font-sans font-bold text-primary mb-3">کسب
+                                استاندارد ISO 9001:2015</h3>
+                            <p class="text-secondary-600">با افتخار اعلام
+                                می‌کنیم که شرکت ما موفق به دریافت گواهینامه
+                                استاندارد مدیریت کیفیت ISO 9001:2015 شده
+                                است.</p>
+                        </div>
+                        <a href="#"
+                            class="text-primary font-sans font-semibold hover:text-accent transition-colors mt-6 inline-block">ادامه
+                            مطلب →</a>
+                    </div>
+
+                    <!-- News Item 4 (Hidden by default) -->
+                    <div
+                        class="news-item card-elevated group hover:shadow-industrial transition-all h-full flex-col hidden">
+                        <div class="relative overflow-hidden rounded-lg mb-6">
+                            <img src="../assets/images/zarafshan.webp"
+                                alt="وبینار تخصصی"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div
+                                class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">رویداد</div>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-sm text-secondary-500 mb-2">۰۱ تیر
+                                ۱۴۰۴</p>
+                            <h3
+                                class="text-heading font-sans font-bold text-primary mb-3">وبینار
+                                تخصصی حفاظت الکتریکی</h3>
+                            <p class="text-secondary-600">مدیر فنی شرکت، مهندس
+                                ایرانی، یک وبینار تخصصی در مورد آخرین
+                                تکنولوژی‌های حفاظت در سیستم‌های قدرت برگزار
+                                خواهد کرد.</p>
+                        </div>
+                        <a href="news-template.html?id=news-3"
+                            class="text-primary font-sans font-semibold hover:text-accent transition-colors mt-6 inline-block">اطلاعات
+                            بیشتر →</a>
+                    </div>
+
+                    <!-- Add more hidden news items here -->
+
+                </div>
+
+                <!-- Pagination Controls -->
+                <div id="pagination-controls"
+                    class="flex justify-center items-center gap-x-2 mt-12">
+                    <!-- Pagination buttons will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
         <!-- Trusted By Section -->
         <!-- <section class="py-20 bg-white">
             <div class="text-center mb-16">
@@ -931,57 +1021,120 @@
 
         </section> -->
 
-                <section aria-labelledby="trusted-by-heading" class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-8">
-      <h2 id="trusted-by-heading" class="text-display font-sans font-bold text-primary mb-4">مشتریان ما</h2>
-      <p class="text-body-lg text-secondary-600 max-w-3xl mx-auto iran-sharp">
-        افتخار همکاری با شرکت‌های پیشرو. روی لوگوها فوکوس کنید تا حرکت متوقف شود، یا کنترل‌ها را برای پیمایش استفاده کنید.
-      </p>
-    </div>
+        <section aria-labelledby="trusted-by-heading" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 id="trusted-by-heading"
+                        class="text-display font-sans font-bold text-primary mb-4">مشتریان
+                        ما</h2>
+                    <p
+                        class="text-body-lg text-secondary-600 max-w-3xl mx-auto iran-sharp">
+                        ما مفتخریم که با شرکت‌های پیشرو در صنایع مختلف برای
+                        تامین زیرساخت‌های حیاتی آنها همکاری می‌کنیم.
+                    </p>
+                </div>
 
-    <div class="relative">
-      <!-- Frame -->
-      <div id="logo-slider" class="logo-slider rounded-xl shadow-sm bg-white/40 overflow-hidden">
-        <!-- Track (original items only; JS will duplicate for seamless loop) -->
-        <div class="slider-track flex items-center gap-8 px-6 py-6" role="list" aria-live="off" aria-label="لوگوهای مشتریان">
-          <div role="listitem" class="logo-item flex items-center justify-center w-40 h-16">
-            <img loading="lazy" src="../assets/images/saipa.webp" alt="لوگوی سایپا" class="max-h-12 object-contain grayscale transition-transform duration-300" />
-          </div>
-          <div role="listitem" class="logo-item flex items-center justify-center w-40 h-16">
-            <img loading="lazy" src="../assets/images/edare-bargh.webp" alt="لوگوی اداره برق" class="max-h-12 object-contain grayscale transition-transform duration-300" />
-          </div>
-          <div role="listitem" class="logo-item flex items-center justify-center w-40 h-16">
-            <img loading="lazy" src="../assets/images/tam (2).webp" alt="لوگوی TAM" class="max-h-12 object-contain grayscale transition-transform duration-300" />
-          </div>
-          <div role="listitem" class="logo-item flex items-center justify-center w-40 h-16">
-            <img loading="lazy" src="../assets/images/iran-khodro.webp" alt="لوگوی ایران‌خودرو" class="max-h-12 object-contain grayscale transition-transform duration-300" />
-          </div>
-          <div role="listitem" class="logo-item flex items-center justify-center w-40 h-16">
-            <img loading="lazy" src="../assets/images/behran.webp" alt="لوگوی بهر‌ان" class="max-h-12 object-contain grayscale transition-transform duration-300" />
-          </div>
-          <!-- add more distinct logos here if needed -->
-        </div>
-      </div>
+                <div class="relative">
+                    <!-- Frame -->
+                    <div id="logo-slider"
+                        class="logo-slider rounded-xl shadow-sm bg-white/40 overflow-hidden">
+                        <!-- Track (original items only; JS will duplicate for seamless loop) -->
+                        <div
+                            class="slider-track flex items-center gap-8 px-6 py-6"
+                            role="list" aria-live="off"
+                            aria-label="لوگوهای مشتریان">
+                            <div role="listitem"
+                                class="logo-item flex items-center justify-center w-40 h-16">
+                                <img loading="lazy"
+                                    src="../assets/images/saipa.webp"
+                                    alt="لوگوی سایپا"
+                                    class="max-h-12 object-contain grayscale transition-transform duration-300" />
+                            </div>
+                            <div role="listitem"
+                                class="logo-item flex items-center justify-center w-40 h-16">
+                                <img loading="lazy"
+                                    src="../assets/images/edare-bargh.webp"
+                                    alt="لوگوی اداره برق"
+                                    class="max-h-12 object-contain grayscale transition-transform duration-300" />
+                            </div>
+                            <div role="listitem"
+                                class="logo-item flex items-center justify-center w-40 h-16">
+                                <img loading="lazy"
+                                    src="../assets/images/tam (2).webp"
+                                    alt="لوگوی TAM"
+                                    class="max-h-12 object-contain grayscale transition-transform duration-300" />
+                            </div>
+                            <div role="listitem"
+                                class="logo-item flex items-center justify-center w-40 h-16">
+                                <img loading="lazy"
+                                    src="../assets/images/iran-khodro.webp"
+                                    alt="لوگوی ایران‌خودرو"
+                                    class="max-h-12 object-contain grayscale transition-transform duration-300" />
+                            </div>
+                            <div role="listitem"
+                                class="logo-item flex items-center justify-center w-40 h-16">
+                                <img loading="lazy"
+                                    src="../assets/images/behran.webp"
+                                    alt="لوگوی بهر‌ان"
+                                    class="max-h-12 object-contain grayscale transition-transform duration-300" />
+                            </div>
+                            <div role="listitem"
+                                class="logo-item flex items-center justify-center w-40 h-16">
+                                <img loading="lazy"
+                                    src="../assets/images/behran.webp"
+                                    alt="لوگوی بهر‌ان"
+                                    class="max-h-12 object-contain grayscale transition-transform duration-300" />
+                            </div>
+                            <div role="listitem"
+                                class="logo-item flex items-center justify-center w-40 h-16">
+                                <img loading="lazy"
+                                    src="../assets/images/behran.webp"
+                                    alt="لوگوی بهر‌ان"
+                                    class="max-h-12 object-contain grayscale transition-transform duration-300" />
+                            </div>
+                            <div role="listitem"
+                                class="logo-item flex items-center justify-center w-40 h-16">
+                                <img loading="lazy"
+                                    src="../assets/images/behran.webp"
+                                    alt="لوگوی بهر‌ان"
+                                    class="max-h-12 object-contain grayscale transition-transform duration-300" />
+                            </div>
+                            <!-- add more distinct logos here if needed -->
+                        </div>
+                    </div>
 
-      <!-- Controls -->
-      <div class="absolute inset-y-0 left-0 flex items-center pl-2">
-        <button id="prevLogo" aria-label="نمایش قبلی" class="control-btn bg-white/90 hover:bg-white text-gray-700 rounded-full p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary">
-          <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12.707 4.293a1 1 0 010 1.414L8.414 10l4.293 4.293a1 1 0 11-1.414 1.414l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-        </button>
-      </div>
-      <div class="absolute inset-y-0 right-0 flex items-center pr-2">
-        <button id="nextLogo" aria-label="نمایش بعدی" class="control-btn bg-white/90 hover:bg-white text-gray-700 rounded-full p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary">
-          <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 15.707a1 1 0 010-1.414L11.586 10 7.293 5.707A1 1 0 018.707 4.293l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
-        </button>
-      </div>
-    </div>
+                    <!-- Controls -->
+                    <div
+                        class="absolute inset-y-0 left-0 flex items-center pl-2">
+                        <button id="prevLogo" aria-label="نمایش قبلی"
+                            class="control-btn bg-white/90 hover:bg-white text-gray-700 rounded-full p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary">
+                            <svg class="w-5 h-5" viewBox="0 0 20 20"
+                                fill="currentColor" aria-hidden="true"><path
+                                    fill-rule="evenodd"
+                                    d="M12.707 4.293a1 1 0 010 1.414L8.414 10l4.293 4.293a1 1 0 11-1.414 1.414l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" /></svg>
+                        </button>
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center pr-2">
+                        <button id="nextLogo" aria-label="نمایش بعدی"
+                            class="control-btn bg-white/90 hover:bg-white text-gray-700 rounded-full p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary">
+                            <svg class="w-5 h-5" viewBox="0 0 20 20"
+                                fill="currentColor" aria-hidden="true"><path
+                                    fill-rule="evenodd"
+                                    d="M7.293 15.707a1 1 0 010-1.414L11.586 10 7.293 5.707A1 1 0 018.707 4.293l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+                                    clip-rule="evenodd" /></svg>
+                        </button>
+                    </div>
+                </div>
 
-    <p class="mt-6 text-center text-sm text-secondary-500">اسلایدر پیوسته و روان؛ برای متوقف کردن حرکت نشانگر ماوس یا فوکوس را روی لوگوها قرار دهید.</p>
-  </div>
-</section>
+                <p class="mt-6 text-center text-sm text-secondary-500">اسلایدر
+                    پیوسته و روان؛ برای متوقف کردن حرکت نشانگر ماوس یا فوکوس را
+                    روی لوگوها قرار دهید.</p>
+            </div>
+        </section>
 
-<style>
+        <style>
 /* Minimal local CSS (complements Tailwind) */
 .logo-slider { width: 100%; max-width: 100%; direction: ltr; } /* force LTR for predictable scrollLeft */
 .slider-track { display: flex; align-items: center; gap: 2rem; white-space: nowrap; }
@@ -995,7 +1148,7 @@
 }
 </style>
 
-<script>
+        <script>
 /* Robust, zero-dependency continuous logo slider.
    - Waits for images to load, duplicates original set until track is at least 2x frame width
    - Uses requestAnimationFrame and scrollLeft for smoothness
@@ -1055,7 +1208,7 @@
 
       // seamless reset: when we've scrolled more than half the track (one full original set),
       // subtract half to continue seamlessly
-      const resetPoint = track.scrollWidth / 2;
+      const resetPoint = track.scrollWidth / 2 + 5;
       if (container.scrollLeft >= resetPoint) {
         container.scrollLeft -= resetPoint;
       }
@@ -1070,9 +1223,9 @@
     function resume() { if (!running) { running = true; last = null; if (!rafId) rafId = requestAnimationFrame(step); } }
 
     // Pause on interaction
-    container.addEventListener('mouseenter', pause);
+    // container.addEventListener('mouseenter', pause);
     container.addEventListener('mouseleave', resume);
-    container.addEventListener('focusin', pause);
+    // container.addEventListener('focusin', pause);
     container.addEventListener('focusout', resume);
     container.setAttribute('tabindex', '0');
 
@@ -1108,8 +1261,7 @@
   });
 })();
 </script>
-<!-- ...existing code... -->
-
+        <!-- ...existing code... -->
 
         <!-- Call to Action Section -->
         <section class="pb-20 bg-white">
@@ -1129,6 +1281,8 @@
                 </div>
             </div>
         </section>
+
+        
 
         <!-- Footer -->
         <footer class="bg-secondary-900 text-white py-16">
@@ -1236,10 +1390,9 @@
             </div>
         </footer>
 
-        <script src="../js/main.js"></script>
-
-        <!-- This rocket script can stay if it's needed on all pages -->
-        <script id="dhws-dataInjector"
-            src="../public/dhws-data-injector.js"></script>
-    </body>
+        <script src="../js/core.js"></script>
+        <script src="../js/homepage.js"></script>
+        <script src="../js/news.js"></script>
+    <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
 </html>
