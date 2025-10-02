@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         try {
             // Show loading state
             showLoading();
+            console.log(`Loading article with ID: ${id}`);
 
             // Load article data
             const response = await fetch(`../data/articles/${id}.json`);

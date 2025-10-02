@@ -50,6 +50,10 @@
                 to { transform: translateX(50%); }
             }
 @layer components {
+  .text-justify {
+    text-align: justify;
+    text-justify: inter-word; /* improves spacing between words */
+}
   .cert-animate {
                 animation: cert-scroll 10s linear infinite;
             }
@@ -330,7 +334,7 @@
 
     .btn-accent {
     /* ADD active:scale-95 to this line */
-    @apply bg-accent text-white font-sans font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 active:scale-95;
+    @apply bg-accent text-white font-sans font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 active:scale-95;
     }
 
     .nav-link {

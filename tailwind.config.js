@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     fontSize: {
       'xs':   'clamp(0.75rem, 0.65rem + 0.5vw, 1rem)',      // Extra Small
-      'sm':   'clamp(0.875rem, 0.55rem + 0.625vw, 1rem)', // Small
+      'sm':   'clamp(0.6rem, 0.6rem + 0.3vw, 1.3rem)', // Small
       'base': 'clamp(1rem, 0.85rem + 0.75vw, 1.375rem)',    // Base (paragraph)
       'lg':   'clamp(1rem, 0.5rem + 0.875vw, 1.2rem)',   // Large
       'xl':   'clamp(1.25rem, 0.6rem + 1vw, 1.75rem)',     // Extra Large

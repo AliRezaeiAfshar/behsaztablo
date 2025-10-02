@@ -8,7 +8,7 @@
         <link rel="icon" type="image/x-icon" href="../public/favicon.ico">
         <meta name="description"
             content="ElectroPanel Pro delivers precision-engineered electrical panels for critical infrastructure. 25+ years experience, 500+ projects, zero safety incidents. ثبت درخواست today." />
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pk+PTMq+o2ZcrxZhNyk+DE++/jB6j/0eLSfi9F5B7FBkfJNGg2f6fn7OE4XfmB3Q1/1IU9dTaZOGX1zAfk7Wsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- JSON-LD Structured Data -->
         <script type="application/ld+json">
         {
@@ -175,7 +175,7 @@
         <header id="main-header"
             class="bg-white shadow-card sticky top-0 z-50 transition-all duration-300">
             <nav
-                class="max-w-full ml-auto mr-0 pl-4 pr-0 sm:px-6 lg:px-8 font-bold">
+                class="max-w-full ml-auto pl-4 sm:px-6 lg:px-4 font-bold">
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo -->
                     <div class="flex-shrink-0">
@@ -183,9 +183,9 @@
                             class="flex items-center gap-x-3">
                             <img src="../assets/images/logo.webp"
                                 alt="Behsaz Tablo Asia Logo"
-                                class="h-14 w-auto">
+                                class="h-10 w-auto">
                             <span
-                                class="text-xl font-sans font-bold text-primary">بهساز
+                                class="text-lg font-sans font-bold text-primary">بهساز
                                 تابلو آسیا</span>
 
                         </a>
@@ -481,6 +481,46 @@
             </button> -->
         </section>
 
+        <div data-include="../includes/header.html"></div>
+
+    <!-- Main Error Section -->
+    <!-- <section class="flex flex-col items-center justify-center py-24">
+        <div class="text-center"> -->
+            <!-- Replacing SVG with Font Awesome icon -->
+            <!-- <i class="fas fa-exclamation-triangle text-6xl text-yellow-500 mb-4"></i>
+            <h1 class="text-4xl font-bold text-pink-600 mb-4">متاسفیم!</h1>
+            <p class="text-xl text-purple-800 mb-6">جزئیات بخش اخبار در حال حاضر در دسترس نیست.</p>
+            <p class="text-md text-indigo-800">ما در حال بهبود و به‌روزرسانی این بخش هستیم. لطفاً بعداً مراجعه فرمایید.</p>
+        </div>
+        <section class="bg-gradient-to-r from-orange-600 via-emerald-600 to-blue-700 py-12 w-screen">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-white">ارتباط با ما</h2>
+            <p class="text-lg mb-6 text-white">در صورت نیاز به راهنمایی یا رفع مشکل، با شماره‌های زیر تماس بگیرید یا ایمیل بزنید:</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <a href="tel:+982112345678" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded shadow inline-flex items-center">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    تماس پشتیبانی
+                </a>
+                <a href="mailto:support@example.com" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded shadow inline-flex items-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    ایمیل پشتیبانی
+                </a>
+            </div>
+        </div>
+    </section>
+    </section> -->
+
+    <!-- Navigation Back Section -->
+    <!-- <section class="py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-orange-700">بازگشت به صفحه اصلی</h2>
+            <p class="text-lg mb-6 text-orange-600">برای ادامه استفاده از سایت، به صفحه اصلی بازگردید.</p>
+            <a href="homepage.html" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded shadow">
+                صفحه اصلی
+            </a>
+        </div>
+    </section> -->
+
        
         <!-- Trust Bar Section -->
         <section class="bg-secondary-50 py-12" aria-labelledby="certifications-heading">
@@ -502,7 +542,7 @@
 
         <!-- Capabilities Overview Section -->
         <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto px-2 sm:px-2 lg:px-2">
                 <div class="text-center mb-16">
                     <h2
                         class="text-display font-sans font-bold text-primary mb-4">محصولات ما</h2>
@@ -513,23 +553,25 @@
                 </div>
 
                 <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
                     <!-- Custom Panel Design -->
                     <div
                         class="card-elevated text-right group hover:shadow-industrial transition-all flex flex-col h-full">
                         <div
                             class="rounded-md group-hover:scale-105 transition-transform duration-300 overflow-hidden mx-auto mb-6 group-hover:bg-primary-100 transition-colors">
-                            <img src="../assets/images/apply-bg.jpg"
+                            <a href="products.html#product-lv-fixed">
+                            <img src="../assets/images/sivacon.webp"
                                 alt="Sivacon Panels Icon"
                                 class="h-full w-full object-cover">
+                            </a>
                         </div>
                         <h3
-                            class="text-heading font-sans font-bold text-primary mb-4">تابلوهای
-                            فشار ضعیف Sivacon</h3>
+                            class="text-lg font-sans font-bold text-primary mb-4">تابلوهای
+                            فشار ضعیف فیکس</h3>
                         <!-- ADDED flex-grow HERE -->
                         <p
-                            class="text-secondary-600 mb-6 flex-grow">تابلوهای
+                            class="text-secondary-600 mb-6 flex-grow text-justify">تابلوهای
                             فشار ضعیف سیواکِن (SIVACON) محصولات شرکت زیمنس هستند
                             که به عنوان سیستم‌های مدرن و مقرون به صرفه برای
                             توزیع برق و کنترل مرکزی موتور (MCC) شناخته می‌شوند.
@@ -538,9 +580,9 @@
                             می‌دهند و ایمنی بالایی برای پرسنل و تجهیزات فراهم
                             می‌کنند. </p>
                         <!-- REMOVED mt-auto HERE -->
-                        <a href="custom_panel_design.html"
+                        <!-- <a href="custom_panel_design.html"
                             class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">مطالعه
-                            بیشتر →</a>
+                            بیشتر →</a> -->
                     </div>
 
                     <!-- Standard Products -->
@@ -548,16 +590,18 @@
                         class="card-elevated text-right group hover:shadow-industrial transition-all flex flex-col h-full">
                         <div
                             class="rounded-md group-hover:scale-105 transition-transform duration-300 overflow-hidden mx-auto mb-6 group-hover:bg-primary-100 transition-colors">
-                            <img src="../assets/images/apply-bg.jpg"
+                            <a href="products.html#product-compact">
+                            <img src="../assets/images/mv-compact.webp"
                                 alt="Sivacon Panels Icon"
                                 class="h-full w-full object-cover">
+                            </a>
                         </div>
                         <h3
-                            class="text-heading font-sans font-bold text-primary mb-4">تابلوهای
+                            class="text-lg font-sans font-bold text-primary mb-4">تابلوهای
                             فشار متوسط کامپکت</h3>
                         <!-- ADDED flex-grow HERE -->
                         <p
-                            class="text-secondary-600 mb-6 flex-grow">تابلوهای
+                            class="text-secondary-600 mb-6 flex-grow text-justify">تابلوهای
                             فشار متوسط کامپکت، نسل جدید تابلوهای برق هستند که با
                             حجم کمتر نسبت به تابلوهای سنتی، ایمنی و اطمینان
                             بالاتری را ارائه می‌دهند . این تابلوها از نوع AIS یا
@@ -567,9 +611,9 @@
                             کنترل، توزیع و حفاظت از انرژی الکتریکی در شبکه‌های
                             فشار متوسط است</p>
                         <!-- REMOVED mt-auto HERE -->
-                        <a href="project_portfolio.html"
+                        <!-- <a href="project_portfolio.html"
                             class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">مطالعه
-                            بیشتر →</a>
+                            بیشتر →</a> -->
                     </div>
 
                     <!-- Engineering Services -->
@@ -577,16 +621,18 @@
                         class="card-elevated text-right group hover:shadow-industrial transition-all flex flex-col h-full">
                         <div
                             class="rounded-md group-hover:scale-105 transition-transform duration-300 overflow-hidden mx-auto mb-6 group-hover:bg-primary-100 transition-colors">
-                            <img src="../assets/images/apply-bg.jpg"
+                            <a href="products.html#product-mv-withdrawable">
+                            <img src="../assets/images/mv-withdrawable.webp"
                                 alt="Sivacon Panels Icon"
                                 class="h-full w-full object-cover">
+                            </a>
                         </div>
                         <h3
-                            class="text-heading font-sans font-bold text-primary mb-4">تابلوهای
+                            class="text-lg font-sans font-bold text-primary mb-4">تابلوهای
                             فشار متوسط کشویی</h3>
                         <!-- ADDED flex-grow HERE -->
                         <p
-                            class="text-secondary-600 mb-6 flex-grow">تابلوهای
+                            class="text-secondary-600 mb-6 flex-grow text-justify">تابلوهای
                             فشار متوسط کشویی تجهیزات توزیع برق در ولتاژ متوسط
                             (معمولاً تا 36 کیلو ولت) هستند که برای اطمینان و
                             ایمنی بالا، با ماژول‌های جداگانه (کشویی) و
@@ -596,9 +642,9 @@
                             دسترسی آسان از جلو برای نصب و نگهداری را فراهم
                             می‌کنند</p>
                         <!-- REMOVED mt-auto HERE -->
-                        <a href="about_capabilities.html"
+                        <!-- <a href="about_capabilities.html"
                             class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">مطالعه
-                            بیشتر →</a>
+                            بیشتر →</a> -->
                     </div>
 
                     <!-- Emergency Support -->
@@ -606,15 +652,17 @@
                         class="card-elevated text-right group hover:shadow-industrial transition-all flex flex-col h-full">
                         <div
                             class="rounded-md group-hover:scale-105 transition-transform duration-300 overflow-hidden mx-auto mb-6 group-hover:bg-primary-100 transition-colors">
-                            <img src="../assets/images/apply-bg.jpg"
+                            <a href="products.html#product-lv-withdrawable">
+                            <img src="../assets/images/lv-withdrawable.webp"
                                 alt="Sivacon Panels Icon"
                                 class="h-full w-full object-cover">
+                            </a>
                         </div>
                         <h3
-                            class="text-heading font-sans font-bold text-primary mb-4">تابلوهای
+                            class="text-lg font-sans font-bold text-primary mb-4">تابلوهای
                             فشار ضعیف کشویی</h3>
                         <!-- ADDED flex-grow HERE -->
-                        <p class="text-secondary-600 mb-6 flex-grow">تابلوهای
+                        <p class="text-secondary-600 mb-6 flex-grow text-justify">تابلوهای
                             فشار ضعیف کشویی نوعی تابلو برق هستند که به دلیل
                             قابلیت جداسازی و تعویض آسان قطعات و مدارهای داخلی،
                             در صنایع بزرگ مانند پتروشیمی، نیروگاه‌ها و فولاد
@@ -623,9 +671,9 @@
                             کنترل ایمن انرژی الکتریکی در سیستم‌های پیچیده کمک
                             می‌کنند </p>
                         <!-- REMOVED mt-auto HERE -->
-                        <a href="contact_quote_request.html"
+                        <!-- <a href="contact_quote_request.html"
                             class="text-accent font-sans font-semibold hover:text-accent-700 transition-colors">مطالعه
-                            بیشتر →</a>
+                            بیشتر →</a> -->
                     </div>
 
                 </div>
@@ -675,9 +723,9 @@
                                 و گاز</div>
                         </div>
                         <h3
-                            class="text-heading font-sans font-bold text-primary mb-3 flex-grow">پالایش
+                            class="text-lg font-sans font-bold text-primary mb-3 flex-grow text-center">پالایش
                             نفت آفتاب</h3>
-                        <p class="text-secondary-600 mb-4">تابلو LV Switchgear
+                        <!-- <p class="text-secondary-600 mb-4">تابلو LV Switchgear
                             (تابلوی برق فشار ضعیف) یک سیستم فلزی است که تجهیزات
                             الکتریکی مانند قطع‌کننده‌ها، کلیدها، و مدارشکن‌ها را
                             در خود جای می‌دهد و وظیفه کنترل، حفاظت و توزیع انرژی
@@ -685,8 +733,8 @@
                             عهده دارد. این تابلوها از دستگاه‌های الکتریکی و
                             کاربران در برابر نوسانات برق و جریان‌های اتصال کوتاه
                             محافظت کرده و اطمینان از عملکرد ایمن و کارآمد
-                            سیستم‌های الکتریکی را فراهم می‌کنند. </p>
-                        <div class="bg-secondary-50 rounded-lg p-4 mb-6">
+                            سیستم‌های الکتریکی را فراهم می‌کنند. </p> -->
+                        <!-- <div class="bg-secondary-50 rounded-lg p-4 mb-6">
                             <p
                                 class="text-sm text-secondary-700 italic">"ElectroPanel Pro delivered a flawless installation with zero downtime to our critical systems. Their attention to detail and safety protocols exceeded our expectations."</p>
                             <p
@@ -698,7 +746,7 @@
                             <span>2,500 amp service</span>
                             <span>99.99% uptime</span>
                             <span>48-hour completion</span>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- Project 2 - Manufacturing -->
@@ -731,9 +779,9 @@
                                 و گاز</div>
                         </div>
                         <h3
-                            class="text-heading font-sans font-bold text-primary mb-3 flex-grow">اکتشاف،
+                            class="text-lg font-sans font-bold text-primary mb-3 flex-grow text-center">اکتشاف،
                             توسعه و تولید پاسارگاد</h3>
-                        <p class="text-secondary-600 mb-4">تابلو LV Switchgear
+                        <!-- <p class="text-secondary-600 mb-4">تابلو LV Switchgear
                             (تابلوی برق فشار ضعیف) یک سیستم فلزی است که تجهیزات
                             الکتریکی مانند قطع‌کننده‌ها، کلیدها، و مدارشکن‌ها را
                             در خود جای می‌دهد و وظیفه کنترل، حفاظت و توزیع انرژی
@@ -741,8 +789,8 @@
                             عهده دارد. این تابلوها از دستگاه‌های الکتریکی و
                             کاربران در برابر نوسانات برق و جریان‌های اتصال کوتاه
                             محافظت کرده و اطمینان از عملکرد ایمن و کارآمد
-                            سیستم‌های الکتریکی را فراهم می‌کنند.</p>
-                        <div class="bg-secondary-50 rounded-lg p-4 mb-6">
+                            سیستم‌های الکتریکی را فراهم می‌کنند.</p> -->
+                        <!-- <div class="bg-secondary-50 rounded-lg p-4 mb-6">
                             <p
                                 class="text-sm text-secondary-700 italic">"The team's expertise in industrial applications was evident throughout the project. They understood our operational constraints and delivered accordingly."</p>
                             <p
@@ -754,7 +802,7 @@
                             <span>5,000 amp capacity</span>
                             <span>Zero downtime</span>
                             <span>3-week delivery</span>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- Project 3 - Data Center -->
@@ -770,9 +818,9 @@
                                 class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">پتروشیمی</div>
                         </div>
                         <h3
-                            class="text-heading font-sans font-bold text-primary mb-3 flex-grow">احداث
+                            class="text-lg font-sans font-bold text-primary mb-3 flex-grow text-center">احداث
                             تصفیه‌خانه آب سد گلال پالایشگاه گاز ایلام</h3>
-                        <p class="text-secondary-600 mb-4">تابلو LV Switchgear
+                        <!-- <p class="text-secondary-600 mb-4">تابلو LV Switchgear
                             (تابلوی برق فشار ضعیف) یک سیستم فلزی است که تجهیزات
                             الکتریکی مانند قطع‌کننده‌ها، کلیدها، و مدارشکن‌ها را
                             در خود جای می‌دهد و وظیفه کنترل، حفاظت و توزیع انرژی
@@ -780,8 +828,8 @@
                             عهده دارد. این تابلوها از دستگاه‌های الکتریکی و
                             کاربران در برابر نوسانات برق و جریان‌های اتصال کوتاه
                             محافظت کرده و اطمینان از عملکرد ایمن و کارآمد
-                            سیستم‌های الکتریکی را فراهم می‌کنند.</p>
-                        <div class="bg-secondary-50 rounded-lg p-4 mb-6">
+                            سیستم‌های الکتریکی را فراهم می‌کنند.</p> -->
+                        <!-- <div class="bg-secondary-50 rounded-lg p-4 mb-6">
                             <p
                                 class="text-sm text-secondary-700 italic">"Mission-critical infrastructure demands perfection. ElectroPanel Pro delivered exactly that with their redundant power design and flawless execution."</p>
                             <p
@@ -793,9 +841,161 @@
                             <span>N+1 redundancy</span>
                             <span>Tier III certified</span>
                             <span>72-hour emergency</span>
+                        </div> -->
+                    </div>
+                    <!-- Project 1 - Healthcare -->
+                    <div
+                        class="card-elevated group hover:shadow-industrial transition-all h-full flex flex-col">
+                        <div class="relative overflow-hidden rounded-lg mb-6">
+                            <!-- <img
+                                src="https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Regional Medical Center electrical upgrade"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                                onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=800&auto=format&fit=crop'; this.onerror=null;" /> -->
+                            <picture>
+                                <!-- The browser will try to use this WebP source first -->
+                                <source srcset="../assets/images/2.webp"
+                                    type="image/webp">
+
+                                <!-- If the browser doesn't support WebP, it will use this JPG source -->
+                                <!-- <source srcset="images/my-awesome-photo.jpg"
+                                    type="image/jpeg"> -->
+
+                                <!-- The <img> tag is the final fallback AND is required for accessibility and display -->
+                                <!-- It's what actually displays the image on the page -->
+                                <img
+                                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                                    src="../assets/images/2.webp"
+                                    alt="\Palayesh Naft Aftab">
+                            </picture>
+                            <div
+                                class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">نفت
+                                و گاز</div>
                         </div>
+                        <h3
+                            class="text-lg font-sans font-bold text-primary mb-3 flex-grow text-center">پالایش
+                            نفت آفتاب</h3>
+                        <!-- <p class="text-secondary-600 mb-4">تابلو LV Switchgear
+                            (تابلوی برق فشار ضعیف) یک سیستم فلزی است که تجهیزات
+                            الکتریکی مانند قطع‌کننده‌ها، کلیدها، و مدارشکن‌ها را
+                            در خود جای می‌دهد و وظیفه کنترل، حفاظت و توزیع انرژی
+                            الکتریکی در ولتاژ پایین (معمولاً تا ۱۰۰۰ ولت) را بر
+                            عهده دارد. این تابلوها از دستگاه‌های الکتریکی و
+                            کاربران در برابر نوسانات برق و جریان‌های اتصال کوتاه
+                            محافظت کرده و اطمینان از عملکرد ایمن و کارآمد
+                            سیستم‌های الکتریکی را فراهم می‌کنند. </p> -->
+                        <!-- <div class="bg-secondary-50 rounded-lg p-4 mb-6">
+                            <p
+                                class="text-sm text-secondary-700 italic">"ElectroPanel Pro delivered a flawless installation with zero downtime to our critical systems. Their attention to detail and safety protocols exceeded our expectations."</p>
+                            <p
+                                class="text-sm font-sans font-semibold text-primary mt-2">-
+                                Michael Chen, Chief Engineering Officer</p>
+                        </div>
+                        <div
+                            class="flex justify-between items-center text-sm text-secondary-600">
+                            <span>2,500 amp service</span>
+                            <span>99.99% uptime</span>
+                            <span>48-hour completion</span>
+                        </div> -->
+                    </div>
+
+                    <!-- Project 2 - Manufacturing -->
+                    <div
+                        class="card-elevated group hover:shadow-industrial transition-all h-full flex flex-col">
+                        <div class="relative overflow-hidden rounded-lg mb-6">
+                            <!-- <img
+                                src="https://images.pixabay.com/photo/2014/12/22/10/04/factory-577166_1280.jpg"
+                                alt="Automotive manufacturing facility power distribution"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                                onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop'; this.onerror=null;" /> -->
+                            <picture>
+                                <!-- The browser will try to use this WebP source first -->
+                                <source srcset="../assets/images/3.webp"
+                                    type="image/webp">
+
+                                <!-- If the browser doesn't support WebP, it will use this JPG source -->
+                                <!-- <source srcset="images/my-awesome-photo.jpg"
+                                    type="image/jpeg"> -->
+
+                                <!-- The <img> tag is the final fallback AND is required for accessibility and display -->
+                                <!-- It's what actually displays the image on the page -->
+                                <img
+                                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                                    src="../assets/images/3.webp"
+                                    alt="\Palayesh Naft Aftab">
+                            </picture>
+                            <div
+                                class="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">نفت
+                                و گاز</div>
+                        </div>
+                        <h3
+                            class="text-lg font-sans font-bold text-primary mb-3 flex-grow text-center">اکتشاف،
+                            توسعه و تولید پاسارگاد</h3>
+                        <!-- <p class="text-secondary-600 mb-4">تابلو LV Switchgear
+                            (تابلوی برق فشار ضعیف) یک سیستم فلزی است که تجهیزات
+                            الکتریکی مانند قطع‌کننده‌ها، کلیدها، و مدارشکن‌ها را
+                            در خود جای می‌دهد و وظیفه کنترل، حفاظت و توزیع انرژی
+                            الکتریکی در ولتاژ پایین (معمولاً تا ۱۰۰۰ ولت) را بر
+                            عهده دارد. این تابلوها از دستگاه‌های الکتریکی و
+                            کاربران در برابر نوسانات برق و جریان‌های اتصال کوتاه
+                            محافظت کرده و اطمینان از عملکرد ایمن و کارآمد
+                            سیستم‌های الکتریکی را فراهم می‌کنند.</p> -->
+                        <!-- <div class="bg-secondary-50 rounded-lg p-4 mb-6">
+                            <p
+                                class="text-sm text-secondary-700 italic">"The team's expertise in industrial applications was evident throughout the project. They understood our operational constraints and delivered accordingly."</p>
+                            <p
+                                class="text-sm font-sans font-semibold text-primary mt-2">-
+                                Sarah Rodriguez, Plant Engineering Manager</p>
+                        </div>
+                        <div
+                            class="flex justify-between items-center text-sm text-secondary-600">
+                            <span>5,000 amp capacity</span>
+                            <span>Zero downtime</span>
+                            <span>3-week delivery</span>
+                        </div> -->
+                    </div>
+
+                    <!-- Project 3 - Data Center -->
+                    <div
+                        class="card-elevated group hover:shadow-industrial transition-all h-full flex flex-col">
+                        <div class="relative overflow-hidden rounded-lg mb-6">
+                            <img
+                                src="../assets/images/mofateh.webp"
+                                alt="Data center redundant power systems"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                                onerror="this.src='https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;" />
+                            <div
+                                class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-sans font-semibold">پتروشیمی</div>
+                        </div>
+                        <h3
+                            class="text-lg font-sans font-bold text-primary mb-3 flex-grow text-center">احداث
+                            تصفیه‌خانه آب سد گلال پالایشگاه گاز ایلام</h3>
+                        <!-- <p class="text-secondary-600 mb-4">تابلو LV Switchgear
+                            (تابلوی برق فشار ضعیف) یک سیستم فلزی است که تجهیزات
+                            الکتریکی مانند قطع‌کننده‌ها، کلیدها، و مدارشکن‌ها را
+                            در خود جای می‌دهد و وظیفه کنترل، حفاظت و توزیع انرژی
+                            الکتریکی در ولتاژ پایین (معمولاً تا ۱۰۰۰ ولت) را بر
+                            عهده دارد. این تابلوها از دستگاه‌های الکتریکی و
+                            کاربران در برابر نوسانات برق و جریان‌های اتصال کوتاه
+                            محافظت کرده و اطمینان از عملکرد ایمن و کارآمد
+                            سیستم‌های الکتریکی را فراهم می‌کنند.</p> -->
+                        <!-- <div class="bg-secondary-50 rounded-lg p-4 mb-6">
+                            <p
+                                class="text-sm text-secondary-700 italic">"Mission-critical infrastructure demands perfection. ElectroPanel Pro delivered exactly that with their redundant power design and flawless execution."</p>
+                            <p
+                                class="text-sm font-sans font-semibold text-primary mt-2">-
+                                David Park, Data Center Operations Director</p>
+                        </div>
+                        <div
+                            class="flex justify-between items-center text-sm text-secondary-600">
+                            <span>N+1 redundancy</span>
+                            <span>Tier III certified</span>
+                            <span>72-hour emergency</span>
+                        </div> -->
                     </div>
                 </div>
+                </div>
+                
 
                 <div class="text-center mt-12">
                     <a href="project_portfolio.html"
@@ -894,7 +1094,7 @@
                     <div
                         class="news-item card-elevated group hover:shadow-industrial transition-all h-full flex flex-col">
                         <div class="relative overflow-hidden rounded-lg mb-6">
-                            <img src="../assets/images/zarafshan.webp"
+                            <img src="../assets/images/download (1).webp"
                                 alt="مشارکت در نمایشگاه بین‌المللی صنعت برق"
                                 class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                             <div
@@ -904,23 +1104,24 @@
                             <p class="text-sm text-secondary-500 mb-2">۱۴ شهریور
                                 ۱۴۰۴</p>
                             <h3
-                                class="text-heading font-sans font-bold text-primary mb-3">حضور
+                                class="text-heading font-sans font-bold text-primary mb-3 text-center">حضور
                                 موفق در نمایشگاه بین‌المللی صنعت برق</h3>
-                            <p class="text-secondary-600">شرکت بهساز تابلو آسیا
+                            <!-- <p class="text-secondary-600">شرکت بهساز تابلو آسیا
                                 با ارائه آخرین دستاوردهای خود در زمینه تابلوهای
                                 فشار متوسط و ضعیف، حضور پررنگی در بیست و چهارمین
-                                نمایشگاه صنعت برق داشت.</p>
+                                نمایشگاه صنعت برق داشت.</p> -->
                         </div>
-                        <a href="news-template.html?id=news-1"
+                        <!-- <a href=""
                             class="text-primary font-sans font-semibold hover:text-accent transition-colors mt-6 inline-block">ادامه
-                            مطلب →</a>
+                            مطلب →</a> -->
+                            <!-- news-template.html?id=news-1 -->
                     </div>
 
                     <!-- News Item 2 -->
                     <div
                         class="news-item card-elevated group hover:shadow-industrial transition-all h-full flex flex-col">
                         <div class="relative overflow-hidden rounded-lg mb-6">
-                            <img src="../assets/images/zarafshan.webp"
+                            <img src="../assets/images/download (1).webp"
                                 alt="پروژه جدید پالایشگاه نفت"
                                 class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                             <div
@@ -930,23 +1131,23 @@
                             <p class="text-sm text-secondary-500 mb-2">۰۵ مرداد
                                 ۱۴۰۴</p>
                             <h3
-                                class="text-heading font-sans font-bold text-primary mb-3">راه‌اندازی
+                                class="text-heading font-sans font-bold text-primary mb-3 text-center">راه‌اندازی
                                 موفق پروژه پالایشگاه نفت زرافشان</h3>
-                            <p class="text-secondary-600">پروژه تأمین و نصب
+                            <!-- <p class="text-secondary-600">پروژه تأمین و نصب
                                 تابلوهای فشار متوسط پالایشگاه نفت زرافشان با
                                 موفقیت به پایان رسید و مورد تحسین کارشناسان قرار
-                                گرفت.</p>
+                                گرفت.</p> -->
                         </div>
-                        <a href="news-template.html?id=news-2"
+                        <!-- <a href=""
                             class="text-primary font-sans font-semibold hover:text-accent transition-colors mt-6 inline-block">ادامه
-                            مطلب →</a>
+                            مطلب →</a> -->
                     </div>
 
                     <!-- News Item 3 -->
                     <div
                         class="news-item card-elevated group hover:shadow-industrial transition-all h-full flex flex-col">
                         <div class="relative overflow-hidden rounded-lg mb-6">
-                            <img src="../assets/images/zarafshan.webp"
+                            <img src="../assets/images/download (1).webp"
                                 alt="دریافت گواهینامه ISO 9001:2015"
                                 class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                             <div
@@ -956,23 +1157,23 @@
                             <p class="text-sm text-secondary-500 mb-2">۱۸ تیر
                                 ۱۴۰۴</p>
                             <h3
-                                class="text-heading font-sans font-bold text-primary mb-3">کسب
+                                class="text-heading font-sans font-bold text-primary mb-3 text-center">کسب
                                 استاندارد ISO 9001:2015</h3>
-                            <p class="text-secondary-600">با افتخار اعلام
+                            <!-- <p class="text-secondary-600">با افتخار اعلام
                                 می‌کنیم که شرکت ما موفق به دریافت گواهینامه
                                 استاندارد مدیریت کیفیت ISO 9001:2015 شده
-                                است.</p>
+                                است.</p> -->
                         </div>
-                        <a href="#"
+                        <!-- <a href="#"
                             class="text-primary font-sans font-semibold hover:text-accent transition-colors mt-6 inline-block">ادامه
-                            مطلب →</a>
+                            مطلب →</a> -->
                     </div>
 
                     <!-- News Item 4 (Hidden by default) -->
-                    <div
+                    <!-- <div
                         class="news-item card-elevated group hover:shadow-industrial transition-all h-full flex-col hidden">
                         <div class="relative overflow-hidden rounded-lg mb-6">
-                            <img src="../assets/images/zarafshan.webp"
+                            <img src="../assets/images/soon.webp"
                                 alt="وبینار تخصصی"
                                 class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                             <div
@@ -989,10 +1190,10 @@
                                 تکنولوژی‌های حفاظت در سیستم‌های قدرت برگزار
                                 خواهد کرد.</p>
                         </div>
-                        <a href="news-template.html?id=news-3"
+                        <a href="" 
                             class="text-primary font-sans font-semibold hover:text-accent transition-colors mt-6 inline-block">اطلاعات
                             بیشتر →</a>
-                    </div>
+                    </div> -->
 
                     <!-- Add more hidden news items here -->
 
@@ -1128,9 +1329,9 @@
                     </div>
                 </div>
 
-                <p class="mt-6 text-center text-sm text-secondary-500">اسلایدر
+                <!-- <p class="mt-6 text-center text-sm text-secondary-500">اسلایدر
                     پیوسته و روان؛ برای متوقف کردن حرکت نشانگر ماوس یا فوکوس را
-                    روی لوگوها قرار دهید.</p>
+                    روی لوگوها قرار دهید.</p> -->
             </div>
         </section>
 
@@ -1264,7 +1465,7 @@
         <!-- ...existing code... -->
 
         <!-- Call to Action Section -->
-        <section class="pb-20 bg-white">
+        <!-- <section class="pb-20 bg-white">
             <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
                 <h2
                     class="text-display font-sans font-bold text-primary mb-6">پروژه‌تان
@@ -1280,7 +1481,7 @@
                         توانایی‌های ما</a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         
 
@@ -1390,9 +1591,40 @@
             </div>
         </footer>
 
+        <!-- Sticky "Go to Top" Button -->
+<div id="goToTop" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 bg-primary hover:bg-primary-700 text-white p-3 rounded-full shadow-lg cursor-pointer transition-colors">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+  </svg>
+</div>
+
+<!-- Scroll To Top Script -->
+<script>
+  // Optional: Toggle the visibility based on scroll position
+  const goToTopBtn = document.getElementById('goToTop');
+  
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+      goToTopBtn.style.display = 'block';
+    } else {
+      goToTopBtn.style.display = 'none';
+    }
+  });
+  
+  // Smooth scroll to top when button is clicked
+  goToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  
+  // Initially hide button
+  goToTopBtn.style.display = 'none';
+</script>
+<script src="https://kit.fontawesome.com/your_kit_code.js" crossorigin="anonymous"></script>
+
         <script src="../js/core.js"></script>
         <script src="../js/homepage.js"></script>
         <script src="../js/news.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
 </body>
 </html>
